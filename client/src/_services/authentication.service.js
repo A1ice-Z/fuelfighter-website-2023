@@ -1,6 +1,6 @@
 import { fetch } from 'whatwg-fetch';
 
-import handleResponse from '../_helpers/handleResponse';
+import handleResponse from './handleResponse';
 
 // const url = `${process.env.PUBLIC_URL}/backend/admin/user/`;
 const url = '/backend/admin/user/';

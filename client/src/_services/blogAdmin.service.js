@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { fetch } from 'whatwg-fetch';
 
-import handleResponse from '../_helpers/handleResponse';
+import handleResponse from './handleResponse';
 
 // const url = `${process.env.PUBLIC_URL}/backend/admin/blog/`;
 const url = '/backend/admin/blog/';

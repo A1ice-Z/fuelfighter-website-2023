@@ -1,14 +1,13 @@
-.App {
-    flex: 1;
-    text-align: center;
-    font-family: 'Roboto-Regular';
-}
-  
-.prova {
-    font-family: 'Roboto-Black';
+:root {
+  --blue: #222f5c;
+  --white: #ffffff;
+  --green: #9BCBA7;
+  font-size: 1.4vw;
 }
 
-p{
-    margin: 0px;
+body {
+  margin: 0;
+  font-family: 'Roboto-Light';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
