@@ -1,26 +1,26 @@
 .header {
     background-color: var(--blue);
+    color: var(--green);
 }
 
-.header h1 a {
-    color: var(--green)
-}
-
-
-.header a {
-    color: var(--green)
+.header .containerHead {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-between;
 }
 
 .header ul {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    align-items: center;
 }
 
 .header li {
-    display: inline-block;
-    padding: 0 12px;
+    padding: 0 1rem;
+    vertical-align: middle;
+}
+
+.header a {
+    color: var(--green);
 }
 
 .header a:link { text-decoration: none; }
@@ -29,12 +29,7 @@
 .header a:active { text-decoration: none; }
 
 .header img{
-    height: 50px;
+    height: 2.5rem;
     vertical-align: middle;
 }
 
-.header .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}

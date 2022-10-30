@@ -9,10 +9,8 @@ import Sponsors from './pages/Sponsors'
 
 import Dev from './pages/DevView'
 
-import Header from './components/header'
+import Header from './components/Header'
 
-
-//import "../styles/bootstrap/css/bootstrap.min.css"
 import './styles/fonts.css'
 import './styles/shared.css'
 
