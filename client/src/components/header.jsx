@@ -3,6 +3,7 @@ import '../styles/componentStyles/header.css'
 
 import logonav from '../assets/logo/logo_white.png'
 
+
 export default function Header() {
     return(
         <div class="header">

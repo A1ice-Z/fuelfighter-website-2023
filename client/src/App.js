@@ -9,7 +9,7 @@ import Sponsors from './pages/Sponsors'
 
 import Dev from './pages/DevView'
 
-import Header from './components/header'
+import Header from './components/Header'
 
 
 import './styles/fonts.css'
