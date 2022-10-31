@@ -1,26 +1,24 @@
 .header {
     background-color: var(--blue);
-    color: var(--green);
-}
-
-.header .containerHead {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    justify-content:space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: [logo] 1fr [title] 1fr [] 1fr [pages] 6fr [buttons] 2fr;
+    grid-template-rows: auto;
+    height: 4rem;
 }
 
 .header ul {
+    vertical-align: middle;
     align-items: center;
 }
 
 .header li {
     padding: 0 1rem;
-    vertical-align: middle;
 }
 
 .header a {
-    color: var(--green);
+    align-self: center;
+    color: var(--white);
 }
 
 .header a:link { text-decoration: none; }
@@ -30,6 +28,19 @@
 
 .header img{
     height: 2.5rem;
-    vertical-align: middle;
 }
 
+.header #titleHeader{
+
+}
+
+.header #menu {
+    color: var(--white);
+    align-self: center;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 1,
+        'opsz' 48;
+    
+}
