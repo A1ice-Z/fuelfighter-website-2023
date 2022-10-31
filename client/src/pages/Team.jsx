@@ -1,4 +1,6 @@
 import React from "react"
+import '../styles/pageStyles/Team.css'
+
 
 export default function Team() {
     return(
