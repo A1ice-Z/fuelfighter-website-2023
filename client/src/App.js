@@ -17,20 +17,22 @@ import './styles/shared.css'
 
 function App() {
   return (
-    <>
+    <div className='pageContainer'>
       <Header />
-      <Router>
-        <Routes>
-          <Route path='/'         element={ <Home/> }/>
-          <Route path='/dev'      element={ <Dev/> }/>
-          <Route path='/blog'     element={ <Blog/> }/>
-          <Route path='/about'    element={ <About/> }/>
-          <Route path='/team'     element={ <Team/> }/>
-          <Route path='/sponsors' element={ <Sponsors/> }/>
-          {/* <Route path='/admin'    element={ <Admin /> } /> */}
-        </Routes>
-      </Router>
-    </>
+      <div className='aPage'>
+        <Router>
+          <Routes>
+            <Route path='/'         element={ <Home/> }/>
+            <Route path='/dev'      element={ <Dev/> }/>
+            <Route path='/blog'     element={ <Blog/> }/>
+            <Route path='/about'    element={ <About/> }/>
+            <Route path='/team'     element={ <Team/> }/>
+            <Route path='/sponsors' element={ <Sponsors/> }/>
+            {/* <Route path='/admin'    element={ <Admin /> } /> */}
+          </Routes>
+        </Router>
+      </div>
+    </div>
   );
 }
 
