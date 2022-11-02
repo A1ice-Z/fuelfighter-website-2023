@@ -17,7 +17,7 @@ section {
 }
 
 section:nth-of-type(1) {
-    height: 93vh;
+    height: 100vh;
     background-color: rgb(167, 167, 167);
 
 }
