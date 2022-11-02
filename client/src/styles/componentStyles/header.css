@@ -2,9 +2,11 @@
     background-color: var(--blue);
     width: 100%;
     display: grid;
-    grid-template-columns: [logo] 1fr [title] 1fr [] 1fr [pages] 6fr [buttons] 2fr;
+    grid-template-columns: [white]0.7fr [logo] 1fr [title] 1fr [] 1.7fr [pages] 6fr [buttons] 2.5fr;
     grid-template-rows: auto;
     height: 4rem;
+    position: fixed;
+    color: var(--white);
 }
 
 .header ul {
@@ -27,16 +29,11 @@
 .header a:active { text-decoration: none; }
 
 .header img{
+    align-self: center;
     height: 2.5rem;
 }
 
 .header #menu {
     color: var(--white);
     align-self: center;
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 300,
-        'GRAD' 1,
-        'opsz' 48;
-    
 }

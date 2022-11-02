@@ -3,6 +3,8 @@
   --white: #ffffff;
   --green: #9BCBA7;
   font-size: 1.4vw;
+  --screen-height: 100vh;
+  --screen-width:  100vw;
 }
 
 body {
@@ -12,10 +14,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 200,
-  'GRAD' 0,
-  'opsz' 48
+.pageContainer{
+  display: grid;
+  background-color: var(--white);
+}
+
+.aPage{
+  margin-top: 4rem;
 }
