@@ -1,12 +1,23 @@
 import React from "react"
+import TeamTitle from '../components/Team/TeamTitle'
 import '../styles/pageStyles/Team.css'
 
 
 export default function Team() {
     return(
-        <div>
-            <h1>Team</h1>
+        <main>
+            <section id="center" >
+                <TeamTitle/>
+            </section>
+            <section>
+                
+            </section>
+        </main>
+
+
+        
             
-        </div>
+            
+
     )
 }
