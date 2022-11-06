@@ -15,7 +15,8 @@ body {
 }
 
 .pageContainer{
-  display: grid;
+  display: flex;
+  flex-direction: column;
   background-color: var(--white);
 }
 
