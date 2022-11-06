@@ -3,10 +3,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: [white]0.7fr [logo] 1fr [title] 1fr [] 1.7fr [pages] 6fr [buttons] 2.5fr;
-    grid-template-rows: auto;
+    grid-template-rows: [nav] 1fr;
     height: 4rem;
     position: fixed;
     color: var(--white);
+    margin-bottom: 4rem;
 }
 
 .header ul {
@@ -36,4 +37,43 @@
 .header #menu {
     color: var(--white);
     align-self: center;
+}
+
+.headMenu{
+    display: grid;
+    grid-template-columns: [blank1] 1fr [content] 3fr [blank2] 1fr;
+    grid-template-rows: 100%;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 4rem;
+    height: 4rem;
+    opacity: 0.95;
+}
+
+.headMenu #menuBar{
+    grid-column: content;
+    align-items: center;
+}
+
+.headMenu #menuBar ul {
+    vertical-align: middle;
+    align-items: center;
+}
+
+.headMenu #menuBar li {
+    padding: 0 1rem;
+}
+
+.headMenu ul {
+    vertical-align: middle;
+    align-items: center;
+}
+
+.headMenu li {
+    padding: 0 1rem;
+}
+
+.headMenu a {
+    align-self: center;
+    color: var(--white);
 }
