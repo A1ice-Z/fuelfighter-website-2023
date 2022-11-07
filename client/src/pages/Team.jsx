@@ -1,7 +1,7 @@
 import React from "react"
-import TeamDisplay from "../components/Team/TeamDisplay"
-import TeamTitle from '../components/Team/TeamTitle'
-import SideTopBar from '../components/Team/SideTopBar'
+import TeamDisplay from "../components/Team/TeamDisplay.jsx"
+import TeamTitle from '../components/Team/TeamTitle.jsx'
+import SideTopBar from '../components/Team/SideTopBar.jsx'
 
 import '../styles/pageStyles/Team.css'
 
@@ -13,7 +13,7 @@ export default function Team() {
                 <TeamTitle/>
             </section>
             <section>
-                <SideTopBar/>
+                {/* <SideTopBar/> */}
                 <TeamDisplay/>
             </section>
         </main>
