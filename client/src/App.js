@@ -5,6 +5,8 @@ import Team     from './pages/Team'
 import Blog     from './pages/Blog'
 import About    from './pages/About'
 import Sponsors from './pages/Sponsors'
+import PageNotFound from './pages/404'
+import Contact from './pages/Contact'
 // import Admin    from './pages/Admin'
 
 import Dev from './pages/DevView'
@@ -30,11 +32,14 @@ function App() {
             <Route path='/about'    element={ <About/> }/>
             <Route path='/team'     element={ <Team/> }/>
             <Route path='/sponsors' element={ <Sponsors/> }/>
+            <Route path="/contact" element={ <Contact/> } />
             {/* <Route path='/admin'    element={ <Admin /> } /> */}
+            
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Router>
       </div>
-      
+
       <Footer />
     </div>
   );

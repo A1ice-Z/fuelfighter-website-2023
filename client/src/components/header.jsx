@@ -49,6 +49,7 @@ export default function Header() {
                         <li><a href="/about" className="">About</a></li>
                         <li><a href="/team" className="">Team</a></li>
                         <li><a href="/sponsors" className="">Sponsors</a></li>
+                        <li><a href="/contact" className="">Contact us</a></li>
                         <li><a href="/dev" className="">dev</a></li>
                     </ul>
                 </div>
