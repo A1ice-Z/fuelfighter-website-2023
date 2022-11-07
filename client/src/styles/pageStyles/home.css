@@ -1,0 +1,12 @@
+.homeContainer{
+    display: grid;
+    grid-template-rows: [first] 100vh [about] 100vh;
+    grid-template-columns: [all] 100%;
+}
+
+.homeContainer .homeFirst{
+    grid-column: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
