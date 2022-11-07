@@ -2,10 +2,9 @@ import React, { useState } from "react"
 import '../styles/componentStyles/header.css'
 
 import logonav from '../assets/logo/logo_white.png'
-import { useEffect } from "react"
 
 export default function Header() {
-    const [menuView, setMenuView] = useState(true)
+    const [menuView, setMenuView] = useState(false)
     
     const toggleDisplay = () => {
         setMenuView(!menuView)

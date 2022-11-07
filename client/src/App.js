@@ -14,6 +14,7 @@ import Header from './components/header'
 
 import './styles/fonts.css'
 import './styles/shared.css'
+import Footer from './components/footer'
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           </Routes>
         </Router>
       </div>
+      
+      <Footer />
     </div>
   );
 }
