@@ -19,5 +19,58 @@ min-height: 500px;
 background-color: #F6F8FC;
 margin-left: 2.5%;
 margin-right: 2.5%;
+margin-top: 2.5%;
+height: auto;
 
+}
+
+.teamBox {
+    background-color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0px;
+    width: 70%;
+    float: right;
+    display: fixed;
+    height: 50%;    
+    margin-right: 2.5%;
+    font-weight:600;
+    color: var(--black);
+    word-spacing: 10px;
+    overflow:hidden;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    margin-left: auto;
+
+    
+}
+
+.yearBox {
+    background-color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0px;
+    margin-right: 50px;
+    width: 20%;
+    float: left;
+    display: fixed;
+    min-height: 100%;
+    
+    margin-left: 2.5%;
+
+    font-weight:600;
+    color: var(--black);
+    word-spacing: 10px;
+    
+
+
+    
+}
+
+.teamYearContainer {
+    height: 15%;
+    overflow: hidden;
+    display: flex;
 }

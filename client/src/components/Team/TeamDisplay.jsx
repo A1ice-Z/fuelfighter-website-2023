@@ -101,7 +101,7 @@ export default function TeamDisplay() {
 
 
     const onClickChangeYear = (year) => {
-        // setDisplayTeam([])
+        setDisplayTeam([])
         setSelectedYear(year)
 
     }
@@ -118,32 +118,39 @@ export default function TeamDisplay() {
     return(
         <>
             <title>
-                    <h1 > Hello! </h1> 
-                    <h1 onClick={() => onClickChangeTeam(1)}> changeTeam 1 </h1>
                     {/* <h1 onClick={onClickChangeTeam(2)}> changeTeam 2</h1>
                     <h1 onClick={onClickChangeYear(2022)}> changeYear 1</h1>
                     <h1 onClick={onClickChangeYear(2021)}> changeYear 2</h1> */}
-                    <h1> {displayTeam.length} </h1>
-
-
-
-
-
             </title> 
+            <div className='teamYearContainer'>
+                <div className='yearBox'>
+                    <a  onClick={() => onClickChangeYear(2022)}> 2022 </a> 
+                    <a  onClick={() => onClickChangeYear(2021)}> 2021 </a> 
+                    <a  onClick={() => onClickChangeYear(2020)}> 2020 </a> 
+
+
+
+                </div>
+
+                <div className='teamBox'>
+                            <a onClick={() => onClickChangeTeam(0)}> Board </a> 
+                            <a onClick={() => onClickChangeTeam(1)}> Autonomous</a>
+                            <a onClick={() => onClickChangeTeam(2)}> Electrical</a>
+                            <a onClick={() => onClickChangeTeam(3)}> Mechanical</a>
+                            <a onClick={() => onClickChangeTeam(4)}> Design</a>
+                            <a onClick={() => onClickChangeTeam(5)}> Software</a>
+                            <a onClick={() => onClickChangeTeam(6)}> Finance</a>
+                            <a onClick={() => onClickChangeTeam(7)}> Marketing</a>
+                </div>
+            </div>
             <div className='section'>
                 <div className='TeamsWrap'>
                         {displayTeam.length !== 0
                         ? displayTeam.map(team => (
                             <div key={team.name} >
-                                {/* {team.team_image !== null ? <TeamImageContainer><TeamImage src={team.team_image} /></TeamImageContainer> : null} */}
                                 <Section>
                                     <div className = 'teamTitle' >{team.name}</div>
                                     <Description>
-                                        {/* 
-                                        <Image src={team.preview_image}/>
-                                        description
-                                    */}
-                                        {/* <Image src={team.preview_image}/> */}
                                         <Text>{team.description}</Text>
                                     </Description>
                                     <Content>
