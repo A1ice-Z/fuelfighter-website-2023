@@ -66,10 +66,7 @@ const Loading = styled.div`
 
 
 export default function TeamDisplay() {
-    const TeamsWrap = styled.div`
-    min-height: 1000px;
-    background-color: #F6F8FC;
-`;
+
 
     const defaultYear = 2022; // The default year
     const defaultTeam = 0; // The default index
@@ -133,32 +130,34 @@ export default function TeamDisplay() {
 
 
             </title> 
-            <TeamsWrap>
-					{displayTeam.length !== 0
-					? displayTeam.map(team => (
-						<div key={team.name} >
-							{/* {team.team_image !== null ? <TeamImageContainer><TeamImage src={team.team_image} /></TeamImageContainer> : null} */}
-							<Section>
-								<div className = 'teamTitle' >{team.name}</div>
-								<Description>
-									{/* 
-									<Image src={team.preview_image}/>
-									description
-									*/}
-									{/* <Image src={team.preview_image}/> */}
-									<Text>{team.description}</Text>
-								</Description>
-								<Content>
-									{team.members.map(member => (
-										<Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} />
-									))}
-								</Content>
-							</Section>
-						</div>
-					))
-				: <Loading><div className="spinner" /></Loading>
-				}
-            </TeamsWrap>
+            <div className='section'>
+                <div className='TeamsWrap'>
+                        {displayTeam.length !== 0
+                        ? displayTeam.map(team => (
+                            <div key={team.name} >
+                                {/* {team.team_image !== null ? <TeamImageContainer><TeamImage src={team.team_image} /></TeamImageContainer> : null} */}
+                                <Section>
+                                    <div className = 'teamTitle' >{team.name}</div>
+                                    <Description>
+                                        {/* 
+                                        <Image src={team.preview_image}/>
+                                        description
+                                    */}
+                                        {/* <Image src={team.preview_image}/> */}
+                                        <Text>{team.description}</Text>
+                                    </Description>
+                                    <Content>
+                                        {team.members.map(member => (
+                                            <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} />
+                                            ))}
+                                    </Content>
+                                </Section>
+                            </div>
+                        ))
+                        : <Loading><div className="spinner" /></Loading>
+                    }
+                </div>
+            </div>
         </>
 
 
