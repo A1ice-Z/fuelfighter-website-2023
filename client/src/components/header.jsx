@@ -10,6 +10,8 @@ export default function Header() {
         setMenuView(!menuView)
     }
 
+    //TODO: fade in animation for the menu from top
+
     return(
         <div className="fixed-top">
             <div className="header">

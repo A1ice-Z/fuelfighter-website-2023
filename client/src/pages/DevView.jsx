@@ -15,8 +15,8 @@ export default function Dev() {
                 </li>
                 <li>
                     <h5>checking bootstrap:</h5>
-                    <button type="button" class="btn btn-primary">Primary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" className="btn btn-primary">Primary</button>
+                    <button type="button" className="btn btn-secondary">Secondary</button>
                 </li>
                 <li>
                     <h5>Dimensions:</h5>

@@ -8,6 +8,7 @@
     position: fixed;
     color: var(--white);
     margin-bottom: 4rem;
+    font-family: "Roboto-Light";
 }
 
 .header ul {
@@ -53,6 +54,7 @@
 .headMenu #menuBar{
     grid-column: content;
     align-items: center;
+    font-family: "Roboto-Light";
 }
 
 .headMenu #menuBar ul {
@@ -77,3 +79,8 @@
     align-self: center;
     color: var(--white);
 }
+.headMenu a:link { text-decoration: none;}
+.headMenu a:visited { text-decoration: none; }
+.headMenu a:hover { opacity: 0.2; }
+.headMenu a:active { text-decoration: none; }
+
