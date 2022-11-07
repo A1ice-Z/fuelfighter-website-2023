@@ -31,10 +31,12 @@ function App() {
             <Route path='/team'     element={ <Team/> }/>
             <Route path='/sponsors' element={ <Sponsors/> }/>
             {/* <Route path='/admin'    element={ <Admin /> } /> */}
+            
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Router>
       </div>
-      
+
       <Footer />
     </div>
   );
