@@ -3,8 +3,9 @@ import styled from 'styled-components';
 // import { SocialIcon } from 'react-social-icons';
 import SocialMediaBar from './SocialMediaBar';
 import defaultImage from '../../assets/icon/worker_small.png';
+// import '../../styles/componentStyles/Team/MemberProfile.css'
 
-console.log("5")
+
 
 const Card = styled.div`
 	background-color: #fafafa;
