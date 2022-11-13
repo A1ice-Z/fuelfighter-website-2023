@@ -1,12 +1,12 @@
 import React from "react"
-//import '../../styles/templatesStyles/header.css'
+import '../styles/componentStyles/footer.css'
 
 import logo from "../assets/logo/logo_blue.png";
 
 
 export default function Footer() {
     return(
-        <footer className="container">
+        <footer className="footer">
             <div className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <p className="col-md-4 mb-0 text-muted">&copy; 2023 Fuel Fighter NTNU</p>
 

@@ -1,12 +1,68 @@
 .homeContainer{
     display: grid;
-    grid-template-rows: [first] 100vh [about] 100vh;
+    grid-template-rows: [first] 90vh [about] 190vh;
     grid-template-columns: [all] 100%;
 }
 
 .homeContainer .homeFirst{
+    grid-row: first;
+    margin: 0;
+    height: 100%;
+}
+
+.homeContainer .homeFirst video{
+    width: 100%;
+}
+
+.homeContainer .homeAbout{
+    grid-row: about;
     grid-column: all;
+
+    background-color: var(--blue);
+    display: grid;
+    grid-template-columns: [white] 5% [element] 90% [white] 5%;
+    grid-row-gap: 4%;
+    padding: 4% 0;
+}
+.homeContainer .homeAbout #homeSection{
+    border-radius: 40px;
+    grid-column: element;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: [text] 60% [img] 40%;
+}
+
+.homeContainer .homeAbout #homeSectionInverted{
+    border-radius: 40px;
+    grid-column: element;
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: [text] 40% [img] 60%;
+}
+
+.homeContainer .homeAbout .testoHomeSections{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.homeContainer .homeAbout .valuesImgContainer{
+    border-radius: inherit;
+}
+
+#imgHomeAbout {
+    border-end-end-radius: inherit;
+    border-start-end-radius: inherit;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#imgHomeAboutInv{
+    border-end-start-radius: inherit;
+    border-start-start-radius: inherit;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
