@@ -8,15 +8,15 @@ import '../styles/pageStyles/Team.css'
 
 export default function Team() {
     return(
-        <main>
-            <section id="center" >
+        <div className="teamMain">
+            <div className="teamSection" id="center" >
                 <TeamTitle/>
-            </section>
-            <section>
+            </div>
+            <div className="teamSection">
                 {/* <SideTopBar/> */}
                 <TeamDisplay/>
-            </section>
-        </main>
+            </div>
+        </div>
 
 
         

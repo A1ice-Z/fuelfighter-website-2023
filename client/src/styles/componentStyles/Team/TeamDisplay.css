@@ -6,21 +6,22 @@
 	font-size: 2.3em;
 }
 
-.section {
+.teamSection {
     width: 100%;
     background-color: var(--blue);
     display: block;
     position: static;
+    padding: 2.5%;
 
 }
 
 .TeamsWrap {
 min-height: 500px;
-background-color: #F6F8FC;
-margin-left: 2.5%;
-margin-right: 2.5%;
-margin-top: 2.5%;
+background-color: var(--white);
+
 height: auto;
+min-height: 500px;
+
 
 }
 
@@ -28,20 +29,24 @@ height: auto;
     background-color: var(--white);
     border-radius: 10px;
     text-align: center;
-    padding-top: 0;
-    padding-bottom: 0px;
-    width: 70%;
+    width: 80%;
     float: right;
     display: fixed;
-    height: 50%;    
+    height: 50%;   
+    /* height: auto;  */
     margin-right: 2.5%;
+
+    font-size: 120%;
     font-weight:600;
-    color: var(--black);
-    word-spacing: 10px;
-    overflow:hidden;
-    margin-top: 1%;
-    margin-bottom: 0%;
+
+
+    word-spacing: 100px;
+    overflow: hidden;
+    /* margin-top: 1%;
+    margin-bottom: 1%; */
     margin-left: auto;
+
+    padding: 1% 1%;
 
     
 }
@@ -50,27 +55,70 @@ height: auto;
     background-color: var(--white);
     border-radius: 10px;
     text-align: center;
-    padding-top: 0;
-    padding-bottom: 0px;
     margin-right: 50px;
-    width: 20%;
+    width: 10%;
     float: left;
-    display: fixed;
-    min-height: 100%;
+    /* display: fixed; */
+    height: 200px;
     
     margin-left: 2.5%;
-
+    /* display: block; */
     font-weight:600;
+    font-size: 130%;
     color: var(--black);
-    word-spacing: 10px;
+    padding: 1% 0;
+    display:grid;
     
-
-
-    
-}
+}  
 
 .teamYearContainer {
     height: 15%;
     overflow: hidden;
     display: flex;
+    padding: 0.25%;
+}
+
+.yearBox a {
+    width: 50%;
+    margin: auto;
+    padding: 50px, 0;
+    align-self: center;
+
+
+
+}
+
+.teamBox a {
+    padding: 50px, 0;
+    color: var(--black);
+
+}
+
+.teamBox a:hover {
+    color: var(--blue) !important;
+    cursor: pointer;
+}
+
+.yearBox a:hover {
+    color: var(--blue) !important;
+    cursor: pointer;
+}
+
+
+
+.yearTitle {
+    text-align: center;
+    padding-top: 4%;
+}
+
+#center1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    vertical-align: middle;
+    min-height: auto;
+    
+
+/* Remove this */
 }
