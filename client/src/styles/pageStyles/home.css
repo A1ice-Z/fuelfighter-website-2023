@@ -1,10 +1,23 @@
 .homeContainer{
     display: grid;
-    grid-template-rows: [first] 100vh [about] 100vh;
+    grid-template-rows: [first] 90vh [about] 90vh;
     grid-template-columns: [all] 100%;
 }
 
 .homeContainer .homeFirst{
+    grid-row: first;
+    margin: 0;
+    height: 100%;
+}
+
+.homeContainer .homeFirst video{
+    width: 100%;
+}
+
+.homeSecond{
+    grid-row: about;
+    padding-top: 4rem;
+    
     grid-column: all;
     display: flex;
     align-items: center;

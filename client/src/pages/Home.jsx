@@ -1,13 +1,14 @@
 import React from "react"
 import "../styles/pageStyles/home.css"
+import video from '../assets/video/mainPageVideo.mp4';
 
 export default function Home() {
     return(
         <div className="homeContainer">
             <div className="homeFirst">
-                <h1>Home</h1>
+                <video src={video} controls={false} playing={true} autoPlay muted loop></video>                
             </div>
-            <div>
+            <div className="homeSecond">
                 About
             </div>
         </div>
