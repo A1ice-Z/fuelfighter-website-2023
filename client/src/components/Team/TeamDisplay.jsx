@@ -103,6 +103,7 @@ export default function TeamDisplay() {
     const onClickChangeYear = (year) => {
         setDisplayTeam([])
         setSelectedYear(year)
+        setSelectedTeam(0)
 
     }
 
@@ -124,12 +125,9 @@ export default function TeamDisplay() {
             </title> 
             <div className='teamYearContainer'>
                 <div className='yearBox'>
-                    <a  onClick={() => onClickChangeYear(2022)}> 2022 </a> 
-                    <a  onClick={() => onClickChangeYear(2021)}> 2021 </a> 
-                    <a  onClick={() => onClickChangeYear(2020)}> 2020 </a> 
-
-
-
+                        <a  onClick={() => onClickChangeYear(2022)}> 2022 </a> 
+                        <a  onClick={() => onClickChangeYear(2021)}> 2021 </a> 
+                        <a  onClick={() => onClickChangeYear(2020)}> 2020 </a> 
                 </div>
 
                 <div className='teamBox'>
@@ -143,8 +141,11 @@ export default function TeamDisplay() {
                             <a onClick={() => onClickChangeTeam(7)}> Marketing</a>
                 </div>
             </div>
-            <div className='section'>
+            <div className='teamSection'>
+
                 <div className='TeamsWrap'>
+                    <div className='yearTitle'> The {selectedYear} team!</div>
+
                         {displayTeam.length !== 0
                         ? displayTeam.map(team => (
                             <div key={team.name} >

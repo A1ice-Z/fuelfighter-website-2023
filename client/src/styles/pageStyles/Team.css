@@ -1,15 +1,10 @@
-main {
+.teamMain {
     height: 100%;
     width: 100%;
 
 }
 
-body {
-    height: 100%;
-    width: 100%;
-}
-
-section {
+.teamSection {
     width: 100%;
     background-color: grey;
     display: block;
@@ -17,14 +12,14 @@ section {
 
 }
 
-section:nth-of-type(1) {
+.teamSection:nth-of-type(1) {
     height: 90vh;
     background-color: rgb(167, 167, 167);
 
 }
 
-section:nth-of-type(2) {
-    height: 100vh;
+.teamSection:nth-of-type(2) {
+    height: auto;
     background-color: var(--blue);
 
 }
