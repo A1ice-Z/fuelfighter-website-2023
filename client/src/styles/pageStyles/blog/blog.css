@@ -1,0 +1,33 @@
+.blogContainer{
+    display: grid;
+    grid-template-rows: [preview] 80vh [latest] 80vh [articles] auto-fit;
+    grid-template-columns: 1fr;
+}
+
+.blogContainer #topStories{
+    background-color: red;
+}
+
+.blogContainer .latestPosts{
+    background-color: white;
+    padding: 3%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+    height: fit-content;
+}
+
+.blogContainer .subLatest{
+    display: grid;
+    grid-template-columns: [a1] 1fr [a2] 1fr [a3] 1fr [b] 1fr;
+    grid-template-rows: [unique] 100%;
+    column-gap: 5%;
+}
+
+.blogContainer .article{
+    background-color: fuchsia;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+}

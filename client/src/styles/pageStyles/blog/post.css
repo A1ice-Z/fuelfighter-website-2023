@@ -1,0 +1,29 @@
+#containerPost{
+    height: fit-content;
+    background-color: #e3d7c3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    flex-direction: column;
+}
+
+#containerPost h1{
+    font-size: 2vw;
+    font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
+}
+
+#containerPost p{
+    font-size: 1.2vw;
+}
+
+#containerPost .postTxt{
+    text-align: justify;
+    padding: 0 10%
+}
+
+#containerPost .datePost{
+    font-family: Roboto-Light;
+    font-size: 1vw;
+    margin-left: auto;
+}

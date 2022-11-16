@@ -4,6 +4,7 @@
   --white: #ffffff;
   --green: #9BCBA7;
   font-size: 1.4vw;
+  --fontSize: 1.4vw;
   --screen-height: 100vh;
   --screen-width:  100vw;
 }
