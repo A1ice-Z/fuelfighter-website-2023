@@ -23,3 +23,10 @@ body {
 .aPage{
   margin-top: 4rem;
 }
+
+#centeredDiv {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,16 +1,17 @@
 #containerPost{
     height: 100%;
-    background-color: #e3d7c3;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 5vh;
+    grid-template-rows: auto;
     flex-direction: column;
+    
 }
 
 #containerPost h1{
     font-size: 2vw;
     font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 #containerPost p{

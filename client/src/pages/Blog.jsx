@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 import { post as Post } from './Blog/articlePost';
-import { ArticlesRow } from './Blog/articlesRow';
 
 import '../styles/pageStyles/blog/blog.css'
 
@@ -12,7 +11,7 @@ export default function Blog() {
 	const [endOfTable, setEndOfTable] = useState(false)
 	const [posts, setPosts] = useState([])
 	const [loadCounter, setLoadCounter] = useState(0)
-	const loadAmout = 4
+	const loadAmout = 11
 	
     const loadMore = () => {
 		setLoading(true)
@@ -43,22 +42,26 @@ export default function Blog() {
 	const idLatest = [70, 69, 64];
 
 	let topPosts = posts?.filter((el) => idLatest.includes(el.id));
+	let otherPosts = posts?.filter((el) => !idLatest.includes(el.id));
 	
     return(
         <section className='blogContainer'>
-			<div id='topStories' style={{display:"flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
-				<h1>Top Stories</h1>
+			<div className='topStories' id="centeredDiv">
+				<h1>Welcome to Fuel Fighter Blog</h1>
+				<p>We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.</p>
 				</div>
 			<div className='latestPosts'>
 				<h1>Latest News</h1>
-				<ArticlesRow articles= {topPosts} />
-				<div>Read these</div>
+				<div className='articlesRow'>
+					{topPosts?.map((el, idx)=> <Post props={el}/>)}
+					<div>Read these</div>
+				</div>
 			</div>
 			<div className='articlesCont'>
 				<h1>Articles</h1>
 				<div className='articles'>
 					{
-						posts?.map((el, idx) =>
+						otherPosts?.map((el, idx) =>
 							<div key={idx}>
 								<Post props={el} />
 							</div>
@@ -66,7 +69,7 @@ export default function Blog() {
 					}
 				</div>
 			</div>
-			<button className="btn btn-primary" id="moreArts" onClick={loadMore} disabled={loading}>Load more</button>
+			<button className="btn btn-primary" onClick={loadMore} disabled={loading}>Load more</button>
         </section>
     )
 }
