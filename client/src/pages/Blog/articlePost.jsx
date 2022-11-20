@@ -13,7 +13,7 @@ export const post = ({props}) => {
 
     return (
         <div id="containerPost">
-            <img className="" width="100%" height="170" src={props.image}/>
+            <img className="imagePost" width="100%" height="170" src={props.image}/>
             <h1>{props.title}</h1>
             <div className="postTxt">
                 <p>{props.author}</p>

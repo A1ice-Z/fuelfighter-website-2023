@@ -1,11 +1,15 @@
 .blogContainer{
-    display: grid;
-    grid-template-rows: [preview] 80vh [latest] 80vh [articles] auto-fit;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .blogContainer #topStories{
     background-color: red;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 
 .blogContainer .latestPosts{
@@ -18,16 +22,29 @@
     height: fit-content;
 }
 
-.blogContainer .subLatest{
+.articlesRow {
     display: grid;
     grid-template-columns: [a1] 1fr [a2] 1fr [a3] 1fr [b] 1fr;
     grid-template-rows: [unique] 100%;
     column-gap: 5%;
 }
 
-.blogContainer .article{
-    background-color: fuchsia;
+.blogContainer .articlesCont{
     display: flex;
-    flex-wrap: wrap;
-    height: fit-content;
+    text-align: center;
+    padding: 3%;
+    flex-direction: column;
+    height: 100%;
+}
+
+.blogContainer .articles{
+    display: grid;
+    grid-template-columns: [a1] 1fr [a2] 1fr [a3] 1fr [b] 1fr;
+    column-gap: 5%;
+    row-gap: 4vh;
+}
+
+.blogContainer #moreArts{
+    font-family: Roboto-Light;
+    font-size: 1vw;
 }

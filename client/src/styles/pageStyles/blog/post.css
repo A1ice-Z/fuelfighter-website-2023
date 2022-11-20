@@ -1,10 +1,10 @@
 #containerPost{
-    height: fit-content;
+    height: 100%;
     background-color: #e3d7c3;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 5vh;
     flex-direction: column;
 }
 
@@ -26,4 +26,8 @@
     font-family: Roboto-Light;
     font-size: 1vw;
     margin-left: auto;
+}
+
+.imagePost{
+    object-fit: cover;
 }
