@@ -1,3 +1,5 @@
+@import url();
+
 .header {
     background-color: var(--blue);
     width: 100%;
@@ -9,6 +11,12 @@
     color: var(--white);
     margin-bottom: 4rem;
     font-family: "Roboto-Light";
+}
+
+.header.shadow {
+    -webkit-box-shadow: 0 3px 5px #bbc0ff;
+    -moz-box-shadow: 0 3px 5px #bbc0ff;
+    box-shadow: 0 3px 5px #bbc0ff;
 }
 
 .header ul {
