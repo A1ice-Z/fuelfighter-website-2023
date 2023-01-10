@@ -57,3 +57,28 @@
     font-family: Roboto-Light;
     font-size: 2vw;
 }
+
+.articlesRow .suggestions{
+    background-color: var(--blue);
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.articlesRow .suggestions li {
+    list-style-type: none;
+    margin: 3%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100%;
+    align-items: center;
+}
+
+
+.articlesRow .suggestions a {
+    margin: 0% 5%;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+}

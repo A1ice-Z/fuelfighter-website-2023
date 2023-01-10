@@ -11,8 +11,27 @@
 }
 
 .homeContainer .homeFirst video{
+    object-fit: cover;
     width: 100%;
+    height: 100%;
+    z-index: -1;
 }
+
+.homeContainer .homeFirst .homeTitle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 2;
+    font-family: RobotoBlack;
+    text-shadow: 2px 2px 4px #fff;
+    color: #fff;
+}
+
 
 .homeContainer .homeAbout{
     grid-row: about;

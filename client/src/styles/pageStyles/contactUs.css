@@ -12,9 +12,9 @@ Contact page
 
 .contactUsContainer h1, .contactUsContainer p {
     color: var(--white);
-    background-color: var(--blue);
     margin: 0;
     font-family: 'Roboto-Light';
+    /* filter: box-shadow(1); */
 }
 
 .cu_subcontainer{

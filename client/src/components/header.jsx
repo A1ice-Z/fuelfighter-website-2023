@@ -9,8 +9,17 @@ export default function Header() {
     const toggleDisplay = () => {
         setMenuView(!menuView)
     }
-
-    //TODO: fade in animation for the menu from top
+    
+    // var header = $('.header');
+    // $(window).scroll(function(e){
+    //     if(header.offset().top !== 0){
+    //         if(!header.hasClass('shadow')){
+    //             header.addClass('shadow');
+    //         }
+    //     }else{
+    //         header.removeClass('shadow');
+    //     }
+    // })
 
     return(
         <div className="fixed-top">
