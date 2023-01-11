@@ -34,13 +34,13 @@ const Text = styled.div`
 	vertical-align: top;
 `;
 
-const Image = styled.img`
-	display: block;
-	width: 350px;
-	height: 300px;
-	z-index: 2;
-	object-fit: cover;
-`;
+// const Image = styled.img`
+// 	display: block;
+// 	width: 350px;
+// 	height: 300px;
+// 	z-index: 2;
+// 	object-fit: cover;
+// `;
 
 const Section = styled.div`
 	display: flex;
@@ -79,8 +79,7 @@ export default function TeamDisplay() {
     useEffect(() => {
             console.log("2")
 
-            
-            if (displayTeam.length == 0) {
+            if (displayTeam.length === 0) {
                 var showYear = selectedYear;
                 var showTeam = selectedTeam;
 

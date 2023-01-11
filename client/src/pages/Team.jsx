@@ -1,7 +1,7 @@
 import React from "react"
-import TeamDisplay from "../components/Team/TeamDisplay.jsx"
-import TeamTitle from '../components/Team/TeamTitle.jsx'
-import SideTopBar from '../components/Team/SideTopBar.jsx'
+import TeamDisplay from "./Team/TeamDisplay.jsx"
+import TeamTitle from './Team/TeamTitle.jsx'
+// import SideTopBar from '../components/Team/SideTopBar.jsx'
 
 import '../styles/pageStyles/Team.css'
 
