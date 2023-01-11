@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 // import { SocialIcon } from 'react-social-icons';
 import SocialMediaBar from './SocialMediaBar';
@@ -50,13 +50,13 @@ const Studie = styled.div`
 	font-size: 12px;
 `;
 
-const Mail = styled.div`
-	// color: rgba(0,0,0,0.7);
-	font-weight: normal;
-	font-size: 12px;
-	padding: 3px 0;
-	color: rgba(0,0,0,0.7);
-`;
+// const Mail = styled.div`
+// 	// color: rgba(0,0,0,0.7);
+// 	font-weight: normal;
+// 	font-size: 12px;
+// 	padding: 3px 0;
+// 	color: rgba(0,0,0,0.7);
+// `;
 
 const Line = styled.div`
 	height: 1px;
@@ -76,9 +76,9 @@ const Position = styled.div`
 
 
 function Profile({mail, image, name, studie, position, linkedin}) {
-	const [mailVisible, setMailVisible] = useState(false)
+	// const [mailVisible, setMailVisible] = useState(false)
 
-	const makeMailVisible = () => setMailVisible(true);
+	// const makeMailVisible = () => setMailVisible(true);
 	const data = {'email' : mail, 'linkedin' : linkedin }
 	return (
 			<Card>
