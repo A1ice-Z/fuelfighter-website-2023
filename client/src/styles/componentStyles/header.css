@@ -1,12 +1,15 @@
-.header {
+#headerBackground{
     background-color: var(--blue);
+    color: var(--white);
+}
+
+.header {
     width: 100%;
     display: grid;
-    grid-template-columns: [white]0.7fr [logo] 1fr [title] 1fr [] 1.7fr [pages] 6fr [buttons] 2.5fr;
+    grid-template-columns: [white]0.7fr [lbogo] 1fr [title] 1fr [] 1.7fr [pages] 6fr [buttons] 2.5fr;
     grid-template-rows: [nav] 1fr;
     height: 4rem;
     position: fixed;
-    color: var(--white);
     margin-bottom: 4rem;
     font-family: "Roboto-Light";
 }
@@ -28,13 +31,12 @@
 
 .header a {
     align-self: center;
-    color: var(--white);
 }
 
-.header a:link { text-decoration: none; }
-.header a:visited { text-decoration: none; }
-.header a:hover { text-decoration: none; }
-.header a:active { text-decoration: none; }
+.header a:link { text-decoration: none; color: inherit; }
+.header a:visited { text-decoration: none; color: inherit; }
+.header a:hover { text-decoration: none; color: inherit; }
+.header a:active { text-decoration: none; color: inherit; }
 
 .header img{
     align-self: center;
@@ -42,16 +44,19 @@
 }
 
 .header #menu {
-    color: var(--white);
+    color: inherit;
     align-self: center;
+}
+
+#menuDropdown {
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .headMenu{
     display: grid;
     grid-template-columns: [blank1] 1fr [content] 3fr [blank2] 1fr;
     grid-template-rows: 100%;
-    background-color: var(--blue);
-    color: var(--white);
     margin-top: 4rem;
     height: 4rem;
     opacity: 0.95;
@@ -83,7 +88,7 @@
 
 .headMenu a {
     align-self: center;
-    color: var(--white);
+    color: inherit;
 }
 .headMenu a:link { text-decoration: none;}
 .headMenu a:visited { text-decoration: none; }

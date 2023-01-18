@@ -75,45 +75,24 @@ export default function TeamDisplay() {
     const [displayTeam, setDisplayTeam] = useState([]);
 
 
-    
-    useEffect(() => {
-            console.log("2")
-
-            if (displayTeam.length === 0) {
-                var showYear = selectedYear;
-                var showTeam = selectedTeam;
-
-                const loadingData = async (showYear, showTeam) => {
-                    const data = await teamService.team(showYear, showTeam);
-                
-                setDisplayTeam(displayTeam => [data]);
-                }
-
-                loadingData(showYear, showTeam); // Put in if statement to prevent it from displaying the wrong team. 
-            
-            
-
-                console.log('displayTeam')
-
-            }
-        }, [displayTeam])
-
-
     const onClickChangeYear = (year) => {
-        setDisplayTeam([])
-        setSelectedYear(year)
-        setSelectedTeam(0)
-
+        setSelectedYear(year)    
     }
-
-    const onClickChangeTeam = (team) => {
-        setDisplayTeam([])
-        setSelectedTeam(team)
-
-    }
-
-
     
+    const onClickChangeTeam = (team) => {
+        setSelectedTeam(team)    
+    }
+
+    useEffect( () => {
+        var showYear = selectedYear;
+        var showTeam = selectedTeam;
+
+        const loadingData = async (showYear, showTeam) => {
+            const data = await teamService.team(showYear, showTeam);
+            setDisplayTeam([data])
+        }
+        loadingData(showYear, showTeam);
+    }, [selectedTeam, selectedYear])
     
     return(
         <>

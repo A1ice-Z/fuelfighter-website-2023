@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
-import { post, post as Post } from './Blog/articlePost';
-
+import Post from './Blog/articlePost'
+import blogServices from '../_services/blog.services'
 import '../styles/pageStyles/blog/blog.css'
 
-import blogServices from '../_services/blog.services'
-
 export default function Blog() {
-    const [loading, setLoading] = useState(false)
+    const navigate = useNavigate();
+	const [loading, setLoading] = useState(false)
 	// const [endOfTable, setEndOfTable] = useState(false)
 	const [posts, setPosts] = useState([])
 	const [loadCounter, setLoadCounter] = useState(0)
@@ -44,6 +44,14 @@ export default function Blog() {
 	let topPosts = posts?.filter((el) => idLatest.includes(el.id));
 	let otherPosts = posts?.filter((el) => !idLatest.includes(el.id));
 
+	const goInside = (id) => {
+        navigate(`/blog/${id}`, {
+            state: {
+                id: id
+            }
+        })
+    }
+
     return(
         <section className='blogContainer'>
 			<div className='topStories' id="centeredDiv">
@@ -56,10 +64,10 @@ export default function Blog() {
 					{topPosts?.map((el, idx)=> <Post props={el}/>)}
 					<div className='suggestions'>
 						<h5 style={    {'fontFamily': 'Roboto-Black', 'marginTop': '7%'}}>Our suggestions:</h5>
-							<li><i class="bi bi-1-square-fill"></i><a>Design contest</a></li>
-							<li><i class="bi bi-2-square-fill"></i><a>What a beatiful week</a></li>
-							<li><i class="bi bi-3-square-fill"></i><a>We did it!</a></li>
-							<li><i class="bi bi-4-square-fill"></i><a>Unexpected problems</a></li>
+							<li><i class="bi bi-1-square-fill"></i><div onClick={() => goInside(56)}>Design contest</div></li>
+							<li><i class="bi bi-2-square-fill"></i><div onClick={() => goInside(32)}>What a beatiful week</div></li>
+							<li><i class="bi bi-3-square-fill"></i><div onClick={() => goInside(31)}>We did it!</div></li>
+							<li><i class="bi bi-4-square-fill"></i><div onClick={() => goInside(28)}>Unexpected problems</div></li>
 					</div>
 				</div>
 			</div>
@@ -75,7 +83,7 @@ export default function Blog() {
 					}
 				</div>
 			</div>
-			<button className="btn btn-primary" style={{'backgroundColor':'var(--blue)','borderColor':'var(--blue)' }}onClick={loadMore} disabled={loading}>Load more</button>
+			<button className="btn btn-primary" style={{'backgroundColor':'var(--blue)','borderColor':'var(--blue)' }} onClick={loadMore} disabled={loading}>Load more</button>
         </section>
     )
 }

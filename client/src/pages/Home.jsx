@@ -3,7 +3,7 @@ import React from "react"
 import "../styles/pageStyles/home/home.css"
 // import BlogPreview from "./home/blogPreview";
 import video from '../assets/video/mainPageVideo.mp4';
-import imgValues from '../assets/home/value1.jpg'
+import imgValues from '../assets/pages/home/value1.jpg'
 
 export default function Home() {
     return(
