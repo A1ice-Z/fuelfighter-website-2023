@@ -31,3 +31,62 @@ body {
 }
 
 /* fontFamily = [Roboto-Light, Roboto-Medium, Roboto-Black, ...]*/
+
+/*******
+* Grid *
+*******/
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 32px 0;
+  text-align: center;
+  width: auto;
+}
+
+.grid > * {
+  margin: 24px;
+}
+
+.grid .grid {
+  padding: 0;
+}
+
+.grid .whole {
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  .grid .half {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(50% - 48px);
+  }
+
+  .grid .half h2 {
+      text-align: left;
+  }
+
+  .grid .third {
+      width: calc(33.33% - 48px);
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 16px;
+  }
+
+  .grid .third:last-child {
+      margin-left: 16px;
+      margin-right: 0;
+  }
+
+  .grid .two-thirds {
+      display: inline-block;
+      vertical-align: top;
+      width: calc(66% - 48px);
+  }
+
+  .grid *:only-child p {
+      text-align: center;
+  }
+}

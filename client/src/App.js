@@ -27,11 +27,11 @@ const HandMadeRoute = ({Param}) => {
     <div className='pageContainer'>
       <DarkModeProvider>
         <Header path={location.pathname} />
+        <div className='aPage'>
+          <Param />
+        </div>
+        <Footer />
       </DarkModeProvider>
-      <div className='aPage'>
-        <Param />
-      </div>
-      <Footer />
     </div>
   )
 }

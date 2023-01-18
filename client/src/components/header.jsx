@@ -52,7 +52,7 @@ export default function Header({path}) {
                 </ul>
 
                 <ul className="nav col-md-0 justify-content-center text-end">
-                    <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook">
+                    <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-facebook"></i>
                     </a></li>
                     <li><a href="https://www.instagram.com/fuelfighter_ntnu/" title="instagram" target="_blank" rel="noopener noreferrer">
