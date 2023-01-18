@@ -1,32 +1,43 @@
-import React, { useState } from "react"
+import React, { useState, useContext, useEffect} from "react"
 import '../styles/componentStyles/header.css'
 
-import logonav from '../assets/logo/logo_white.png'
+import logoWhite from '../assets/logo/logo_white.png'
+import logoBlue from '../assets/logo/logo_blue.png'
 
-export default function Header() {
+import { DarkModeContext } from "./DarkModeContext"
+
+export default function Header({path}) {
     const [menuView, setMenuView] = useState(false)
-    
+    const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+
     const toggleDisplay = () => {
         setMenuView(!menuView)
     }
     
-    // var header = $('.header');
-    // $(window).scroll(function(e){
-    //     if(header.offset().top !== 0){
-    //         if(!header.hasClass('shadow')){
-    //             header.addClass('shadow');
-    //         }
-    //     }else{
-    //         header.removeClass('shadow');
-    //     }
-    // })
+    const blue = getComputedStyle(document.documentElement).getPropertyValue('--blue');
+    const white = getComputedStyle(document.documentElement).getPropertyValue('--white');
+    useEffect(()=>{
+        let head = document.getElementById("headerBackground");
+        let imag = document.getElementById("logoimg"); 
+        let a = darkMode ? blue : white;
+        let b = darkMode ? white : blue;
+        head.style.backgroundColor = a;
+        head.style.color = b;
+        imag.src = !darkMode ? logoBlue : logoWhite;
+
+        if (menuView){
+            var menu = document.getElementById("menuDropdown");
+            menu.style.backgroundColor = a;
+            menu.style.color = b;
+        }
+    })
 
     return(
         <div className="fixed-top">
-            <div className="header">
+            <div className="header" id="headerBackground">
                 <div></div>
                 <a href="/" className="d-flex align-items-center justify-content-center col-md-1 mb-2 mb-md-0 text-decoration-none">
-                    <img id="logoimg" src={logonav}/>
+                    <img id="logoimg" src={logoWhite}/>
                 </a>
                 <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
                 
@@ -34,11 +45,14 @@ export default function Header() {
                     <i className="bi bi-list" id="menu"></i>
                 </div>
                 
-                <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <ul className="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0">
+                    <li onClick={() => toggleDarkMode()}>
+                        {darkMode ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}
+                    </li>
                 </ul>
 
                 <ul className="nav col-md-0 justify-content-center text-end">
-                    <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook">
+                    <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-facebook"></i>
                     </a></li>
                     <li><a href="https://www.instagram.com/fuelfighter_ntnu/" title="instagram" target="_blank" rel="noopener noreferrer">
@@ -53,7 +67,7 @@ export default function Header() {
                 </ul>
             </div>
             {menuView ?
-                <div className="headMenu">
+                <div className="headMenu" id="menuDropdown">
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="menuBar">
                         <li><a href="/" className="">Home</a></li>
                         <li><a href="/blog" className="">Blog</a></li>

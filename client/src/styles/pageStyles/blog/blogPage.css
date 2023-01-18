@@ -1,0 +1,71 @@
+.spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #333;
+    animation: spin .5s linear infinite;
+    -webkit-animation: spin .5s linear infinite;
+}
+
+#articlePageContainer{
+    width: fit-content;
+}
+
+#articleSpanner{
+    width: 100%;
+    height: 35vh;
+    background-color: var(--blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#arrowBack{
+    position: relative;
+    left: 5%;
+    width: fit-content;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+#articleContainer{
+    background-color: white;
+    position: relative;
+    top: -17vh;
+    padding-top: 3%;
+    padding-inline: 2%;
+    margin-inline: 10%;
+    padding-inline: 7%
+
+}
+#articleTitle{
+    font-family: 'Roboto-Black';
+}
+
+#dateAuthor{
+    margin-block: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* #artAuthor{
+    position: relative;
+    left: 5vh;
+} */
+
+#articleImg{
+    width:100%;
+}
+#descriptionArticle{
+    font-family: 'Roboto-Bold';
+}
+
+#descriptionArticle, #derivedHTML{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
