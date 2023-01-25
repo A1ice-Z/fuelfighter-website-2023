@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import Post from './Blog/articlePost'
 import blogServices from '../_services/blog.services'
 import '../styles/pageStyles/blog/blog.css'
+import { DarkModeContext, blue, white } from "../components/DarkModeContext";
 
 export default function Blog() {
     const navigate = useNavigate();
@@ -11,7 +12,21 @@ export default function Blog() {
 	// const [endOfTable, setEndOfTable] = useState(false)
 	const [posts, setPosts] = useState([])
 	const [loadCounter, setLoadCounter] = useState(0)
-	const loadAmout = 11
+	const loadAmout = 11;
+
+    const { darkMode } = useContext(DarkModeContext);
+	useEffect(()=>{
+		let title = document.getElementById("titleBlog");
+		let subtitle = document.getElementById("subtitleBlog");
+		let a = darkMode ? blue : white;
+		let b = darkMode ? white : blue;
+
+        title.style.color= b;
+		subtitle.style.color =b;
+        title.style.backgroundColor = a;
+		subtitle.style.backgroundColor =a;
+	}, [darkMode])
+	
 	
     const loadMore = () => {
 		setLoading(true)
@@ -55,9 +70,9 @@ export default function Blog() {
     return(
         <section className='blogContainer'>
 			<div className='topStories' id="centeredDiv">
-				<h1>Welcome to Fuel Fighter Blog</h1>
-				<p>We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.</p>
-				</div>
+				<h1 id="titleBlog">Welcome to Fuel Fighter Blog</h1>
+				<p id="subtitleBlog">We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.</p>
+			</div>
 			<div className='latestPosts'>
 				<h1 className='titlePosts'>Latest News</h1>
 				<div className='articlesRow'>

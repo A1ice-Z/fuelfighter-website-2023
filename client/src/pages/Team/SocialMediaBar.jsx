@@ -3,7 +3,7 @@ import { SiLinkedin  } from 'react-icons/si'
 import { MdMailOutline } from 'react-icons/md'
 import 'react-dropdown/style.css';
 // import styled from 'styled-components';
-import '../../styles/componentStyles/Team/SocialMediaBar.css'
+import '../../styles/pageStyles/Team/SocialMediaBar.css'
 
 function SocialMediaBar(props) {
     

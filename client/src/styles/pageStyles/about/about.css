@@ -1,0 +1,121 @@
+#aboutUs{
+    display: grid;
+    grid-template-columns: [one] 50%, [two] 50%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "init init"
+    "presA presB"
+    "impact impact"
+    "presC presD";
+}
+
+.fullCentered{
+    color: var(--white);
+    width: 100%;
+    grid-area: init;
+
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#titleAboutUs{
+    height: 40vh;
+    width: 100%;
+    background-image: url('../../../assets/pages/about/aboutInit.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto-Bold;
+}
+#subtitleAboutUs{
+    height: fit-content;
+    padding-inline: 15%;
+    background-color: var(--green);
+    text-align: center;
+}
+#subtitleAboutUs h2{
+    font-family: Roboto-Medium;
+}
+#subtitleAboutUs p{
+    text-align: justify;
+}
+
+#secondRowText{
+    grid-area: presA;
+}
+.rowTextHalf{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 20vh;
+    padding-block: 15vh;
+    width: 100%;
+    height: 100%;
+    background-color: var(--ghostBlue);
+    
+}
+#secondRowText p{
+    margin: 0;
+}
+
+#secondRowImg{
+    grid-area: presB;
+    /* background-image: url('../../../assets/pages/about/aboutInit.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%; */
+    width: 100%;
+    height: 100%;
+}
+#secondRowImg img{
+    max-width: 100%;
+    min-height: 100%;
+}
+
+#aboutImpact{
+    grid-area: impact;
+    padding-block: 10vh;
+    text-align: center;
+}
+#aboutImpact h2{
+    font-family: Roboto-Medium;
+}
+
+#aboutImpact #theseImpacts{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.valueCard{
+    width: 20vw;
+    min-height: 50vh; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.valueCard img{
+    max-width: 10vh;
+}
+
+#fourthRowImg{
+    grid-area: presC;
+}
+#fourthRowText{
+    grid-area: presD;
+
+}
+#fourthRowImg img{
+    max-width: 100%;
+    min-height: 100%;
+}
