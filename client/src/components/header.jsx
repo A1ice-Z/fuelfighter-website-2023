@@ -4,7 +4,7 @@ import '../styles/componentStyles/header.css'
 import logoWhite from '../assets/logo/logo_white.png'
 import logoBlue from '../assets/logo/logo_blue.png'
 
-import { DarkModeContext } from "./DarkModeContext"
+import { DarkModeContext, blue, white } from "./DarkModeContext"
 
 export default function Header({path}) {
     const [menuView, setMenuView] = useState(false)
@@ -14,14 +14,13 @@ export default function Header({path}) {
         setMenuView(!menuView)
     }
     
-    const blue = getComputedStyle(document.documentElement).getPropertyValue('--blue');
-    const white = getComputedStyle(document.documentElement).getPropertyValue('--white');
     useEffect(()=>{
         let head = document.getElementById("headerBackground");
         let imag = document.getElementById("logoimg"); 
         let a = darkMode ? blue : white;
         let b = darkMode ? white : blue;
         head.style.backgroundColor = a;
+        head.style.boxShadow = `0px 0px 5px ${b}`;
         head.style.color = b;
         imag.src = !darkMode ? logoBlue : logoWhite;
 
@@ -30,7 +29,7 @@ export default function Header({path}) {
             menu.style.backgroundColor = a;
             menu.style.color = b;
         }
-    })
+    });
 
     return(
         <div className="fixed-top">

@@ -1,0 +1,14 @@
+title {
+    display:inline-block;
+    text-align: center;
+    /* background-color: brown; */
+    position: auto;
+    margin: auto;
+    width: 100%;
+    padding: 50px, 0;
+}
+
+#titleText {
+    font-size: 400%;
+
+}

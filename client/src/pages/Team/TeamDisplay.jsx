@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../../styles/componentStyles/Team/TeamDisplay.css'
+import '../../styles/pageStyles/Team/TeamDisplay.css'
 import 'react-dropdown/style.css';
 import teamService from '../../_services/team.service'
 import Profile from './MemberProfile'

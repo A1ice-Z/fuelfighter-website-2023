@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/componentStyles/Team/TeamTitle.css'
+import '../../styles/pageStyles/Team/TeamTitle.css'
 
 
 export default function TeamTitle() {

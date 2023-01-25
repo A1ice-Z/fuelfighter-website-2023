@@ -2,6 +2,8 @@
   --blue: #222f5c;  /*rgba: rgb(34, 47, 92)*/
   --white: #ffffff;
   --green: #9BCBA7;
+  --opaqueGreen: #9bcba78a;
+  --ghostBlue: #222f5c57;
   font-size: 1.4vw;
   --fontSize: 1.4vw;
   --screen-height: 100vh;
