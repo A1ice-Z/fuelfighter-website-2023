@@ -1,4 +1,1 @@
-favinco.ico => black, responsive to darkmode
-
-Photo in the preview of the browser -> "FUEL FIGHTER NTNU"
 

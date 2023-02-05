@@ -1,0 +1,35 @@
+.sponsorCard{
+    border-color: var(--primary-color);
+    border-width: 1px;
+    border-style: solid;
+    width: 25vw;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    margin: 2%;
+}
+
+.sponsorCard:hover{
+    border-color: var(--green);
+    background-color: var(--green);
+}
+
+
+.sponsorCard img{
+    width: 100%;
+    padding: 5%;
+    background-color: white;
+    height: 19vh;
+}
+
+.sponsorName{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.sponsorName p{
+    margin-bottom: 0;
+    padding: 4%;
+}

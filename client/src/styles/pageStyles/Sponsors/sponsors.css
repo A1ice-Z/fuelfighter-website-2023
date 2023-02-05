@@ -1,0 +1,52 @@
+#titleSponsors{
+    padding-inline: 10%;
+    padding-block: 5%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+#titleSponsors h1{
+    font-family: Roboto-Black;
+}
+
+#sponsorsSponsors{
+    color: var(--primary-color);
+}
+.sponsorDiv{
+    padding-block: 9%;
+    padding-inline: 10%;
+    /* background: linear-gradient(var(--white), var(--ghostBlue)); */
+}
+.sponsorDiv h3{
+    font-family: Roboto-Medium;
+}
+
+.sponsorRow{
+    display: flex;
+    flex-direction: row;
+}
+
+#goldSponsors{
+    background: linear-gradient(var(--secondary-color), gold, var(--secondary-color));
+}
+#silverSponsors{
+    background: linear-gradient(var(--secondary-color), silver, var(--secondary-color));
+}
+#bronzeSponsors{
+    background: linear-gradient(var(--secondary-color),#eda358, var(--secondary-color));
+}
+
+.bronzeSponsorsContainer{
+    background-color: fuchsia;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+}
+
+#contactSponsorsContainer{
+    background-image: url('../../../assets/pages/Sponsors/sponsors_car.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10%;
+    color: white;
+    font-family: Roboto-Black;
+}

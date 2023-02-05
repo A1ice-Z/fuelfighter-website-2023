@@ -1,33 +1,18 @@
-import React, { useState, useEffect, useContext} from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import Post from './Blog/articlePost'
 import blogServices from '../_services/blog.services'
 import '../styles/pageStyles/blog/blog.css'
-import { DarkModeContext, blue, white } from "../components/DarkModeContext";
 
 export default function Blog() {
     const navigate = useNavigate();
 	const [loading, setLoading] = useState(false)
-	// const [endOfTable, setEndOfTable] = useState(false)
+	const [endOfTable, setEndOfTable] = useState(false)
 	const [posts, setPosts] = useState([])
 	const [loadCounter, setLoadCounter] = useState(0)
 	const loadAmout = 11;
 
-    const { darkMode } = useContext(DarkModeContext);
-	useEffect(()=>{
-		let title = document.getElementById("titleBlog");
-		let subtitle = document.getElementById("subtitleBlog");
-		let a = darkMode ? blue : white;
-		let b = darkMode ? white : blue;
-
-        title.style.color= b;
-		subtitle.style.color =b;
-        title.style.backgroundColor = a;
-		subtitle.style.backgroundColor =a;
-	}, [darkMode])
-	
-	
     const loadMore = () => {
 		setLoading(true)
 		blogServices.lazyBlogposts(loadCounter * loadAmout, loadAmout)
@@ -37,23 +22,13 @@ export default function Blog() {
 					setPosts([...posts, ...json?.data])
 					setLoading(false)
 				} else {
-					// setEndOfTable(true)
+					setEndOfTable(true)
 				}
 			})
 	}
-
+	
 	useEffect(loadMore, [])
 
-	/*
-			<h1>Blog</h1>
-            <ul>
-                {posts?.map((post)=>(
-                    <li>{post.id}</li>
-                ))}
-            </ul>
-            <p>loading: {loading} | endOfTable: {endOfTable}</p>
-
-	*/
 	const idLatest = [70, 69, 64];
 
 	let topPosts = posts?.filter((el) => idLatest.includes(el.id));
@@ -83,11 +58,12 @@ export default function Blog() {
 							<li><i class="bi bi-2-square-fill"></i><div onClick={() => goInside(32)}>What a beatiful week</div></li>
 							<li><i class="bi bi-3-square-fill"></i><div onClick={() => goInside(31)}>We did it!</div></li>
 							<li><i class="bi bi-4-square-fill"></i><div onClick={() => goInside(28)}>Unexpected problems</div></li>
+							<li><i class="bi bi-1-square-fill"></i><div onClick={() => goInside(7)}>Design contest</div></li>
 					</div>
 				</div>
 			</div>
 			<div className='articlesCont'>
-				<h1>Articles</h1>
+				<h1 id="articlesTitle">Articles</h1>
 				<div className='articles'>
 					{
 						otherPosts?.map((el, idx) =>
@@ -98,7 +74,11 @@ export default function Blog() {
 					}
 				</div>
 			</div>
-			<button className="btn btn-primary" style={{'backgroundColor':'var(--blue)','borderColor':'var(--blue)' }} onClick={loadMore} disabled={loading}>Load more</button>
+			{ !endOfTable ? 
+				<button className="btn btn-primary" style={{'backgroundColor':'var(--primary-color)','borderColor':'var(--primary-color)', 'color': 'var(--secondary-color)'}} onClick={loadMore} disabled={loading}>Load more</button>
+			:
+				<></>
+			}
         </section>
     )
 }
