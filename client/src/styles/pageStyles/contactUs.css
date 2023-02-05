@@ -11,7 +11,7 @@ Contact page
 }
 
 .contactUsContainer h1, .contactUsContainer p {
-    color: var(--white);
+    color: var(--secondary-color);
     margin: 0;
     font-family: 'Roboto-Light';
     /* filter: box-shadow(1); */

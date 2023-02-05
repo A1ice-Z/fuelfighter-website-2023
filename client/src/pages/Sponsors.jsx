@@ -1,5 +1,4 @@
-import React, {useContext, useEffect} from "react"
-import { DarkModeContext, blue, white } from "../components/DarkModeContext";
+import React from "react"
 
 import "../styles/pageStyles/Sponsors/sponsors.css";
 import SponsorCard from "./sponsors/sponsorCard";
@@ -31,14 +30,6 @@ import Haugaland from '../assets/pages/Sponsors/colored/Haugaland.png'
 
 
 export default function Sponsors() {
-    const { darkMode } = useContext(DarkModeContext);
-    useEffect(() => {
-        let titleDiv = document.getElementById("titleSponsors");
-        titleDiv.style.backgroundColor = darkMode ? blue : white;
-        titleDiv.style.color = darkMode ? white : blue;
-
-    }, [darkMode]);
-
     return(
             <>
                 <section>

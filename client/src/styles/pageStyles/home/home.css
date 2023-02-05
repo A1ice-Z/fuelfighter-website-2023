@@ -29,10 +29,9 @@
     text-align: center;
     z-index: 2;
     font-family: RobotoBlack;
-    text-shadow: 2px 2px 4px var(--blue);
-    color: var(--white)
+    color: var(--primary-color);
+    text-shadow: 2px 2px 2px var(--blue);
 }
-
 
 .homeContainer .homeAbout{
     grid-row: about;

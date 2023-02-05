@@ -1,10 +1,10 @@
 .sponsorCard{
-    border-color: var(--blue);
+    border-color: var(--primary-color);
     border-width: 1px;
     border-style: solid;
     width: 25vw;
-    color: var(--white);
-    background-color: var(--blue);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     margin: 2%;
 }
 

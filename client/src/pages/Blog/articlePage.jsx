@@ -1,16 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 //css
 import '../../styles/pageStyles/blog/blogPage.css';
 import '../../styles/shared.css';
-import { DarkModeContext } from '../../components/DarkModeContext';
 
 //Backend service
 import blogService from '../../_services/blog.services';
 
 export default function ArticlePage({state}) {
-	const { darkMode } = useContext(DarkModeContext);
     const [blogpost, setBlogPost] = useState();
 	const location = useLocation();
 
@@ -26,16 +24,6 @@ export default function ArticlePage({state}) {
 				}
 			})
 	}, [id])
-
-	const blue = getComputedStyle(document.documentElement).getPropertyValue('--blue');
-    const white = getComputedStyle(document.documentElement).getPropertyValue('--white');
-	useEffect(() => {
-        let spanner = document.getElementById("articleSpanner");
-		let container = document.createElement("articleContainer");
-		spanner.style.backgroundColor = darkMode ? white : blue;
-		spanner.style.color = darkMode ? blue : white	;
-		container.style.top = '-35vh';
-	})
 
 	const goBack = () => window.history.back()
 

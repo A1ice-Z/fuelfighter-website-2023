@@ -1,11 +1,12 @@
 :root {
+  --primary-color: #222f5c;
+  --secondary-color: #ffffff;
   --blue: #222f5c;  /*rgba: rgb(34, 47, 92)*/
   --white: #ffffff;
   --green: #9BCBA7;
   --opaqueGreen: #9bcba78a;
-  --ghostBlue: #222f5c57;
-  font-size: 1.4vw;
-  --fontSize: 1.4vw;
+  --ghostBlue: #7391ff;
+  --fontSize: 1.1em;
   --screen-height: 100vh;
   --screen-width:  100vw;
 }
@@ -13,12 +14,13 @@
 body {
   margin: 0;
   font-family: 'Roboto-Light';
+  font-size: var(--fontSize);
 }
 
 .pageContainer{
   display: flex;
   flex-direction: column;
-  background-color: var(--white);
+  background-color: var(--secondary-color);
 }
 
 .aPage{
