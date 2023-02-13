@@ -1,14 +1,15 @@
 :root {
   --primary-color: #ffffff;
-  --secondary-color: #222f5c;
-  --blue: #222f5c;  /*rgba: rgb(34, 47, 92)*/
+  --secondary-color: #0c1319;
+  --blue: #222f5c;
+  /*rgba: rgb(34, 47, 92)*/
   --white: #ffffff;
   --green: #9BCBA7;
   --opaqueGreen: #9bcba78a;
   --ghostBlue: #7391ff;
   --fontSize: 1.1em;
   --screen-height: 100vh;
-  --screen-width:  100vw;
+  --screen-width: 100vw;
 }
 
 body {
@@ -17,18 +18,18 @@ body {
   font-size: var(--fontSize);
 }
 
-.pageContainer{
+.pageContainer {
   display: flex;
   flex-direction: column;
   background-color: var(--secondary-color);
 }
 
-.aPage{
+.aPage {
   margin-top: 4rem;
 }
 
 #centeredDiv {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -49,7 +50,7 @@ body {
   width: auto;
 }
 
-.grid > * {
+.grid>* {
   margin: 24px;
 }
 
@@ -63,34 +64,34 @@ body {
 
 @media only screen and (min-width: 640px) {
   .grid .half {
-      display: inline-block;
-      vertical-align: top;
-      width: calc(50% - 48px);
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 48px);
   }
 
   .grid .half h2 {
-      text-align: left;
+    text-align: left;
   }
 
   .grid .third {
-      width: calc(33.33% - 48px);
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 16px;
+    width: calc(33.33% - 48px);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
   }
 
   .grid .third:last-child {
-      margin-left: 16px;
-      margin-right: 0;
+    margin-left: 16px;
+    margin-right: 0;
   }
 
   .grid .two-thirds {
-      display: inline-block;
-      vertical-align: top;
-      width: calc(66% - 48px);
+    display: inline-block;
+    vertical-align: top;
+    width: calc(66% - 48px);
   }
 
   .grid *:only-child p {
-      text-align: center;
+    text-align: center;
   }
 }
