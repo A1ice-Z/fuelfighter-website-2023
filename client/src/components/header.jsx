@@ -1,8 +1,8 @@
-import React, { useState, useContext, useEffect} from "react"
+import React, { useState, /*useContext, useEffect*/} from "react"
 import '../styles/componentStyles/header.css'
 
 import logoWhite from '../assets/logo/logo_white.png'
-import logoBlue from '../assets/logo/logo_blue.png'
+//import logoBlue from '../assets/logo/logo_blue.png'
 
 // import { DarkModeContext } from "./DarkModeContext"
 
@@ -32,7 +32,7 @@ export default function Header({path}) {
                 <div></div>
                 <a href="/" className="d-flex align-items-center justify-content-center col-md-1 mb-2 mb-md-0 text-decoration-none">
                     {/* <img id="logoimg" /> */}
-                    <img id="logoimg" src = {logoWhite} />
+                    <img id="logoimg" src = {logoWhite} alt="fuel fighter logo"/>
                 </a>
                 <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
                 

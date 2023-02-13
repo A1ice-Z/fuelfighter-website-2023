@@ -3,7 +3,7 @@
 //look in header.jsx comments to activate it
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
-import React, {createContext, useState} from 'react';
+import {createContext, useState} from 'react';
 import { useEffect } from 'react';
 
 const DarkModeContext = createContext();
