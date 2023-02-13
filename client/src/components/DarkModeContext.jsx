@@ -1,4 +1,9 @@
-import React, {createContext, useState} from 'react';
+////////////////////////////////////////////////////////////////////////////////////////////////
+//THE DARK MODE IS IMPLEMENTED BUT NOT WORKING BECAUSE OF WORKFLOW CHOICES
+//look in header.jsx comments to activate it
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+import {createContext, useState} from 'react';
 import { useEffect } from 'react';
 
 const DarkModeContext = createContext();

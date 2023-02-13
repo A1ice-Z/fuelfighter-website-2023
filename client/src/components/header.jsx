@@ -1,37 +1,38 @@
-import React, { useState, useContext, useEffect} from "react"
+import React, { useState, /*useContext, useEffect*/} from "react"
 import '../styles/componentStyles/header.css'
 
 import logoWhite from '../assets/logo/logo_white.png'
-import logoBlue from '../assets/logo/logo_blue.png'
+//import logoBlue from '../assets/logo/logo_blue.png'
 
-import { DarkModeContext } from "./DarkModeContext"
+// import { DarkModeContext } from "./DarkModeContext"
 
 export default function Header({path}) {
     const [menuView, setMenuView] = useState(false)
-    const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+    // const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
     const toggleDisplay = () => {
         setMenuView(!menuView)
     }
-    
-    useEffect(()=>{
-        const imag = document.getElementById("logoimg"); 
-        imag.src = !darkMode ? logoBlue : logoWhite;
-    }, [darkMode]);
 
     //BLUE & WHITE HANDLED HERE ///////////////////////////////////////////////////////////////////////////
-    useEffect(()=>{
-        document.documentElement.style.setProperty('--primary-color', !darkMode ? '#222f5c' : '#ffffff');
-        document.documentElement.style.setProperty('--secondary-color', !darkMode ? '#ffffff' : '#222f5c');
-    }, [darkMode]);
+    // useEffect(()=>{
+    //     document.documentElement.style.setProperty('--primary-color', !darkMode ? '#222f5c' : '#ffffff');
+    //     document.documentElement.style.setProperty('--secondary-color', !darkMode ? '#ffffff' : '#222f5c');
+    // }, [darkMode]);
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    // useEffect(()=>{
+    //     const imag = document.getElementById("logoimg"); 
+    //     imag.src = !darkMode ? logoBlue : logoWhite;
+    // }, [darkMode]);
 
     return(
         <div className="fixed-top">
             <div className="header" id="headerBackground">
                 <div></div>
                 <a href="/" className="d-flex align-items-center justify-content-center col-md-1 mb-2 mb-md-0 text-decoration-none">
-                    <img id="logoimg" />
+                    {/* <img id="logoimg" /> */}
+                    <img id="logoimg" src = {logoWhite} alt="fuel fighter logo"/>
                 </a>
                 <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
                 
@@ -40,9 +41,9 @@ export default function Header({path}) {
                 </div>
                 
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0">
-                    <li onClick={() => toggleDarkMode()}>
+                    {/* <li onClick={() => toggleDarkMode()}>
                         {darkMode ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}
-                    </li>
+                    </li> */}
                 </ul>
 
                 <ul className="nav col-md-0 justify-content-center text-end">
