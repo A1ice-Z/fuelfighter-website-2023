@@ -13,10 +13,10 @@ export default function HeroHome() {
             <div id="homeTitle" className="homeTitle">
                 <h1>Fuel Fighter NTNU</h1>
             </div>
-            { videoVisible ? 
+            {videoVisible ?
                 <video src={video} onEnded={() => setVideoVisible(false)} controls={false} autoPlay muted />
-            :
-                <img src={landingImage} alt="fuel fighter"/>
+                :
+                <img id="landingimage" src={landingImage} alt="fuel fighter" />
             }
         </section>
     )

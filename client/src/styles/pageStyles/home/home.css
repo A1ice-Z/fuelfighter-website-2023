@@ -11,7 +11,7 @@
     background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: [white] 5% [element] 90% [white] 5%;
-    grid-row-gap: 0%;
+    grid-row-gap: 1%;
     padding: 4% 0;
 }
 
