@@ -48,6 +48,18 @@ export default function Home() {
                 </div>
             </div>
             {/* <BlogPreview /> */}
+
+            <div id="applyField">
+                <div className="upper-part">
+                    <img alt="Fuel Fighter logo" src="https://www.fuelfighter.no/static/media/logo_black.352579201a5ee3025768.png" width="64" />
+                    <img alt="Fuel Fighter logo" src="https://www.fuelfighter.no/static/media/logo_black.352579201a5ee3025768.png" width="64" />
+
+                    <h2>Apply for Fuel Fighter NTNU</h2>
+                    <p>Fuel Fighter NTNU is a technical student organization at NTNU working with the goal of making the world’s most energy efficient electric car.</p>
+                    <a className="button suggested-action" href="./join">Apply now</a>
+                </div>
+            </div>
+
         </div>
     )
 }
