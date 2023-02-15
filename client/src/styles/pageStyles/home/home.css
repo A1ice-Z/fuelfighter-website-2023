@@ -1,35 +1,23 @@
-.homeContainer {
-    display: grid;
-    grid-template-rows: [first] 100vh [about] 190vh;
-    grid-template-columns: [all] 100%;
-}
-
 .homeContainer .homeAbout {
-    grid-row: about;
-    grid-column: all;
-
     background-color: var(--secondary-color);
-    display: grid;
-    grid-template-columns: [white] 5% [element] 90% [white] 5%;
-    grid-row-gap: 1%;
-    padding: 4% 0;
+    padding-inline: 4%;
 }
 
 .homeContainer .homeAbout #homeSection {
     border-radius: 0px;
-    grid-column: element;
     display: grid;
     font-family: 'Roboto-BlackItalic';
     grid-template-columns: [text] 50% [img] 50%;
+    grid-template-rows: auto;
+    margin: 1%;
 }
 
 .homeContainer .homeAbout #homeSectionInverted {
     border-radius: 0px;
-    grid-column: element;
-    background-color: var;
     display: grid;
     font-family: 'Roboto-BlackItalic';
     grid-template-columns: [text] 50% [img] 50%;
+    grid-template-rows: auto;
 }
 
 .homeContainer .homeAbout .testoHomeSections {
@@ -58,7 +46,6 @@
     text-align: left;
     display: flex;
     flex-direction: row;
-
 }
 
 .homeContainer .applyField #apply-button {

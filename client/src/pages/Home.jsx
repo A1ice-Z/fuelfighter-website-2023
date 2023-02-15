@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 
 import "../styles/pageStyles/home/home.css"
-// import BlogPreview from "./home/blogPreview";
+import BlogPreview from "./home/BlogPreview.jsx";
 import imgValues from '../assets/pages/home/value1.jpg'
 
 import HeroHome from "./home/HeroMainPage";
@@ -43,7 +43,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* <BlogPreview /> */}
+            
+            <BlogPreview />
 
             <div className="applyField">
                 <div id="apply">
