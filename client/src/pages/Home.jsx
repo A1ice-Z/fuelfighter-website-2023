@@ -1,15 +1,23 @@
-import React from "react"
+import React, { useState } from "react"
 
 import "../styles/pageStyles/home/home.css"
 // import BlogPreview from "./home/blogPreview";
 import video from '../assets/video/mainPageVideo.mp4';
+import landingImage from '../assets/pages/home/car_render_transparent_crop1.png';
 import imgValues from '../assets/pages/home/value1.jpg'
 
-export default function Home() {
+export default function Home() {    
+    const [videoVisible, setVideoVisible] = useState(true)
+
+    const afterVideoEnd = () =>{
+        setVideoVisible(false)
+    }
+
     return(
         <div className="homeContainer">
-            <div className="homeFirst">
-                <video src={video} controls={false} playing={true} autoPlay muted loop />
+            <div className={`homeFirst`}>
+                {/* <video src={video} controls={false} playing={true} autoPlay muted loop /> */}
+                <img src={landingImage} alt="fuel fighter image"/>
                 <div id="homeTitle" className="homeTitle">
 					<h1>Fuel Fighter NTNU</h1>
 				</div>
