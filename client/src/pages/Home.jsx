@@ -6,13 +6,7 @@ import imgValues from '../assets/pages/home/value1.jpg'
 
 import HeroHome from "./home/HeroMainPage";
 
-export default function Home() {    
-    const [videoVisible, setVideoVisible] = useState(true)
-
-    const afterVideoEnd = () =>{
-        setVideoVisible(false)
-    }
-
+export default function Home() {
     return(
         <div className="homeContainer">
             <HeroHome />
