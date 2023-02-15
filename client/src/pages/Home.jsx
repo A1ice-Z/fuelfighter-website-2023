@@ -7,7 +7,7 @@ import imgValues from '../assets/pages/home/value1.jpg'
 import HeroHome from "./home/HeroMainPage";
 
 export default function Home() {
-    return(
+    return (
         <div className="homeContainer">
             <HeroHome />
             <div className="homeAbout">
@@ -45,14 +45,22 @@ export default function Home() {
             </div>
             {/* <BlogPreview /> */}
 
-            <div id="applyField">
-                <div className="upper-part">
-                    <img alt="Fuel Fighter logo" src="https://www.fuelfighter.no/static/media/logo_black.352579201a5ee3025768.png" width="64" />
-                    <img alt="Fuel Fighter logo" src="https://www.fuelfighter.no/static/media/logo_black.352579201a5ee3025768.png" width="64" />
-
-                    <h2>Apply for Fuel Fighter NTNU</h2>
-                    <p>Fuel Fighter NTNU is a technical student organization at NTNU working with the goal of making the world’s most energy efficient electric car.</p>
-                    <a className="button suggested-action" href="./join">Apply now</a>
+            <div className="applyField">
+                <div id="apply">
+                    <div className="fuelfighter-logo">
+                        <img alt="Fuel Fighter logo" src="http://localhost:3000/static/media/logo_white.d667c3ac7c755ca6d81a.png" width="64" />
+                    </div>
+                    <div className="applyText">
+                        <h1>Apply for Fuel Fighter NTNU</h1>
+                        <p>Fuel Fighter NTNU is a technical student organization at NTNU
+                            working with the goal of making the world’s most energy
+                            efficient electric car.</p>
+                    </div>
+                </div>
+                <div id="apply-button">
+                    <a className="button-suggested-action" href="./join">
+                        Apply now
+                    </a>
                 </div>
             </div>
 
