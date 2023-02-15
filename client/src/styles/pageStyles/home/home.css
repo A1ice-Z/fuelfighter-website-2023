@@ -37,7 +37,7 @@
     grid-row: about;
     grid-column: all;
 
-    background-color: rgb(5, 8, 15);
+    background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: [white] 5% [element] 90% [white] 5%;
     grid-row-gap: 4%;
