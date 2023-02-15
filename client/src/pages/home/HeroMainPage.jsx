@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import "../../styles/pageStyles/home/heroHome.css";
+
 import video from '../../assets/video/mainPageVideo.mp4';
 import landingImage from '../../assets/pages/home/car_render_transparent_crop1.png';
 
