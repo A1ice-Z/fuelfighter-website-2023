@@ -11,7 +11,7 @@
     background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: [white] 5% [element] 90% [white] 5%;
-    grid-row-gap: 4%;
+    grid-row-gap: 0%;
     padding: 4% 0;
 }
 
@@ -20,7 +20,7 @@
     grid-column: element;
     display: grid;
     font-family: 'Roboto-BlackItalic';
-    grid-template-columns: [text] 55% [img] 45%;
+    grid-template-columns: [text] 50% [img] 50%;
 }
 
 .homeContainer .homeAbout #homeSectionInverted {
@@ -29,7 +29,7 @@
     background-color: var;
     display: grid;
     font-family: 'Roboto-BlackItalic';
-    grid-template-columns: [text] 55% [img] 45%;
+    grid-template-columns: [text] 50% [img] 50%;
 }
 
 .homeContainer .homeAbout .testoHomeSections {
