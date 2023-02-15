@@ -1,19 +1,15 @@
-import React from "react"
+import React, { useState } from "react"
 
 import "../styles/pageStyles/home/home.css"
 // import BlogPreview from "./home/blogPreview";
-import video from '../assets/video/mainPageVideo.mp4';
 import imgValues from '../assets/pages/home/value1.jpg'
 
+import HeroHome from "./home/HeroMainPage";
+
 export default function Home() {
-    return (
+    return(
         <div className="homeContainer">
-            <div className="homeFirst">
-                <video src={video} controls={false} playing={true} autoPlay muted loop />
-                <div id="homeTitle" className="homeTitle">
-                    <h1>Fuel Fighter NTNU</h1>
-                </div>
-            </div>
+            <HeroHome />
             <div className="homeAbout">
                 <div id="homeSection">
                     <div className="testoHomeSections">

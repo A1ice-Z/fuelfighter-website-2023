@@ -1,7 +1,7 @@
 #headerBackground{
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
     color: var(--primary-color);
-    box-shadow : 0px 0px 5px var(--primary-color);
+    box-shadow : 0px 0px 5px var(--tertiary-color);
 }
 
 .header {
