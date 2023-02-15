@@ -13,12 +13,13 @@ import Contact from './pages/Contact'
 // import Admin    from './pages/Admin'
 import ArticlePage from './pages/Blog/articlePage'
 import Dev from './pages/DevView'
+import NewTeam from './pages/NewTeam'
 
 import Header from './components/header'
 import Footer from './components/footer'
 
 import './styles/fonts.css'
-import './styles/shared.css'
+import './styles/shared.css' 
 
 const HandMadeRoute = ({Param}) => {
   const location = useLocation()
@@ -52,7 +53,8 @@ function App() {
         <Route path='/about'    element={ <HandMadeRoute Param={About}/> }/>
         <Route path='/team'     element={ <HandMadeRoute Param={Team}/>}/>
         <Route path='/sponsors' element={ <HandMadeRoute Param={Sponsors}/> }/>
-        <Route path='/contact'  element={ <HandMadeRoute Param={Contact}/> } /> 
+        <Route path='/contact'  element={ <HandMadeRoute Param={Contact}/> } />
+        <Route path='/NewTeam'      element={ <HandMadeRoute Param={NewTeam}/> } /> 
         {/* <Route path='/admin'    element={ <Admin /> } /> */}
         <Route path="*" element={ <PageNotFound />} />
       </Routes>

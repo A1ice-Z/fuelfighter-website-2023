@@ -1,0 +1,17 @@
+.container{
+    border-style: solid;
+    border-color: red;
+}
+
+#row1{
+    border-style: solid;
+    border-color: lightblue;
+    color: white;
+}
+#col1{
+    border-style: solid;
+    border-color: green;
+    color: white;
+    margin-top: 20px;
+    
+}
