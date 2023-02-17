@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import '../../styles/pageStyles/blog/post.css';
+import { formatDate } from '../../components/formatter';
 
 export default function Post ({props}) {
     const navigate = useNavigate();
@@ -20,12 +21,6 @@ export default function Post ({props}) {
             }
         })
         return str;
-    }
-    
-    const formatDate = (milliseconds) => {
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Descember"];
-        var date = new Date(+milliseconds);
-        return `${date.getDate()}. ${months[date.getMonth()]} ${date.getFullYear()}`
     }
 
     const nWords = 17;

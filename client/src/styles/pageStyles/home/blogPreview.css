@@ -1,14 +1,34 @@
 .blogPreview{
-    border-left: 5px solid var(--blue);
-    margin-left: 10%;
+    border-left: 10px solid var(--blue);
+    margin-inline: 10%;
     color: var(--primary-color);
-    padding: 4%;
+    padding: 2%;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.blogPreview h2{
+    font-family: 'Roboto-BlackItalic';
+    color: var(--primary-color);
+}
+.blogPreview .inside img{
+    width:100%;
+    height: 100%;
+    object-fit:scale-down;
 }
 
 .blogPreview #inside{
     display: flex;
     flex-direction: row;
+}
+
+.articleViewHome{
+    width: 50%;
+    padding: 1%;
+    margin-inline: 1%;
+    background-color: yellowgreen;
 }

@@ -1,15 +1,10 @@
 import React from 'react'
 
 import '../../styles/pageStyles/home/post.css'
+import { formatDate } from '../../components/formatter'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({id, title, description, author, date, image, featured}) => {
-    
-    const formatDate = (milliseconds) => {
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Descember"];
-        var date = new Date(+milliseconds);
-        return `${date.getDate()}. ${months[date.getMonth()]} ${date.getFullYear()}`
-    }
 
     return (
         <a href={`/blog/${id}`} className={`post_preview ${featured ? 'featured' : ''}`}>

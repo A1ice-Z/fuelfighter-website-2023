@@ -22,10 +22,10 @@ export default function BlogPreview(){
     //   );
     // };
 
-	useEffect(() => {
+	// useEffect(() => {
 		blogService.blogposts(5)
 			.then(json => setPosts(json))
-	}, [])
+	// })
 
 	return(
 		<div className='blogPreviewContainer'>
