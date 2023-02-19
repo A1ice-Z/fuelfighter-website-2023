@@ -7,6 +7,7 @@ import '../../styles/shared.css';
 
 //Backend service
 import blogService from '../../_services/blog.services';
+import { formatDate } from '../../components/formatter';
 
 export default function ArticlePage({state}) {
     const [blogpost, setBlogPost] = useState();
@@ -26,12 +27,6 @@ export default function ArticlePage({state}) {
 	}, [id])
 
 	const goBack = () => window.history.back()
-
-	const formatDate = (milliseconds) => {
-		const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-		var date = new Date(+milliseconds);
-		return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
-	}
 
 	const shareLink = `https://www.fuelfighter.no/share.php?type=blog&id=${blogpost?.id}`
 

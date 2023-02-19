@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import "../styles/pageStyles/home/home.css"
 import BlogPreview from "./home/BlogPreview.jsx";
