@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "../styles/pageStyles/NewTeam.css"
 import teamService from '../_services/team.service'
 
+import NewTeamYears from "./NewTeamYears"
 
 export default function NewTeam() {
     const defaultYear = 2022; // The default year
@@ -33,7 +34,7 @@ export default function NewTeam() {
         <div class="container" id="teamContainer">
             <div class="row">
                 <div class="col-2" id="row1">
-                    <h1>Years </h1>
+                    <NewTeamYears/>
                 </div>
                 <div class="col-10" id="row1">
                     <div class="row" id="teamTitleRow">
