@@ -1,13 +1,13 @@
 import React from "react"
 import "../styles/pageStyles/NewTeam.css"
-
+import NewTeamYears from "./NewTeamYears"
 
 export default function NewTeam() {
     return(
         <div class="container" id="maincont">
             <div class="row">
                 <div class="col-2" id="row1">
-                    <h1>Years </h1>
+                    <NewTeamYears/>
                 </div>
                 <div class="col-10" id="row1">
                     <div class="row" id="row1">
