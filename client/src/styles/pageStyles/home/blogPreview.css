@@ -11,12 +11,14 @@
     height: fit-content;
     overflow: hidden;
 }
+.blogPreview img{
+    object-fit: contain;
+}
 
 .blogPreview h2{
     font-family: 'Roboto-BlackItalic';
     color: var(--primary-color);
 }
-
 
 #primaryImgBlog{
     z-index: 2;

@@ -1,9 +1,13 @@
 import imgValues from '../../assets/pages/home/value1.jpg'
 
+import '../../styles/pageStyles/home/homeAbout.css';
+
 export default function HomeAbout() {
+    
+
     return(
         <div className="homeAbout">
-                <div id="homeSection">
+                <div className="homeSection" id="homeSection-1">
                     <div className="testoHomeSections">
                         <h1>Inspire a sustainable future</h1>
                         <p>Our Motto and Values</p>
@@ -24,7 +28,7 @@ export default function HomeAbout() {
                     </div>
                 </div>
 
-                <div id="homeSection">
+                <div className="homeSection">
                     <div className="testoHomeSections">
                         <h1>Our Goals</h1>
                         <p>Fn-målene</p>
