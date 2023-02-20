@@ -2,7 +2,7 @@
 import { formatDate } from "../../components/formatter"
 import { useNavigate } from 'react-router-dom';
 
-export default ({id, title, description, author, date, image, featured}) => {    
+export default function ArticlePreview ({id, title, description, author, date, image, featured}) {    
     const navigate = useNavigate();
     const redirect = () => {
         navigate(`/blog/${id}`, {
@@ -13,7 +13,7 @@ export default ({id, title, description, author, date, image, featured}) => {
     }
 
     return (
-        <div className="articleViewHome" id="article" onClick={redirect}>
+        <div onClick={redirect}>
             <h2>{title}</h2>
             <div className="dateArticle">
                 <time dateTime={date}>{formatDate(date)}</time>

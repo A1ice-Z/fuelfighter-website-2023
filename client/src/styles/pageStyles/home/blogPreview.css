@@ -1,8 +1,9 @@
 .blogPreview{
     border-left: 10px solid var(--blue);
-    margin-inline: 10%;
+    margin: 10%;
     color: var(--primary-color);
     padding: 2%;
+    padding-bottom: 0;
 
     display: flex;
     flex-direction: column;
@@ -17,29 +18,25 @@
 }
 
 
-.blogPreview .inside img{
-    width:100%;
-    height: 100%;
-    object-fit:scale-down;
-    overflow: hidden;
+#primaryImgBlog{
+    z-index: 2;
 }
 
-.fadeInAnimation{
-    animation: fade-inIMG 0.5s;
+.slideInAnimation{
+    animation: slide-inIMG 0.7s;
 }
 
-@keyframes fade-inIMG {
-    0% {
-        opacity: 0;
-        translate: 200% 0;
-    }
-
-    100% {
-        opacity: 1;
-        translate: 0;
-    }
+.slideOutAnimation{
+    animation: slide-outIMG 0.1s;
 }
 
+.fadeInLeftAnimation{
+    animation: slide-article-left 0.7s;
+}
+
+.fadeInRightAnimation{
+    animation: slide-article-right 0.7s;
+}
 
 .blogPreview #inside{
     display: flex;
@@ -47,11 +44,17 @@
     height: 40vh;
 }
 
+.blogPreview #inside #articlesBlogPreview{
+    display: flex;
+    flex-direction: row;   
+}
+
 .articleViewHome{
     width: 50%;
     padding: 1%;
     margin-left: 1.7%;
     overflow: hidden;
+    z-index: 0;
 }
 .articleViewHome h2{
     height: 5rem;
@@ -71,7 +74,8 @@
 }
 
 .blogPreview .buttons{
-    font-size: 4rem;
+    margin-top: 1%;
+    font-size: 3.7rem;
     position: relative;
     width: 100%;
     display: flex;
@@ -86,4 +90,57 @@
 
 .bi.bi-dot{
     opacity: 0.4;
+}
+
+@keyframes slide-outIMG {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes slide-inIMG {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-article-left {
+    0% {
+        translate: 100% 0;
+    }
+    100% {
+        translate: 0;
+    }
+}
+
+@keyframes slide-article-right {
+    0% {
+        opacity: 0;
+        translate: -75% 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        translate: 0;
+    }
+}
+
+@keyframes fade-inIMG {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
