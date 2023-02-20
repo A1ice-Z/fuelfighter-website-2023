@@ -60,7 +60,6 @@ export default function Footer() {
                             <h2>Fuel Figther NTNU</h2>
                         </div>
                         <div className="sosials">
-                            <p>Follow us:</p>
                             <div className="links">
                                 <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer">
                                     <i className="bi bi-facebook"></i>
@@ -75,6 +74,7 @@ export default function Footer() {
                                     <i className="bi bi-linkedin"></i>
                                 </a></li>
                             </div>
+                            <p className="contact"><li><a href="/contact"><span>Contact us</span></a></li></p>
                         </div>
                     </div>
                     <div className="col-auto" id="navigasjon">
@@ -87,13 +87,13 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="col-auto" id="information">
-                        <h2 className="contact"><li><a href="/contact"><span>Contact us</span></a></li></h2>
                         <div className="adresse">
                             <h2>Adresse</h2>
                             <p>Fuel Fighter NTNU</p>
                             <p>Klæbuveien 153</p>
                             <p>7031 Trondheim</p>
                         </div>
+                        {/* <h2 className="contact"><li><a href="/contact"><span>Contact us</span></a></li></h2> */}
                     </div>
                 </div>
                 <div className="row" id="bottom-part">
