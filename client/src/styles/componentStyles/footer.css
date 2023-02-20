@@ -1,7 +1,87 @@
-#footer-backround {
-    background-color: var(--secondary-color);
+.container #upper-part {
+    display: flex;
+    flex-direction: row;
 }
 
 #about-fuel-fighter {
-    grid-template-columns: [text] 50% [img] 50%;
+    width: 440px;
+}
+
+.sosials p {
+    color: aliceblue;
+    display: flex;
+    margin-left: 40px;
+}
+
+.sosials .links {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    color: var(--secondary-color);
+}
+
+.sosials .links a {
+    color: aliceblue;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    font-family: 'Roboto-BlackItalic';
+}
+
+#navigasjon {
+    width: 250px;
+    margin-left: 90px;
+    padding-left: 10px;
+    border-left: 2px solid var(--gosthWhite);
+}
+
+#navigasjon h2 {
+    color: aliceblue;
+    font-family: 'Roboto-BlackItalic';
+    margin-left: 38px;
+}
+
+.navigasjon {
+    color: var(--secondary-color);
+    /* margin-left: 60px; */
+}
+
+.navigasjon a {
+    color: aliceblue;
+}
+
+#information {
+    width: 250px;
+    margin-left: 90px;
+    padding-left: 10px;
+    border-left: 2px solid var(--gosthWhite);
+}
+
+
+.adresse {
+    color: aliceblue;
+    margin-left: 45px;
+}
+
+.adresse h2 {
+    font-family: 'Roboto-BlackItalic';
+}
+
+#information {
+    color: var(--secondary-color);
+}
+
+.contact a {
+    color: aliceblue;
+    font-family: 'Roboto-BlackItalic';
+}
+
+.text {
+    display: flex;
+    flex-direction: column-reverse;
+    color: aliceblue;
+    text-align: center;
 }
