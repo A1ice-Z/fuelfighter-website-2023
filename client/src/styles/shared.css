@@ -1,9 +1,12 @@
 :root {
   --primary-color: #ffffff;
   --secondary-color: #0a0e22;
-  --tertiary-color:  #000a18;
-  --blue: #222e58;  /*rgba: rgb(34, 47, 92)*/
+  --tertiary-color: #000a18;
+  --blue: #222e58;
+  /*rgba: rgb(34, 47, 92)*/
   --white: #ffffff;
+  --gosthWhite: rgb(255, 255, 255, 0.3);
+  /*this white color has less opasity*/
   --green: #9BCBA7;
   --opaqueGreen: #9bcba78a;
   --ghostBlue: #7391ff;

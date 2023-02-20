@@ -1,3 +1,7 @@
-.footer span{
-    color: var(--primary-color);
+#footer-backround {
+    background-color: var(--secondary-color);
+}
+
+#about-fuel-fighter {
+    grid-template-columns: [text] 50% [img] 50%;
 }
