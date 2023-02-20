@@ -47,13 +47,11 @@ export default function Footer() {
                                     <i className="bi bi-linkedin"></i>
                                 </a></li>
                             </div>
-
                         </div>
                     </div>
                     <div className="col-auto" id="navigasjon">
                         <h2>Navigation</h2>
                         <ul className="navigasjon">
-                            <li><a href="/" className="">Home</a></li>
                             <li><a href="/blog" className="">Blog</a></li>
                             <li><a href="/about" className="">About</a></li>
                             <li><a href="/team" className="">Team</a></li>

@@ -3,6 +3,9 @@
     flex-direction: row;
 }
 
+#about-fuel-fighter {
+    width: 440px;
+}
 
 .sosials p {
     color: aliceblue;
@@ -28,19 +31,35 @@
     font-family: 'Roboto-BlackItalic';
 }
 
+#navigasjon {
+    width: 250px;
+    margin-left: 90px;
+    padding-left: 10px;
+    border-left: 2px solid var(--gosthWhite);
+}
+
 #navigasjon h2 {
     color: aliceblue;
     font-family: 'Roboto-BlackItalic';
-    margin-left: 40px;
+    margin-left: 38px;
 }
 
 .navigasjon {
     color: var(--secondary-color);
+    /* margin-left: 60px; */
 }
 
 .navigasjon a {
     color: aliceblue;
 }
+
+#information {
+    width: 250px;
+    margin-left: 90px;
+    padding-left: 10px;
+    border-left: 2px solid var(--gosthWhite);
+}
+
 
 .adresse {
     color: aliceblue;
