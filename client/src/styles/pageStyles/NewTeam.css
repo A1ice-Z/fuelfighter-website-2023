@@ -11,8 +11,6 @@
     color: green;
 }
 #chooseGroupButton{
-    /* border-style: solid;
-    border-color: green; */
     color: white;
     text-align: center;
 }
@@ -20,6 +18,12 @@
 #chooseGroupButtonText{
     font-size:1.35em ;
     font-family: 'Roboto-Light';
+    color: rgb(201, 201, 201);
+}
+
+#chooseGroupButtonText:hover{
+    color: white;
+    cursor: pointer;
 }
 #teamGroupRow{
     padding-bottom: 3%;
@@ -36,13 +40,31 @@
     font-family: 'Roboto-Bold';
 }
 #teamdescriptionRow{
-    border-style: solid;
-    border-color: green;
+    /* border-style: solid;
+    border-color: green; */
     color: white;
     text-align: center;
+    margin-bottom: 3%;
 }
 #teamPicturesRow{
     justify-content: center;
     text-align: center;
     color: white;
+}
+
+#yearTitle{
+    color: rgb(201, 201, 201);
+    text-align: center;
+    padding-top: 10px;
+    font-family: 'Roboto-Light';
+    font-size: x-large;
+}
+
+
+#yearTitle:hover{
+    color: white;
+    cursor: pointer;
+}
+#teamYearCol{
+    margin-top: 20%;
 }
