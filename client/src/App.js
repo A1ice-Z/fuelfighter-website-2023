@@ -15,7 +15,7 @@ import ArticlePage from './pages/Blog/articlePage'
 import Dev from './pages/DevView'
 
 import Header from './components/header'
-import Footer from './components/privFooter'
+import Footer from './components/footer'
 
 import './styles/fonts.css'
 import './styles/shared.css'
