@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import "../styles/pageStyles/NewTeam.css"
 import teamService from '../_services/team.service'
+import Profile from './Team/MemberProfile'
+import styled from 'styled-components';
 
-
+const Content = styled.div`
+	display: flex; 
+	justify-content: center; 
+	flex-wrap: wrap;
+	max-width: 1400px;
+	align-items: flex-start;
+`;
 export default function NewTeam() {
 
     const defaultYear = 2023; // The default year
@@ -87,6 +95,13 @@ export default function NewTeam() {
                     </div>
                     <div class="row" id="teamPicturesRow">
                         <h1> Pictures </h1>
+                        {displayTeam.map(team => (
+                        <Content>
+                            {team.members.map(member => (
+                                <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} />
+                                ))}
+                        </Content>
+                        ))}
                     </div>
                 </div>
             </div>
