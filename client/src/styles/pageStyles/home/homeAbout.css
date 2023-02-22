@@ -38,17 +38,23 @@
 }
 
 #homeSection1 {
+
 }
 
-.enterSectionAnimation{
-    animation: sectionEnterRight 2s;
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-@keyframes sectionEnterRight {
-    0% {
-        translate: 20% 0;
-    }
-    100% {
-        translate: 0;
-    }
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
 }

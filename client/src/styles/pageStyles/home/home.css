@@ -41,6 +41,7 @@
     grid-template-columns: [white] 5% [element] 90% [white] 5%;
     grid-row-gap: 4%;
     padding: 4%;
+    margin-bottom: 7%;
 }
 
 .homeContainer .applyField .applyText p {
@@ -67,4 +68,9 @@
     width: 100%;
     height: 100%;
     background-size: cover;
+}
+
+.fuelfighter-logo{
+    position: relative;
+    top: -7%;
 }

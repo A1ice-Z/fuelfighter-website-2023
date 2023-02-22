@@ -1,24 +1,38 @@
+import React, { useEffect } from 'react';
 import imgValues from '../../assets/pages/home/value1.jpg'
 
 import '../../styles/pageStyles/home/homeAbout.css';
 
 export default function HomeAbout() {
+    const slideInLeftOptions = {
+        rootMargin: '0px',
+        threshold: 0.5
+      };
+    
 
-    const observer = new IntersectionObserver( entries => {
-        entries.forEach( (entry) => {
-            if (entry.isIntersecting){
-                // entry.classList.add('enterSectionAnimation');
-            } else {
-                // entry.classList.remove('enterSectionAnimation');
+    useEffect(() => {
+    
+        const homeSectionOne = document.querySelector('#homeSection1');
+        const homeSectionSecond = document.querySelector('#homeSectionInverted');
+        const homeSectionThird = document.querySelector('#homeSection3');
+    
+        const slideInLeftObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
-        })
-    });
-
-    // observer.observe(document.getElementById("homeSection1"))
-
+            });
+        }, slideInLeftOptions);
+        
+        slideInLeftObserver.observe(homeSectionOne);
+        slideInLeftObserver.observe(homeSectionThird);
+        slideInLeftObserver.observe(homeSectionSecond);
+        
+    }, []);
     return(
         <div className="homeAbout">
-                <div className="homeSection" id="homeSection1">
+                <div className="homeSection slide-in-left" id="homeSection1">
                     <div className="testoHomeSections">
                         <h1>Inspire a sustainable future</h1>
                         <p>Our Motto and Values</p>
@@ -28,7 +42,7 @@ export default function HomeAbout() {
                     </div>
                 </div>
 
-                <div id="homeSectionInverted" data-mdb-toggle="animation" data-mdb-animation-start="onScroll" data-mdb-animation="slide-in-left">
+                <div className="slide-in-right" id="homeSectionInverted">
                     <div className="valuesImgContainer" >
                         <img id="imgHomeAboutInv" alt="img values " src={imgValues} />
                     </div>
@@ -39,7 +53,7 @@ export default function HomeAbout() {
                     </div>
                 </div>
 
-                <div className="homeSection">
+                <div className="homeSection slide-in-left" id="homeSection3">
                     <div className="testoHomeSections">
                         <h1>Our Goals</h1>
                         <p>Fn-målene</p>
