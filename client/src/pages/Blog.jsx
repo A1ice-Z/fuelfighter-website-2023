@@ -48,6 +48,7 @@ export default function Blog() {
 				<h1 id="titleBlog">Welcome to Fuel Fighter Blog</h1>
 				<p id="subtitleBlog">We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.</p>
 			</div>
+
 			<div className='latestPosts'>
 				<h1 className='titlePosts'>Latest News</h1>
 				<div className='articlesRow'>
@@ -62,6 +63,7 @@ export default function Blog() {
 					</div>
 				</div>
 			</div>
+			
 			<div className='articlesCont'>
 				<h1 id="articlesTitle">Articles</h1>
 				<div className='articles'>
