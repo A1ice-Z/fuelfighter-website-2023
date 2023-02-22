@@ -1,4 +1,4 @@
-import React, { useState, /*useContext, useEffect*/} from "react"
+import React, { useState, /*useContext, useEffect*/ } from "react"
 import '../styles/componentStyles/header.css'
 
 import logoWhite from '../assets/logo/logo_white.png'
@@ -6,7 +6,7 @@ import logoWhite from '../assets/logo/logo_white.png'
 
 // import { DarkModeContext } from "./DarkModeContext"
 
-export default function Header({path}) {
+export default function Header({ path }) {
     const [menuView, setMenuView] = useState(false)
     // const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
@@ -26,20 +26,20 @@ export default function Header({path}) {
     //     imag.src = !darkMode ? logoBlue : logoWhite;
     // }, [darkMode]);
 
-    return(
+    return (
         <div className="fixed-top">
             <div className="header" id="headerBackground">
                 <div></div>
                 <a href="/" className="d-flex align-items-center justify-content-center col-md-1 mb-2 mb-md-0 text-decoration-none">
                     {/* <img id="logoimg" /> */}
-                    <img id="logoimg" src = {logoWhite} alt="fuel fighter logo"/>
+                    <img id="logoimg" src={logoWhite} alt="fuel fighter logo" />
                 </a>
                 <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
-                
+
                 <div className="d-flex justify-content-center col-12" id="menuDisplay" onClick={toggleDisplay}>
                     <i className="bi bi-list" id="menu"></i>
                 </div>
-                
+
                 <ul className="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0">
                     {/* <li onClick={() => toggleDarkMode()}>
                         {darkMode ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}
