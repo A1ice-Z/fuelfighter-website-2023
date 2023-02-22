@@ -97,7 +97,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="row" id="bottom-part">
-                    <div className="text">Copyrigth © 2023 Fuel Fighter NTNU. All rights reserved.</div>
+                    <div className="text">Copyright © 2023 Fuel Fighter NTNU. All rights reserved.</div>
                 </div>
             </div>
         </div>

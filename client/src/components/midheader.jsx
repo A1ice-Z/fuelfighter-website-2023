@@ -35,6 +35,9 @@ export default function Header({ path }) {
                             <img id="logoimg" src={logoWhite} alt="fuel fighter logo" width="52" />
                             <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
                         </div>
+                        <div className="col-auto" id="links">
+
+                        </div>
                     </div>
                 </div>
             </div>
