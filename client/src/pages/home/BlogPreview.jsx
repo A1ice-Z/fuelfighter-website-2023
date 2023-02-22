@@ -126,7 +126,7 @@ export default function BlogPreview() {
             </div>
             <div className='buttons'>
                 <div onClick={prevPreview}>
-                    <i class="bi bi-caret-left-fill"></i>
+                    <i className="bi bi-caret-left-fill"></i>
                 </div>
                 <div className='bullets'>
                     {selected?
@@ -140,7 +140,7 @@ export default function BlogPreview() {
                     }
                 </div>
                 <div onClick={nextPreview}>
-                    <i class="bi bi-caret-right-fill"></i>
+                    <i className="bi bi-caret-right-fill"></i>
                 </div>
             </div>
         </section>

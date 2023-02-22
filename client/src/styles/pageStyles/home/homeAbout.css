@@ -37,13 +37,24 @@
     border-radius: inherit;
 }
 
+#homeSection1 {
 
-@keyframes sectionFromLeftToRight {
-    0% {
-        transition: 50% 0;
-    }
-    100%{
-        transition: 0;
-    }
-    
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
 }

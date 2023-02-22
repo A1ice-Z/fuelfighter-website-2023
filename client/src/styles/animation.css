@@ -1,0 +1,61 @@
+/*////////////////////////////////
+//Home Page
+////////////////////////////////*/
+
+@keyframes sectionEnterRight {
+    0% {
+        opacity: 0;
+        translate: 20% 0;
+    }
+    100% {
+        translate: 0;
+        opacity: 1;
+    }
+}
+
+
+/*////////////////////////////////
+//Blog Preview
+////////////////////////////////*/
+@keyframes slide-inIMG {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-article-left {
+    0% {
+        translate: 100% 0;
+    }
+    100% {
+        translate: 0;
+    }
+}
+
+@keyframes slide-article-right {
+    0% {
+        opacity: 0;
+        translate: -75% 0;
+    }
+    25%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        translate: 0;
+    }
+}
+
+@keyframes fade-inIMG {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
