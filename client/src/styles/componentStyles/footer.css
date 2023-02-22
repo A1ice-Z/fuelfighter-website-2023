@@ -1,4 +1,25 @@
+.footer a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container #upper-part {
+    margin-top: 35px;
     display: flex;
     flex-direction: row;
 }
@@ -7,17 +28,12 @@
     width: 440px;
 }
 
-.sosials p {
-    color: aliceblue;
-    display: flex;
-    margin-left: 40px;
-}
-
 .sosials .links {
     display: flex;
     flex-direction: row;
     margin-left: 15px;
     color: var(--secondary-color);
+    margin-top: 10px;
 }
 
 .sosials .links a {
@@ -41,7 +57,7 @@
 #navigasjon h2 {
     color: aliceblue;
     font-family: 'Roboto-BlackItalic';
-    margin-left: 38px;
+    margin-left: 30px;
 }
 
 .navigasjon {
@@ -77,9 +93,21 @@
 .contact a {
     color: aliceblue;
     font-family: 'Roboto-BlackItalic';
+    text-align: left;
+    font-size: x-large;
+    margin-left: 14px;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact li {
+    color: var(--secondary-color);
 }
 
 .text {
+    margin-top: 10px;
     display: flex;
     flex-direction: column-reverse;
     color: aliceblue;
