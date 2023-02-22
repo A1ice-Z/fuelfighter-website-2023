@@ -3,11 +3,22 @@ import imgValues from '../../assets/pages/home/value1.jpg'
 import '../../styles/pageStyles/home/homeAbout.css';
 
 export default function HomeAbout() {
-    
+
+    const observer = new IntersectionObserver( entries => {
+        entries.forEach( (entry) => {
+            if (entry.isIntersecting){
+                // entry.classList.add('enterSectionAnimation');
+            } else {
+                // entry.classList.remove('enterSectionAnimation');
+            }
+        })
+    });
+
+    // observer.observe(document.getElementById("homeSection1"))
 
     return(
         <div className="homeAbout">
-                <div className="homeSection" id="homeSection-1">
+                <div className="homeSection" id="homeSection1">
                     <div className="testoHomeSections">
                         <h1>Inspire a sustainable future</h1>
                         <p>Our Motto and Values</p>

@@ -19,6 +19,7 @@ import Footer from './components/footer'
 
 import './styles/fonts.css'
 import './styles/shared.css'
+import './styles/animation.css'
 
 const HandMadeRoute = ({ Param }) => {
   const location = useLocation()

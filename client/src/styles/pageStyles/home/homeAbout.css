@@ -37,13 +37,18 @@
     border-radius: inherit;
 }
 
+#homeSection1 {
+}
 
-@keyframes sectionFromLeftToRight {
+.enterSectionAnimation{
+    animation: sectionEnterRight 2s;
+}
+
+@keyframes sectionEnterRight {
     0% {
-        transition: 50% 0;
+        translate: 20% 0;
     }
-    100%{
-        transition: 0;
+    100% {
+        translate: 0;
     }
-    
 }
