@@ -1,0 +1,49 @@
+.container {
+    padding: 10%;
+}
+
+.row li {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.row a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#logo-block {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 25%;
+}
+
+#logo-block a {
+    margin-top: 2%;
+    color: aliceblue;
+    font-size: x-large;
+}
+
+#logo-block img {
+    width: 25%;
+}
+
+#links {
+    width: 60%;
+}
+
+.lenker {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.lenker a {
+    margin: 10%;
+}
+
+.sosial-medie-lenker {
+    display: flex;
+    flex-direction: row;
+}
