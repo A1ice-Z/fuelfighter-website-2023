@@ -13,4 +13,8 @@ export default class teamService {
     return fetch(`${url}all_years.php`)
       .then(data => data.json());
   }
+
+  static async team(year){
+    return fetch(`${url}group_list.php?&year${year}`).then(data => data.json());
+  }
 }
