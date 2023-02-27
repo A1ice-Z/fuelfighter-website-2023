@@ -1,7 +1,7 @@
-#headerBackground{
+#headerBackground {
     background-color: var(--tertiary-color);
     color: var(--primary-color);
-    box-shadow : 0px 0px 5px var(--tertiary-color);
+    box-shadow: 0px 0px 5px var(--tertiary-color);
 }
 
 .header {
@@ -34,12 +34,27 @@
     align-self: center;
 }
 
-.header a:link { text-decoration: none; color: inherit; }
-.header a:visited { text-decoration: none; color: inherit; }
-.header a:hover { text-decoration: none; color: inherit; }
-.header a:active { text-decoration: none; color: inherit; }
+.header a:link {
+    text-decoration: none;
+    color: inherit;
+}
 
-.header img{
+.header a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header img {
     align-self: center;
     height: 2.5rem;
 }
@@ -49,7 +64,7 @@
     align-self: center;
 }
 
-.headMenu{
+.headMenu {
     display: grid;
     grid-template-columns: [blank1] 1fr [content] 3fr [blank2] 1fr;
     grid-template-rows: 100%;
@@ -58,7 +73,7 @@
     opacity: 0.95;
 }
 
-.headMenu #menuBar{
+.headMenu #menuBar {
     grid-column: content;
     align-items: center;
     font-family: "Roboto-Light";
@@ -86,27 +101,37 @@
     align-self: center;
     color: inherit;
 }
-.headMenu a:link { text-decoration: none;}
-.headMenu a:visited { text-decoration: none; }
-.headMenu a:active { text-decoration: none; }
+
+.headMenu a:link {
+    text-decoration: none;
+}
+
+.headMenu a:visited {
+    text-decoration: none;
+}
+
+.headMenu a:active {
+    text-decoration: none;
+}
+
 .headMenu a:hover {
     font-weight: bold;
     font-size: calc(var(--fontSize));
     opacity: .9;
 }
 
-#menuDropdown{
-    background-color:var(--secondary-color);
-    color:  var(--primary-color);
+#menuDropdown {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .header i:hover {
     opacity: .8;
-    font-size:larger;
+    font-size: larger;
     cursor: pointer;
 }
 
-#titleHeader{
+#titleHeader {
     font-size: 1em;
     font-family: Roboto-Medium;
 }

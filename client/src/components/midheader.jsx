@@ -27,9 +27,8 @@ export default function Header({ path }) {
     // }, [darkMode]);
 
     return (
-
-        <div className="container">
-            <div className="row" id="headerBackground">
+        <div className="container" id="headerBackground">
+            <div className="row" id="upper-part">
                 <div className="row" id="header-innhold">
                     <div className="col-auto" id="logo-block">
                         <img src={logoWhite} width="30" />
@@ -46,7 +45,7 @@ export default function Header({ path }) {
                         </ul>
                     </div>
                     <div className="col-auto" id="sosiale-medier">
-                        <ul className="sosial-medie-lenker">
+                        <div className="sosial-medie-lenker">
                             <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-facebook"></i>
                             </a></li>
@@ -59,14 +58,10 @@ export default function Header({ path }) {
                             <li><a href="https://www.linkedin.com/company/22290458/" title="linkedin" target="_blank" rel="noopener noreferrer">
                                 <i className="bi bi-linkedin"></i>
                             </a></li>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
     )
 }
