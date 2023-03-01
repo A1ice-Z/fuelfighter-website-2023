@@ -27,12 +27,12 @@ export default function Header({ path }) {
     // }, [darkMode]);
 
     return (
-        <div className="container" id="headerBackground">
+        <div className="fixed-top">
             <div className="row" id="upper-part" >
-                <div className="row" id="header-innhold" height="20">
+                <div className="row" id="header-innhold">
                     <div className="col-auto" id="logo-block">
-                        <img src={logoWhite} width="30" />
-                        <a>Fuel Fighter</a>
+                        <img id="logoimg" src={logoWhite} alt="fuel fighter logo" />
+                        <a href="/"> Fuel Fighter</a>
                     </div>
                     <div className="col-auto" id="links">
                         <ul className="lenker">
