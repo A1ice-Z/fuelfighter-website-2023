@@ -28,8 +28,8 @@ export default function Header({ path }) {
 
     return (
         <div className="container" id="headerBackground">
-            <div className="row" id="upper-part">
-                <div className="row" id="header-innhold">
+            <div className="row" id="upper-part" >
+                <div className="row" id="header-innhold" height="20">
                     <div className="col-auto" id="logo-block">
                         <img src={logoWhite} width="30" />
                         <a>Fuel Fighter</a>
