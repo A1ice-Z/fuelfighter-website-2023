@@ -27,23 +27,41 @@ export default function Header({ path }) {
     // }, [darkMode]);
 
     return (
-        <div className="fixed-top">
-            <div className="header" id="headerBackground">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-auto" id="logo-block">
-                            <img id="logoimg" src={logoWhite} alt="fuel fighter logo" width="52" />
-                            <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
-                        </div>
-                        <div className="col-auto" id="links">
-
+        <div className="container" id="headerBackground">
+            <div className="row" id="upper-part">
+                <div className="row" id="header-innhold">
+                    <div className="col-auto" id="logo-block">
+                        <img src={logoWhite} width="30" />
+                        <a>Fuel Fighter</a>
+                    </div>
+                    <div className="col-auto" id="links">
+                        <ul className="lenker">
+                            <li><a href="/" className="">Home</a></li>
+                            <li><a href="/blog" className="">Blog</a></li>
+                            <li><a href="/about" className="">About</a></li>
+                            <li><a href="/team" className="">Team</a></li>
+                            <li><a href="/sponsors" className="">Sponsors</a></li>
+                            <li><a href="/contact" className="">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div className="col-auto" id="sosiale-medier">
+                        <div className="sosial-medie-lenker">
+                            <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer">
+                                <i className="bi bi-facebook"></i>
+                            </a></li>
+                            <li><a href="https://www.instagram.com/fuelfighter_ntnu/" title="instagram" target="_blank" rel="noopener noreferrer">
+                                <i className="bi bi-instagram"></i>
+                            </a></li>
+                            <li><a href="https://www.youtube.com/user/EcoMarathonNTNU" title="youtube" target="_blank" rel="noopener noreferrer">
+                                <i className="bi bi-youtube"></i>
+                            </a></li>
+                            <li><a href="https://www.linkedin.com/company/22290458/" title="linkedin" target="_blank" rel="noopener noreferrer">
+                                <i className="bi bi-linkedin"></i>
+                            </a></li>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
     )
 }
