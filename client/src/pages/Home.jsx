@@ -1,53 +1,41 @@
 import React from "react"
 
 import "../styles/pageStyles/home/home.css"
-// import BlogPreview from "./home/blogPreview";
-import video from '../assets/video/mainPageVideo.mp4';
-import imgValues from '../assets/pages/home/value1.jpg'
+import BlogPreview from "./home/BlogPreview.jsx";
+import logo_white from "../assets/logo/logo_white.png"
+
+import HeroHome from "./home/HeroMainPage";
+import HomeAbout from "./home/HomeAbout";
+
 
 export default function Home() {
-    return(
+    return (
         <div className="homeContainer">
-            <div className="homeFirst">
-                <video src={video} controls={false} playing={true} autoPlay muted loop />
-                <div id="homeTitle" className="homeTitle">
-					<h1>Fuel Fighter NTNU</h1>
-				</div>
-            </div>
-            <div className="homeAbout">
-                <div id="homeSection">
-                    <div className="testoHomeSections">
-                        <h1>Inspire a sustainable future</h1>
-                        <p>Our Motto</p>
+            <HeroHome />
+
+            <HomeAbout/>
+            
+            <BlogPreview />
+
+            <div className="applyField">
+                <div id="apply">
+                    <div className="fuelfighter-logo">
+                        <img alt="Fuel Fighter logo" src={logo_white} width="64" />
                     </div>
-                    <div className="valuesImgContainer">
-                            <img id="imgHomeAbout" alt="img values " src={imgValues}/>
+                    <div className="applyText">
+                        <h1>Apply for Fuel Fighter NTNU</h1>
+                        <p>Fuel Fighter NTNU is a technical student organization at NTNU
+                            working with the goal of making the world’s most energy
+                            efficient electric car.</p>
                     </div>
                 </div>
-
-                <div id="homeSectionInverted">
-                    <div className="valuesImgContainer">
-                            <img id="imgHomeAboutInv" alt="img values " src={imgValues}/>
-                    </div>
-                    <div className="testoHomeSections">
-                        <h1>Our Mission</h1>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-
-                <div id="homeSection">
-                    <div className="testoHomeSections">
-                        <h1>Our Values</h1>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div className="valuesImgContainer">
-                            <img id="imgHomeAbout" alt="img values " src={imgValues}/>
-                    </div>
+                <div id="apply-button">
+                    <a className="button-suggested-action" href="./join">
+                        Apply now
+                    </a>
                 </div>
             </div>
-            {/* <BlogPreview /> */}
+
         </div>
     )
 }

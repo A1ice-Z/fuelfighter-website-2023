@@ -1,0 +1,60 @@
+.homeContainer .homeAbout {
+    background-color: var(--secondary-color);
+    padding-inline: 4%;
+}
+
+.homeContainer .homeAbout .homeSection {
+    border-radius: 0px;
+    display: grid;
+    font-family: 'Roboto-BlackItalic';
+    grid-template-columns: [text] 50% [img] 50%;
+    grid-template-rows: auto;
+    margin: 1%;
+}
+
+.homeContainer .homeAbout #homeSectionInverted {
+    border-radius: 0px;
+    display: grid;
+    font-family: 'Roboto-BlackItalic';
+    grid-template-columns: [text] 50% [img] 50%;
+    grid-template-rows: auto;
+}
+
+.homeContainer .homeAbout .testoHomeSections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blue);
+    justify-content: center;
+}
+
+.homeContainer .homeAbout .testoHomeSections p {
+    color: aliceblue;
+    font-family: 'Roboto-Light';
+}
+
+.homeContainer .homeAbout .valuesImgContainer {
+    border-radius: inherit;
+}
+
+#homeSection1 {
+
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
