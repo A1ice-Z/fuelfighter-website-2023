@@ -29,7 +29,7 @@ export default function HomeAbout() {
         slideInLeftObserver.observe(homeSectionThird);
         slideInLeftObserver.observe(homeSectionSecond);
         
-    }, []);
+    }, [slideInLeftOptions]);
     return(
         <div className="homeAbout">
                 <div className="homeSection slide-in-left" id="homeSection1">

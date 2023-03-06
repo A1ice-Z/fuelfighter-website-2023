@@ -96,3 +96,11 @@
     border-bottom: 1px;
     border-bottom-style: solid;
 }
+
+.enterArticle {
+    animation: articlePopUp 2s;
+}
+
+.enterSuggestions {
+    animation: sectionEnterRight 1.7s;
+}
