@@ -34,10 +34,12 @@ ul {
 }
 
 #logo-block {
+    margin-top: 1%;
     display: flex;
     flex-direction: row;
 
-    width: 25%;
+    width: 15%;
+
 }
 
 #logo-block a {
@@ -47,7 +49,7 @@ ul {
 }
 
 #logo-block img {
-    width: 20%;
+    width: 25%;
 }
 
 #links {
@@ -62,7 +64,7 @@ ul {
 
 .lenker li {
     width: 20%;
-    margin-top: 4%;
+    margin-top: 4.5%;
     font-size: medium;
 }
 
@@ -72,7 +74,7 @@ ul {
 }
 
 .sosial-medie-lenker li {
-    margin-top: 38%;
+    margin-top: 46%;
     /* margin-left: 10%; */
     margin-right: 15%;
 }
