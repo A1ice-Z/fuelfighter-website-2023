@@ -14,7 +14,7 @@ import Contact from './pages/Contact'
 import ArticlePage from './pages/Blog/articlePage'
 import Dev from './pages/DevView'
 
-import Header from './components/midheader'
+import Header from './components/header'
 import Footer from './components/footer'
 
 import './styles/fonts.css'
