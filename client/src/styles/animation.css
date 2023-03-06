@@ -1,3 +1,15 @@
+.opacityZero {
+    opacity: 0;
+}
+
+.slideInSuggestions{
+    animation: sectionEnterRight 1.7s;
+}
+
+.suggPopUp {
+    animation: suggestionPopUp 1.7s;
+}
+
 /*////////////////////////////////
 //Blog Page
 ////////////////////////////////*/
@@ -10,6 +22,16 @@
     }
 }
 
+@keyframes suggestionPopUp {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 /*////////////////////////////////
 //Home Page
@@ -18,7 +40,7 @@
 @keyframes sectionEnterRight {
     0% {
         opacity: 0;
-        translate: 20% 0;
+        translate: -110% 0;
     }
     100% {
         translate: 0;

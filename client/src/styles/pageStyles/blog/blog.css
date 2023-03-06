@@ -97,10 +97,10 @@
     border-bottom-style: solid;
 }
 
-.enter {
+.enterArticle {
     animation: articlePopUp 2s;
 }
 
-.opacityZero {
-    opacity: 0;
+.enterSuggestions {
+    animation: sectionEnterRight 1.7s;
 }

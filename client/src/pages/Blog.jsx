@@ -41,19 +41,25 @@ export default function Blog() {
             }
         })
     }
+
+
+	//ANIMATIONS
+	const popUpOptions = {
+		rootMargin: '0px',
+		threshold: 0.3
+	};
+	const popUpOptions2 = {
+		rootMargin: '0px',
+		threshold: 0.5
+	};
 	
 	useEffect(() => {
-		const popUpOptions = {
-			rootMargin: '0px',
-			threshold: 0.3
-		};
-	
 		const animatedPostsOther = document.querySelectorAll("#otherPost")
 		
-		const slideInLeftObserver = new IntersectionObserver(function(entries, observer) {
+		const articlesPopOut = new IntersectionObserver(function(entries, observer) {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					entry.target.classList.add('enter');
+					entry.target.classList.add('enterArticle');
 					observer.unobserve(entry.target);
 					setTimeout(() =>{
 						entry.target.classList.remove('opacityZero');
@@ -62,9 +68,39 @@ export default function Blog() {
 			});
 		}, popUpOptions);
 	
-		animatedPostsOther.forEach(p => slideInLeftObserver.observe(p));  
-	}, [posts]);
+		animatedPostsOther.forEach(p => articlesPopOut.observe(p));  
+	}, [posts, popUpOptions]);
 
+	useEffect(() => {
+		const suggestionsSliding = document.querySelectorAll('#suggestedPosts');
+		const suggestedSlideToRight = new IntersectionObserver(function(entries, observer) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('slideInSuggestions');
+					observer.unobserve(entry.target);
+					setTimeout(() =>{
+						entry.target.classList.remove('opacityZero');
+					}, 1700);
+				}
+			});
+		}, popUpOptions2);
+		suggestionsSliding.forEach(suggestion => suggestedSlideToRight.observe(suggestion));
+	}, [popUpOptions2])
+
+	useEffect(() => {
+		const suggBlog = document.getElementById("sugBlog");
+		const suggestionsObserver = new IntersectionObserver(function(entries, observer) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('suggPopUp');
+					entry.target.classList.remove('opacityZero');
+					observer.unobserve(entry.target);
+				}
+			});
+		}, popUpOptions2);
+
+		suggestionsObserver.observe(suggBlog);
+	}, [popUpOptions2]);
 
     return(
         <section className='blogContainer'>
@@ -76,8 +112,12 @@ export default function Blog() {
 			<div className='latestPosts'>
 				<h1 className='titlePosts'>Latest News</h1>
 				<div className='articlesRow'>
-					{topPosts?.map((el, idx)=> <Post props={el}/>)}
-					<div className='suggestions'>
+					{topPosts?.map((el, idx)=> 
+						<div id="suggestedPosts" className='opacityZero' key={idx}>
+							<Post props={el}/>
+						</div>
+					)}
+					<div id="sugBlog" className='suggestions opacityZero'>
 						<h5 style={    {'fontFamily': 'Roboto-Black', 'marginTop': '7%'}}>Our suggestions:</h5>
 							<li><i class="bi bi-1-square-fill"></i><div onClick={() => goInside(56)}>Design contest</div></li>
 							<li><i class="bi bi-2-square-fill"></i><div onClick={() => goInside(32)}>What a beatiful week</div></li>
