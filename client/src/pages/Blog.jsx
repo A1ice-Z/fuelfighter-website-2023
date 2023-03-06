@@ -41,6 +41,30 @@ export default function Blog() {
             }
         })
     }
+	
+	useEffect(() => {
+		const popUpOptions = {
+			rootMargin: '0px',
+			threshold: 0.3
+		};
+	
+		const animatedPostsOther = document.querySelectorAll("#otherPost")
+		
+		const slideInLeftObserver = new IntersectionObserver(function(entries, observer) {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('enter');
+					observer.unobserve(entry.target);
+					setTimeout(() =>{
+						entry.target.classList.remove('opacityZero');
+					}, 2000);
+				}
+			});
+		}, popUpOptions);
+	
+		animatedPostsOther.forEach(p => slideInLeftObserver.observe(p));  
+	}, [posts]);
+
 
     return(
         <section className='blogContainer'>
@@ -69,7 +93,7 @@ export default function Blog() {
 				<div className='articles'>
 					{
 						otherPosts?.map((el, idx) =>
-							<div key={idx}>
+							<div key={idx} id="otherPost" className='opacityZero'>
 								<Post props={el} />
 							</div>
 						)
