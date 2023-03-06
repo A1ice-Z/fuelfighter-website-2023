@@ -2,25 +2,21 @@ import React, { useEffect, useState } from 'react'
 import "../styles/pageStyles/NewTeam.css"
 import teamService from '../_services/team.service'
 import Profile from './Team/MemberProfile'
+import NewProfile from './Team/NewMemberProfile'
 import styled from 'styled-components';
 
-const Content = styled.div`
-	display: flex; 
-	justify-content: center; 
-	flex-wrap: wrap;
-	max-width: 1400px;
-	align-items: flex-start;
-`;
+
 export default function NewTeam() {
 
     const defaultYear = 2023; // The default year
     const defaultTeam = 1; // The default index
-
-
     
+
+   
     const [selectedYear, setSelectedYear] = useState(defaultYear);
     const [selectedTeam, setSelectedTeam] = useState(defaultTeam);
     const [displayTeam, setDisplayTeam] = useState([]);
+    // const [groupList, setGroupList] = useState([]);
 
 
     const onClickChangeYear = (year) => {
@@ -38,7 +34,9 @@ export default function NewTeam() {
 
         const loadingData = async (showYear, showTeam) => {
             const data = await teamService.team(showYear, showTeam);
-            setDisplayTeam([data])
+            // const groupData = await teamService.getGroups(showYear);
+            setDisplayTeam([data]);
+            // setGroupList([groupData]);
         }
         loadingData(showYear, showTeam);
     }, [selectedTeam, selectedYear])
@@ -96,11 +94,11 @@ export default function NewTeam() {
                     <div class="row" id="teamPicturesRow">
                         <h1> Pictures </h1>
                         {displayTeam.map(team => (
-                        <Content>
+                        <div id="memberBox">
                             {team.members.map(member => (
-                                <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} />
+                                <NewProfile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} />
                                 ))}
-                        </Content>
+                        </div>
                         ))}
                     </div>
                 </div>

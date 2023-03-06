@@ -1,0 +1,90 @@
+#memberPictureBox {
+    background-color: var(--tertiary-color);
+	
+	vertical-align: top;
+	border-radius: 7px;
+	margin: 10px;
+	position: relative;
+	display: inline-block;
+	
+	overflow: hidden;
+    font-family: 'Roboto-Light';
+	display:flex;
+	flex-direction: column;
+	align-items:center ;
+    width: 200px;
+    height: 400px;
+    
+}
+#memberImage{
+   
+  	width: 100%;
+	
+}
+#position {
+   	
+	padding: 5px 0 0 0;
+	font-size: 14px;
+    color: white;
+    font-family: 'Roboto-Light';
+}
+
+
+#nameline{
+    color: white;
+	font-weight: bold;
+	font-size: 16px;
+    font-family: 'Roboto-Light';
+	padding-top: 7px;
+	padding-bottom: 2px;
+}
+
+#profileborder{
+	height: 1px;
+	border: 0;
+	color: #302f2f;
+	background-color: #424141;
+	width: 80%;
+	
+}
+
+#socialMediaBar{
+	color: white;
+	background-color: white;
+}
+.sliding-6 {
+	height: 1.2em;
+	color: #fff;
+	text-shadow: 0 calc(-0.5*var(--t, 2.4em)) white;
+	line-height: calc(1.2em + var(--t, 2.4em));
+	background: linear-gradient(white 0 0) bottom/100% var(--d, 0) no-repeat;
+	transition: 0.5s linear;
+  }
+  .sliding-6:hover {
+	--d: 100%;
+	--t: 0em;
+  }
+  .overlay {
+	position: absolute;
+	bottom: 0;
+	background: white;
+	background: white; /* Black see-through */
+	color: #f1f1f1;
+	width: 100%;
+	height: 100px;
+	transition: .5s linear;
+	opacity:0;
+	color: white;
+	padding: 10px;
+	text-align: center;
+  }
+  
+  /* When you mouse over the container, fade in the overlay title */
+  #memberPictureBox:hover .overlay {
+	opacity: 1;
+  }
+  #contactMemberNameOverlay{
+	  font-size: 17px;
+	  font-family: 'Roboto-Light';
+	  color: black;
+  }

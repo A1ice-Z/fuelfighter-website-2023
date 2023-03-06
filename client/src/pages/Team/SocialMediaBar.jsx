@@ -14,7 +14,7 @@ function SocialMediaBar(props) {
         return (
             <div className = "social-links">
                 <a href = {props.data.linkedin}> 
-                    <SiLinkedin className = "socialicon" size = {iconSize} /> 
+                    <SiLinkedin className = "socialicon" size = {iconSize +2} /> 
                 </a> 
                 <a  href = {'mailto:'+props.data.email}>
                     <MdMailOutline className = "socialicon" size = {iconSize + 11}  />

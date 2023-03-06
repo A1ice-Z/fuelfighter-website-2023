@@ -68,3 +68,10 @@
 #teamYearCol{
     margin-top: 20%;
 }
+
+#memberBox{
+    display: flex; 
+	justify-content: center; 
+	flex-wrap: wrap;
+	align-items: flex-start;
+}

@@ -14,7 +14,11 @@ export default class teamService {
       .then(data => data.json());
   }
 
-  static async team(year){
-    return fetch(`${url}group_list.php?&year${year}`).then(data => data.json());
+  static async getGroups(year){
+    return fetch(`http://localhost/backend/team/group_list.php?&year${year}`,{Domain: "localhost"}).then(data => data.json());
+  }
+
+  static async getGroupMembers(year, group){
+    return fetch(`http://localhost/backend/team/get_members.php?&year=${year}&group=${group}`,{Domain: "localhost"}).then(data => data.json());
   }
 }

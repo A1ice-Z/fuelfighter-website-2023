@@ -16,8 +16,8 @@ const Card = styled.div`
 	margin: 10px;
 	position: relative;
 	display: inline-block;
-	// box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.05);
-	// box-shadow: inset 0 0 0 1px rgba(255,255,255,.05),inset 0 1px 0 0 rgba(255,255,255,.2),inset 0 -1px 0 0 rgba(255,255,255,.1),0 1px 3px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.1);
+	box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.05);
+	box-shadow: inset 0 0 0 1px rgba(255,255,255,.05),inset 0 1px 0 0 rgba(255,255,255,.2),inset 0 -1px 0 0 rgba(255,255,255,.1),0 1px 3px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.1);
 	overflow: hidden;
 	padding: 0; 
 	font-family: 'Muli', sans-serif;
