@@ -15,7 +15,7 @@ export default class teamService {
   }
 
   static async getGroups(year){
-    return fetch(`http://localhost/backend/team/group_list.php?&year${year}`,{Domain: "localhost"}).then(data => data.json());
+    return fetch(`http://localhost/backend/team/group_list.php?&year=${year}`,{Domain: "localhost"}).then(data => data.json());
   }
 
   static async getGroupMembers(year, group){

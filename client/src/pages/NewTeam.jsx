@@ -16,7 +16,7 @@ export default function NewTeam() {
     const [selectedYear, setSelectedYear] = useState(defaultYear);
     const [selectedTeam, setSelectedTeam] = useState(defaultTeam);
     const [displayTeam, setDisplayTeam] = useState([]);
-    // const [groupList, setGroupList] = useState([]);
+    const [groupList, setGroupList] = useState([]);
 
 
     const onClickChangeYear = (year) => {
@@ -33,10 +33,10 @@ export default function NewTeam() {
         var showTeam = selectedTeam;
 
         const loadingData = async (showYear, showTeam) => {
+            const groupData = await teamService.getGroups(showYear);
+            setGroupList(groupData);
             const data = await teamService.team(showYear, showTeam);
-            // const groupData = await teamService.getGroups(showYear);
             setDisplayTeam([data]);
-            // setGroupList([groupData]);
         }
         loadingData(showYear, showTeam);
     }, [selectedTeam, selectedYear])
@@ -63,28 +63,12 @@ export default function NewTeam() {
                         <h1 id="teamTitleText" >Our Team </h1>
                     </div>
                     <div class="row justify-content-center" id="teamGroupRow">
-                    
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(0)}>Board</p>
-                        </div>
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(1)}>Autonomous </p>
-                        </div>
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(2)}>Design </p>
-                        </div>
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(3)}>Electrical </p>
-                        </div>
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(4)}>Marketing & Finance</p>
-                        </div>
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(5)}>Mechanical </p>
-                        </div>
-                        <div class="col-auto" id="chooseGroupButton">
-                            <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(6)}>Software </p>
-                        </div>
+
+                        {groupList.map(group => (
+                            console.log(group),
+                            <div class="col-auto" id="chooseGroupButton">
+                                <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(group)}>{group}</p>
+                            </div>))}
                     </div>
                     <div class="row" id="teamdescriptionRow">
                         {displayTeam.map(team => (
