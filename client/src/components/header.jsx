@@ -1,4 +1,4 @@
-import React, { useState, /*useContext, useEffect*/ } from "react"
+import React, { useEffect, useState, /*useContext, useEffect*/ } from "react"
 import '../styles/componentStyles/header.css'
 
 import logoWhite from '../assets/logo/logo_white.png'
@@ -25,9 +25,13 @@ export default function Header({ path, headerTransparent }) {
     //     const imag = document.getElementById("logoimg"); 
     //     imag.src = !darkMode ? logoBlue : logoWhite;
     // }, [darkMode]);
+    useEffect(()=>{
+        let x = document.querySelector('#dajeHead');
+        x.style.backgroundColor = headerTransparent ? "initial" : "var(--secondary-color)";
+    }, [path]);
 
     return (
-        <div className="fixed-top">
+        <nav className="fixed-top" id="dajeHead">
             <div className="row" id="upper-part" >
                 <div className="row" id="header-innhold">
                     <div className="col-auto" id="logo-block">
@@ -62,6 +66,6 @@ export default function Header({ path, headerTransparent }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
     )
 }

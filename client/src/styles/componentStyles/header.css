@@ -1,6 +1,11 @@
-.fixed-top {
-    background: var(--secondary-color);
-    /* position: relative; */
+.fixed-top {    /* position: relative; */
+}
+
+#dajeHead{
+    height: 5vh;
+    position: absolute;
+    top: 0;
+    z-index: 9;
 }
 
 #headerBackground {
