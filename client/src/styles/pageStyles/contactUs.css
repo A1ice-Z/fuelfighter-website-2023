@@ -2,7 +2,6 @@
 #contact-us-container{
     display: grid;
     border: 1px solid;
-    border-color: white;
     border-width: 3px;
     border-radius: 7px;
     margin: 0 auto; 
@@ -13,27 +12,51 @@
     text-align: center;
 }
 
-#leader-info{
+#leader-contact-info{
     color: aliceblue;
     font-size: large;
     font-family: "Roboto-Light";
     border:  1px solid;
-    border-color: aqua;
-    border-width: 3px;
+    border-width: 3px
+    
 }
+
 
 #adress-info{
     color: aliceblue;
     font-size: large;
     font-family: "Roboto-Light";
     border:  1px solid;
-    border-color: red;
     border-width: 3px;
+    text-align: center;
+    padding: 2%;
+    background-color: rgb(30, 30, 38);
 }
+
+#general-details{
+    color:aliceblue;
+    font-family: "Roboto-MediumItalic";
+    text-align: left;  
+}
+
+
+.contact-details{
+    padding-top: 2%;
+    padding-inline-start: 3%;
+}
+
 
 #pic-col, #cont-col, #adr-col, #map-col{
     text-align: left;
 }
+
+#map-col{
+    text-align: center;
+    padding: 2%;
+}
+
+
+
   
 
 
