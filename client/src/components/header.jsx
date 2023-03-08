@@ -6,7 +6,7 @@ import logoWhite from '../assets/logo/logo_white.png'
 
 // import { DarkModeContext } from "./DarkModeContext"
 
-export default function Header({ path }) {
+export default function Header({ path, headerTransparent }) {
     const [menuView, setMenuView] = useState(false)
     // const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
