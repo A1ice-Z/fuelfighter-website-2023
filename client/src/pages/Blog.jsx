@@ -118,12 +118,12 @@ export default function Blog() {
 						</div>
 					)}
 					<div id="sugBlog" className='suggestions opacityZero'>
-						<h5 style={    {'fontFamily': 'Roboto-Black', 'marginTop': '7%'}}>Our suggestions:</h5>
-							<li><i class="bi bi-1-square-fill"></i><div onClick={() => goInside(56)}>Design contest</div></li>
-							<li><i class="bi bi-2-square-fill"></i><div onClick={() => goInside(32)}>What a beatiful week</div></li>
-							<li><i class="bi bi-3-square-fill"></i><div onClick={() => goInside(31)}>We did it!</div></li>
-							<li><i class="bi bi-4-square-fill"></i><div onClick={() => goInside(28)}>Unexpected problems</div></li>
-							<li><i class="bi bi-1-square-fill"></i><div onClick={() => goInside(7)}>Design contest</div></li>
+						<h3 id="suggestionsTitle">Our suggestions</h3>
+							<li><span>1</span><div onClick={() => goInside(56)}>Design contest</div></li>
+							<li><span>2</span><div onClick={() => goInside(32)}>What a beatiful week</div></li>
+							<li><span>3</span><div onClick={() => goInside(31)}>We did it!</div></li>
+							<li><span>4</span><div onClick={() => goInside(28)}>Unexpected problems</div></li>
+							<li><span>5</span><div onClick={() => goInside(7)}>A Closer Look At Our Tanguy</div></li>
 					</div>
 				</div>
 			</div>

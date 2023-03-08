@@ -30,14 +30,12 @@
 .blogContainer .topStories p, .blogContainer .topStories h1{
     margin: 0;
     padding: 1.5%;
-    text-align: center;
     background-color: var(--secondary-color);
     color: var(--primary-color);
 }
 
 .blogContainer .latestPosts{
     padding: 3%;
-    text-align: center;
     display: grid;
     height: fit-content;
 }
@@ -70,21 +68,32 @@
 }
 
 .articlesRow .suggestions{
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background: #11183a;
+}
+.suggestions #suggestionsTitle{
+    font-weight: bold;
+    margin-top: 1%;
+    margin-left: 5%;
+    text-align: left;
 }
 
 .articlesRow .suggestions li {
     list-style-type: none;
-    margin: 3%;
+    margin-left: 5%;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    height: 100%;
     align-items: center;
+}
+.suggestions li span{
+    font-size: 2rem;
+    font-family: Roboto-Normal;
+}
+.suggestions i{
+    font-size: 2.5rem;
 }
 
 .articlesRow .suggestions li:hover{
