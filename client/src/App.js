@@ -21,12 +21,12 @@ import './styles/fonts.css'
 import './styles/shared.css'
 import './styles/animation.css'
 
-const HandMadeRoute = ({ Param }) => {
+const HandMadeRoute = ({ Param, headerTransparent }) => {
   const location = useLocation()
 
   return (
     <div className='pageContainer'>
-      <Header path={location.pathname} />
+      <Header path={location.pathname} headerTransparent={headerTransparent ? headerTransparent : false} />
       <div className='aPage'>
         <Param />
       </div>
@@ -46,7 +46,7 @@ function App() {
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <Router>
         <Routes>
-          <Route path='/' element={<HandMadeRoute Param={Home} />} />
+          <Route path='/' element={<HandMadeRoute Param={Home} headerTransparent={true} />} />
           <Route path='/dev' element={<HandMadeRoute Param={Dev} />} />
           <Route path='/blog' element={<HandMadeRoute Param={Blog} />} />
           <Route exact path='/blog/:id' element={<HandMadeRoute Param={ArticlePage} />} />

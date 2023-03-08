@@ -37,9 +37,7 @@
     border-radius: inherit;
 }
 
-#homeSection1 {
-
-}
+#homeSection1 {}
 
 .slide-in-left {
     opacity: 0;
@@ -57,4 +55,9 @@
 .visible {
     opacity: 1;
     transform: translateX(0);
+}
+
+#subtitleAboutUs {
+    margin-top: 2%;
+    background-color: var(--secondary-color);
 }
