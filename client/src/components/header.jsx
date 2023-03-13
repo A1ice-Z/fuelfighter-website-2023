@@ -23,8 +23,8 @@ export default function Header({ headerTransparent }) {
         expand="lg"
       >
         <Container fluid>
-          <Navbar.Brand href="/" style={{ color: 'var(--primary-color)', marginLeft: '5%' }}>
-            <img src={logoWhite} alt="" width="48" height="48" />
+          <Navbar.Brand href="/" style={{ color: 'var(--primary-color)', marginInline: '5%' }}>
+            <img src={logoWhite} alt="" width="48" height="48" style={{marginRight: '50px'}} />
             Fuel Fighter
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarNav"/>
