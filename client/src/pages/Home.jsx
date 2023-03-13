@@ -10,7 +10,7 @@ import HomeAbout from "./home/HomeAbout";
 
 export default function Home() {
     return (
-        <div className="homeContainer" id="homePage">
+        <div className="homeContainer" style={{position: 'relative'}}>
             <HeroHome />
 
             <HomeAbout/>
