@@ -63,12 +63,19 @@
     height: fit-content;
 }
 
+#unGoals h1 {
+    font-family: Roboto-Medium;
+    font-size: 2rem;
+}
+
 #unGoals #motto {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
 }
+
+#unGoals #motto p {}
 
 .rowTextHalf {
     display: flex;
