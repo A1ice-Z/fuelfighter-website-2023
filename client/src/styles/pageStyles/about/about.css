@@ -1,27 +1,29 @@
-#aboutUs{
+#aboutUs {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: [one] 50%, [two] 50%;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "init init"
-    "presA presB"
-    "impact impact"
-    "presC presD";
+    grid-template-areas:
+        "init init"
+        "unit unit"
+        "presA presB"
+        "impact impact"
+        "presC presD";
 }
 
-.fullCentered{
+.fullCentered {
     color: var(-secondary-color);
     width: 100%;
     grid-area: init;
 
-    display: flex;    
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#titleAboutUs{
+
+#titleAboutUs {
     height: 40vh;
     width: 100%;
     background-image: url('../../../assets/pages/about/aboutInit.jpg');
@@ -33,23 +35,42 @@
     justify-content: center;
     font-family: Roboto-Bold;
 }
-#subtitleAboutUs{
+
+#subtitleAboutUs {
     height: fit-content;
     padding-inline: 15%;
-    background-color: var(--green);
+    background-color: var(--blue);
     text-align: center;
 }
-#subtitleAboutUs h2{
+
+#subtitleAboutUs h2 {
     font-family: Roboto-Medium;
+    margin-top: 2%;
 }
-#subtitleAboutUs p{
+
+#subtitleAboutUs p {
     text-align: justify;
 }
 
-#secondRowText{
+#secondRowText {
     grid-area: presA;
 }
-.rowTextHalf{
+
+#unGoals {
+    grid-area: unit;
+    padding-block: 8vh;
+    text-align: center;
+    height: fit-content;
+}
+
+#unGoals #motto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rowTextHalf {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,11 +81,12 @@
     height: 100%;
     background-color: var(--ghostBlue);
 }
-#secondRowText p{
+
+#secondRowText p {
     margin: 0;
 }
 
-#secondRowImg{
+#secondRowImg {
     grid-area: presB;
     /* background-image: url('../../../assets/pages/about/aboutInit.jpg');
     background-repeat: no-repeat;
@@ -74,30 +96,32 @@
     width: 100%;
     height: 100%;
 }
-#secondRowImg img{
+
+#secondRowImg img {
     max-width: 100%;
     min-height: 100%;
 }
 
-#aboutImpact{
+#aboutImpact {
     grid-area: impact;
     padding-block: 10vh;
     text-align: center;
 }
-#aboutImpact h2{
+
+#aboutImpact h2 {
     font-family: Roboto-Medium;
 }
 
-#aboutImpact #theseImpacts{
+#aboutImpact #theseImpacts {
     display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.valueCard{
+.valueCard {
     width: 20vw;
-    min-height: 50vh; 
+    min-height: 50vh;
 
     display: flex;
     flex-direction: column;
@@ -105,18 +129,20 @@
     justify-content: space-between;
 }
 
-.valueCard img{
+.valueCard img {
     max-width: 10vh;
 }
 
-#fourthRowImg{
+#fourthRowImg {
     grid-area: presC;
 }
-#fourthRowText{
+
+#fourthRowText {
     grid-area: presD;
 
 }
-#fourthRowImg img{
+
+#fourthRowImg img {
     max-width: 100%;
     min-height: 100%;
 }

@@ -123,7 +123,7 @@ export default function Blog() {
 							<li><span>2</span><div onClick={() => goInside(32)}>What a beatiful week</div></li>
 							<li><span>3</span><div onClick={() => goInside(31)}>We did it!</div></li>
 							<li><span>4</span><div onClick={() => goInside(28)}>Unexpected problems</div></li>
-							<li><span>5</span><div onClick={() => goInside(7)}>Design contest</div></li>
+							<li><span>5</span><div onClick={() => goInside(7)}>A Closer Look At Our Tanguy</div></li>
 					</div>
 				</div>
 			</div>
