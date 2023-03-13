@@ -9,15 +9,17 @@ export default function HeroHome() {
     const [videoVisible, setVideoVisible] = useState(true)
 
     return (
-        <section className={`homeFirst`}>
-            <div id="homeTitle" className="homeTitle">
-                <h1>Fuel Fighter NTNU</h1>
+        <section id='heroHome'>
+            <div className={`homeFirst`}>
+                <div id="homeTitle" className="homeTitle">
+                    <h1>Fuel Fighter NTNU</h1>
+                </div>
+                {videoVisible ?
+                    <video src={video} onEnded={() => setVideoVisible(false)} controls={false} autoPlay muted />
+                    :
+                    <img id="landingimage" src={landingImage} alt="fuel fighter" />
+                }
             </div>
-            {videoVisible ?
-                <video src={video} onEnded={() => setVideoVisible(false)} controls={false} autoPlay muted />
-                :
-                <img id="landingimage" src={landingImage} alt="fuel fighter" />
-            }
         </section>
     )
 }
