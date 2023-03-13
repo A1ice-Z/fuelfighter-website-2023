@@ -78,7 +78,7 @@ export default function About() {
             </div>
             <div id="unGoals">
                 <h1>UN Sustainable Development Goals</h1>
-                <div id="mottoBeskrivelse">
+                <div id="motto">
                     <p>Our motto is “inspire for a sustainable future”. We want to show that working on a project can be done with an environmental mindset, and that the electric car is the future. With more focus on energy efficiency, electric cars can increase their range a lot more than what current models can achieve. To help stop the climate changes within 2030, we focus our work around seven of UN’s 17 sustainable development goals.</p>
                 </div>
             </div>
@@ -106,6 +106,7 @@ export default function About() {
                     <ValueCard title="Environmental Sustainability" img={impact2} subtitle="Through lending, investment and philanthropic capital, we’re supporting affordable housing and helping the underserved communities of today become flourishing communities tomorrow." />
                     <ValueCard title="Something something" img={impact3} subtitle="Through lending, investment and philanthropic capital, we’re supporting affordable housing and helping the underserved communities of today become flourishing communities tomorrow." />
                 </div>
+                <div></div>
             </div>
             <div id="fourthRowImg">
                 <img src={right1} />

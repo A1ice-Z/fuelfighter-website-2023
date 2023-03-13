@@ -6,6 +6,7 @@
     grid-template-rows: auto;
     grid-template-areas:
         "init init"
+        "unit unit"
         "presA presB"
         "impact impact"
         "presC presD";
@@ -56,9 +57,10 @@
 }
 
 #unGoals {
-    grid-area: impact;
-    padding-block: 10vh;
+    grid-area: unit;
+    padding-block: 8vh;
     text-align: center;
+    height: fit-content;
 }
 
 #unGoals #motto {
