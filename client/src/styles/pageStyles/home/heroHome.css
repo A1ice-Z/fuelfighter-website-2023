@@ -1,6 +1,9 @@
+#heroHome{
+    position: relative;
+}
 .homeContainer .homeFirst {
     margin: 0;
-    height: 95vh;
+    height: 100vh;
 }
 
 .homeContainer .homeFirst video {
