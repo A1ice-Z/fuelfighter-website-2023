@@ -89,7 +89,7 @@ export default function About() {
                     <p>Our motto is “inspire for a sustainable future”. We want to show that working on a project can be done with an environmental mindset, and that the electric car is the future. With more focus on energy efficiency, electric cars can increase their range a lot more than what current models can achieve. To help stop the climate changes within 2030, we focus our work around seven of UN’s 17 sustainable development goals.</p>
                 </div>
                 <div id="unGoalsImg">
-                    <a id="goal4" hrf="https://sdgs.un.org/goals/goal4">
+                    <a id="goal4" href="https://sdgs.un.org/goals/goal4">
                         <img alt="Un Sustainable Development Goal 4" src={goal4} />
                     </a>
                     <a id="goal7">
