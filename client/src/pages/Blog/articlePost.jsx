@@ -23,9 +23,9 @@ export default function Post ({props}) {
         return str;
     }
 
-    const nWords = 17;
+    const nWords = 10;
     const arrDescr = props.description.split(" ");
-    const description = (arrDescr.length<nWords ? props.description : descriptionTruncated(arrDescr, nWords-1) + "...")
+    const description = (arrDescr.length<nWords ? props.description : descriptionTruncated(arrDescr, nWords-1))
 
     return (
         <div id="containerPost" onClick={() => goInside(props.id)}>
@@ -38,6 +38,7 @@ export default function Post ({props}) {
             </div>
             <div className="postTxt" id="centeredDiv">
                 <p>{description}</p>
+                {/* <span>→</span> */}
             </div>
         </div>
     )

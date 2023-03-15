@@ -33,6 +33,10 @@
     margin-left: auto;
 }
 
+#containerPost:hover {
+    font-weight: bold;
+}
+
 .imagePost{
     object-fit: cover;
 }
