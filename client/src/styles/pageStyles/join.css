@@ -1,0 +1,62 @@
+.introCard{
+    vertical-align: top;
+	padding: 40px;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	width: 45%;
+	min-width: 350px;
+	background-color: #11183a;
+	font-size: 16px;
+    text-align: justify;
+	margin: 0;
+}
+.joinSection{
+    overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0 50px 0;
+	z-index: 0;
+}
+
+.parallax-row {
+	background-size: cover;
+	min-height: 50vh;
+	background-attachment: fixed;
+	transition: background-position 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+	.parallax-row {
+	  min-height: 30vh;
+	  background-attachment: scroll;
+	}
+  }
+
+.vacancy {
+	width: calc(30% - 20px);
+	margin: 1.5%;
+	transition: transform 0.3s;
+}
+
+.vacancy:hover {
+	transform: scale(1.1);
+}
+
+.vacancies-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+
+@media (max-width: 600px) {
+	.vacancy {
+		width: calc(100% - 20px);
+	}
+}
+
+.btn-join {
+	background-color: var(--primary-color) !important;
+	color: var(--tertiary-color) !important;
+  }

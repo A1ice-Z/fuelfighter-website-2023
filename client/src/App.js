@@ -47,17 +47,17 @@ function App() {
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <Router>
         <Routes>
-          <Route path='/' element={<HandMadeRoute Param={Home} headerTransparent={true} />} />
-          <Route path='/blog' element={<HandMadeRoute Param={Blog} headerTransparent={true} />} />
+          <Route path='/'               element={<HandMadeRoute Param={Home}        headerTransparent={true} />} />
+          <Route path='/blog'           element={<HandMadeRoute Param={Blog}        headerTransparent={true} />} />
           <Route exact path='/blog/:id' element={<HandMadeRoute Param={ArticlePage} />} />
-          <Route path='/about' element={<HandMadeRoute Param={About}/>} />
-          <Route path='/team' element={<HandMadeRoute Param={Team} />} />
-          <Route path='/sponsors' element={<HandMadeRoute Param={Sponsors} />} />
-          <Route path='/contact' element={<HandMadeRoute Param={Contact} />} />
-          <Route path='/join' element={<HandMadeRoute Param={Join}/>}/>
+          <Route path='/about'          element={<HandMadeRoute Param={About}       />} />
+          <Route path='/team'           element={<HandMadeRoute Param={Team}        />} />
+          <Route path='/sponsors'       element={<HandMadeRoute Param={Sponsors}    />} />
+          <Route path='/contact'        element={<HandMadeRoute Param={Contact}     />} />
+          <Route path='/join'           element={<HandMadeRoute Param={Join}        />}/>
           {/* <Route path='/dev' element={<HandMadeRoute Param={Dev} />} /> */}
           {/* <Route path='/admin'    element={ <Admin /> } /> */}
-          <Route path="*" element={<HandMadeRoute Param={PageNotFound} />} />
+          <Route path="*"               element={<HandMadeRoute Param={PageNotFound} />} />
         </Routes>
       </Router>
     </DarkModeContext.Provider>
