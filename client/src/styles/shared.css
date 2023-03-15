@@ -42,6 +42,10 @@ body {
   align-items: center;
 }
 
+.primaryColor {
+  color: var(--primary-color);
+}
+
 /* fontFamily = [Roboto-Light, Roboto-Medium, Roboto-Black, ...]*/
 
 /*******
