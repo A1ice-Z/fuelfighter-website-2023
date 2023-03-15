@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import joinHero from '../assets/pages/join/joinHero.jpeg';
 import '../styles/pageStyles/join.css';

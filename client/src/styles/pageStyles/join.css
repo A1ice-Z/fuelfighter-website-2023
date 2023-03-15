@@ -57,6 +57,14 @@
 }
 
 .btn-join {
-	background-color: var(--primary-color) !important;
-	color: var(--tertiary-color) !important;
-  }
+    background-image: linear-gradient(180deg, #05253b, #011a2c);
+    /* border-color: #05253b ;  */
+    border-color: #e54624 ; 
+    color: white !important;
+    text-shadow: 0 1px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    outline: none;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Roboto-Light';
+}
