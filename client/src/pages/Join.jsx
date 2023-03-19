@@ -6,6 +6,7 @@ import '../styles/pageStyles/join.css';
 
 import ParallaxImage from "./join/ParallaxImage";
 import Position from "./join/Position";
+import Positions from "./join/Positions";
 
 export const Join = () => {
     return (
@@ -23,13 +24,7 @@ export const Join = () => {
             </Container>
             <Container>
                 <h3 className="text-center mt-5">Available Roles</h3>
-                <div className="vacancies-list text-center">
-                {
-                    positions.map((p) => (
-                        <Position title={p.title} description={p.description} />
-                      ))
-                }
-                </div>
+                <Positions positions={positions} />
             </Container>
         </div>
       );
