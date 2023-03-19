@@ -21,7 +21,7 @@ const ParallaxImage = ({ image }) => {
           backgroundSize: 'cover',
           minHeight: '50vh',
           backgroundAttachment: 'fixed',
-          backgroundPosition: `center calc(50% + ${scrollY * 0.3}px)`,
+          backgroundPosition: `center calc(50% - ${scrollY * 0.3}px)`,
         }}>
         <Col>
           <h1 className="text-center primaryColor">Join Us</h1>
