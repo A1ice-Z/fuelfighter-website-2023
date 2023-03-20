@@ -8,7 +8,6 @@ import '../../styles/pageStyles/Team/SocialMediaBar.css'
 function SocialMediaBar(props) {
     
     const iconSize = 25
-    console.log(props.data.email)
     if (props.data.linkedin != null)
     {
         return (

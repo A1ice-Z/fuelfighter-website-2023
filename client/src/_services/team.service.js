@@ -1,7 +1,7 @@
 import {fetch} from 'whatwg-fetch';
 
-// const url = `${process.env.PUBLIC_URL}/backend/team/`;
-const url = '/backend/team/';
+const url = `${process.env.PUBLIC_URL}/backend/team/`;
+
 
 export default class teamService {
   static async team(year, number) {
@@ -15,10 +15,14 @@ export default class teamService {
   }
 
   static async getGroups(year){
-    return fetch(`http://localhost/backend/team/group_list.php?&year=${year}`,{Domain: "localhost"}).then(data => data.json());
+    return fetch(`${url}group_list.php?&year=${year}`).then(data => data.json());
   }
 
   static async getGroupMembers(year, group){
-    return fetch(`http://localhost/backend/team/get_members.php?&year=${year}&group=${group}`,{Domain: "localhost"}).then(data => data.json());
+    return fetch(`${url}get_members.php?&year=${year}&group=${group}`).then(data => data.json());
+  }
+
+  static async getDescription(year, group){
+    return fetch(`${url}get_description.php?&year=${year}&group=${group}`,{Domain: "localhost"}).then(data => data.json());
   }
 }

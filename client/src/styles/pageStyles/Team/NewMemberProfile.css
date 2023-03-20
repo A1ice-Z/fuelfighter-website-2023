@@ -13,13 +13,24 @@
 	flex-direction: column;
 	align-items:center ;
     width: 200px;
-    height: 400px;
     
 }
 #memberImage{
    
   	width: 100%;
 	
+}
+#memberInfo{
+	height: 100px;
+	width: 100%;
+	align-items:center ;
+	overflow: hidden;
+    font-family: 'Roboto-Light';
+	display:flex;
+	flex-direction: column;
+	align-items:center ;
+	
+
 }
 #position {
    	
@@ -52,18 +63,7 @@
 	color: white;
 	background-color: white;
 }
-.sliding-6 {
-	height: 1.2em;
-	color: #fff;
-	text-shadow: 0 calc(-0.5*var(--t, 2.4em)) white;
-	line-height: calc(1.2em + var(--t, 2.4em));
-	background: linear-gradient(white 0 0) bottom/100% var(--d, 0) no-repeat;
-	transition: 0.5s linear;
-  }
-  .sliding-6:hover {
-	--d: 100%;
-	--t: 0em;
-  }
+
   .overlay {
 	position: absolute;
 	bottom: 0;

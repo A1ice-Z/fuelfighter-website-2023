@@ -7,7 +7,6 @@ export default class joinService {
           })
           .then((result) => result.json())
           .then((res) => {
-              console.log(res);
               return res;
           });
     }

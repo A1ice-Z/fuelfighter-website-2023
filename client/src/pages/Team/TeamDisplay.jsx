@@ -149,5 +149,3 @@ export default function TeamDisplay() {
 
     )
 }
-
-console.log("4")

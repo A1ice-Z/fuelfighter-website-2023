@@ -45,6 +45,7 @@
     color: white;
     text-align: center;
     margin-bottom: 3%;
+    font-style: italic;
 }
 #teamPicturesRow{
     justify-content: center;
@@ -66,7 +67,12 @@
     cursor: pointer;
 }
 #teamYearCol{
-    margin-top: 20%;
+   margin-top: 20%;
+
+}
+#stickyDiv{
+    position: sticky;
+    top: 20%;
 }
 
 #memberBox{
@@ -75,3 +81,12 @@
 	flex-wrap: wrap;
 	align-items: flex-start;
 }
+
+@media screen and (max-width: 500px) {
+    #teamYearCol{
+        width: 100%;
+    }
+    #row1{
+        width: 100%;
+    }
+ }
