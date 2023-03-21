@@ -1,35 +1,63 @@
-.sponsorCard{
-    border-color: var(--primary-color);
-    border-width: 1px;
-    border-style: solid;
-    width: 25vw;
+.sponsorCard {
+    border: none;
+    width: 25%;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     margin: 2%;
+    overflow: hidden;
+    cursor: pointer;
 }
-
-.sponsorCard:hover{
-    border-color: var(--green);
-    background-color: var(--green);
-}
-
-
-.sponsorCard img{
-    width: 100%;
-    padding: 5%;
-    background-color: white;
-    height: 19vh;
+  
+@media screen and (max-width:600px) {
+  .sponsorCard{
+      width:50%;
+  }
 }
 
 .sponsorName{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+  width:100%;
+  text-align:center;
+}
+  
+.goldSponsor:hover .sponsorBody {
+    background-color: gold;
 }
 
-.sponsorName p{
-    margin-bottom: 0;
-    padding: 4%;
+.silverSponsor:hover .sponsorBody {
+    background-color: silver;
 }
+
+.bronzeSponsor:hover .sponsorBody {
+    background-color: #cd7f32;
+}
+
+.diamondSponsor:hover .sponsorBody {
+  background-color: #b9f2ff;
+}
+
+
+.goldSponsor .card-title {
+    font-weight: bold;
+}
+
+.medal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .gold {
+    color: gold;
+  }
+  
+  .silver {
+    color: silver;
+  }
+  
+  .bronze {
+    color: #cd7f32;
+  }
+  
+  .diamond {
+    color: #b9f2ff;
+  }
