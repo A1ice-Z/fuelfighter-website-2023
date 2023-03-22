@@ -10,8 +10,9 @@ export default function NewTeam() {
     const defaultYear = 2023; // The default year
     const defaultTeam = "Board"; // The default index
     const defaultDescription = "The board of the year 2023"; // The default description
-    
 
+
+    let freezeClick = false; // just modify that variable to disable all clics events
    
     const [selectedYear, setSelectedYear] = useState(defaultYear);
     const [selectedTeam, setSelectedTeam] = useState(defaultTeam);
@@ -37,6 +38,29 @@ export default function NewTeam() {
     }
 
 
+    document.addEventListener("click", e => {
+        if (freezeClick) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+    }, true);
+
+    const toogleLoading = (bool) => {
+        if(bool === true){
+            document.getElementById("spinner").style.display = "block";
+            document.getElementById("teamdescriptionRow").style.display = "none";
+            document.getElementById("teamPicturesRow").style.display = "none";
+            freezeClick = true;
+        }else{
+            document.getElementById("spinner").style.display = "none";
+            document.getElementById("teamdescriptionRow").style.display = "initial";
+            document.getElementById("teamPicturesRow").style.display = "initial";
+            freezeClick = false;
+        }
+
+    }
+
+
     useEffect( () => {
         
         if(selectedYear && selectedTeam ){
@@ -44,12 +68,14 @@ export default function NewTeam() {
         var showTeam = selectedTeam;
 
         const loadingData = async (showYear, showTeam) => {
+            toogleLoading(true);
             const groupData = await teamService.getGroups(showYear);
             setGroupList(groupData);
             const data = await teamService.getGroupMembers(showYear, showTeam);
             setDisplayTeam([data]);
             const description = await teamService.getDescription(showYear,showTeam);
             setGroupDescription(description);
+            toogleLoading(false);
         }
         loadingData(showYear, showTeam);
     }}, [selectedYear, selectedTeam])
@@ -81,6 +107,7 @@ export default function NewTeam() {
                     <div id="yearTitle">
                         <p onClick={() => onClickChangeYear(2020)}>Team 2020</p>
                     </div>
+                    
                     </div>
                 </div>
                 <div class="col-10" id="teamList">
@@ -95,6 +122,13 @@ export default function NewTeam() {
 
                     <div class="row" id="teamName">
                         <h1>{selectedTeam}</h1> 
+                    </div>
+
+
+                    <div class="d-flex justify-content-center">
+                        <div class="spinner-border text-light" role="status" id="spinner">
+                            <span class="sr-only"></span>
+                        </div>
                     </div>
                     <div class="row" id="teamdescriptionRow">
                             <p>{groupDescription.description}</p>
