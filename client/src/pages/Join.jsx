@@ -4,8 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import joinHero from '../assets/pages/join/joinHero.jpeg';
 import '../styles/pageStyles/join.css';
 
-import ParallaxImage from "./join/ParallaxImage";
-import Position from "./join/Position";
+import ParallaxImage from "../components/ParallaxImage";
 import Positions from "./join/Positions";
 
 export const Join = () => {
