@@ -84,9 +84,9 @@ export default function SponsorCard({ name, img, level, link, description }) {
   
   return (
     <>
-        <AnimatedCard ref={ref} style={{...animationProps, padding: '1%'}} className={`sponsorCard ${getCardStyle()}`} aria-label={`${name} sponsor card`} onClick={handleShowModal}>
+        <AnimatedCard ref={ref} style={{...animationProps, padding: '1%', height:'200px'}} className={`sponsorCard ${getCardStyle()}`} aria-label={`${name} sponsor card`} onClick={handleShowModal}>
           {getMedal()}
-          <Card.Img variant="top" src={img} alt={`${name} img`} aria-label={`${name} image`} />
+          <Card.Img variant="top" src={img} alt={`${name} img`} aria-label={`${name} image`} style={{height:'110px'}} />
           <div className="sponsorBody">
             <Card.Body>
               <Card.Title>{name}</Card.Title>
