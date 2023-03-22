@@ -1,18 +1,24 @@
 
 
 #teamContainer{
-    border-style: solid;
-    border-color: red;
+    /* border-style: solid;
+    border-color: red; */
+    /*vh stands for Relative to 1% of the height of the viewport* */
+    min-height: 100vh;
 }
 
-#row1{
-    border-style: solid;
-    border-color: lightblue;
-    color: green;
-}
+
 #chooseGroupButton{
     color: white;
     text-align: center;
+}
+
+#teamName{
+    font-size: 2em;
+    font-family: 'Roboto-Bold';
+    color: white;
+    text-align: center;
+    margin-bottom: 3%;
 }
 
 #chooseGroupButtonText{
@@ -30,7 +36,7 @@
 }
 
 #teamTitleRow{
-    border-style: solid;
+    /* border-style: solid; */
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 6%;
@@ -40,8 +46,7 @@
     font-family: 'Roboto-Bold';
 }
 #teamdescriptionRow{
-    /* border-style: solid;
-    border-color: green; */
+
     color: white;
     text-align: center;
     margin-bottom: 3%;
@@ -67,12 +72,12 @@
     cursor: pointer;
 }
 #teamYearCol{
-   margin-top: 20%;
+   margin-top: 5%;
 
 }
 #stickyDiv{
     position: sticky;
-    top: 20%;
+    top: 10%;
 }
 
 #memberBox{
@@ -85,8 +90,13 @@
 @media screen and (max-width: 500px) {
     #teamYearCol{
         width: 100%;
+        display: grid;
     }
-    #row1{
+
+    #teamList{
+        width: 100%;
+    }
+    #ourTeam{
         width: 100%;
     }
  }

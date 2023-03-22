@@ -1,6 +1,5 @@
 import React from 'react';
 import SocialMediaBar from './SocialMediaBar';
-import { MdMailOutline } from 'react-icons/md'
 import defaultImage from '../../assets/icon/whiteMember.png';
 import '../../styles/pageStyles/Team/NewMemberProfile.css'
 

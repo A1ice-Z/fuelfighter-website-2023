@@ -58,7 +58,12 @@ export default function NewTeam() {
     return(
         <div class="container" id="teamContainer">
         <div class="row" id="teamTitleRow">
+            <div class="col-2">
+            
+            </div>
+            <div class="col-10" id="ourTeam">
             <h1 id="teamTitleText" >Our Team </h1>
+            </div>
         </div>
             <div class="row">
                 <div class="col-2" id="teamYearCol">
@@ -78,7 +83,7 @@ export default function NewTeam() {
                     </div>
                     </div>
                 </div>
-                <div class="col-10" id="row1">
+                <div class="col-10" id="teamList">
                     <div class="row justify-content-center" id="teamGroupRow">
 
                         {groupList.map(group => (
@@ -86,6 +91,10 @@ export default function NewTeam() {
                             <div class="col-auto" id="chooseGroupButton">
                                 <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(group)}>{group}</p>
                             </div>))}
+                    </div>
+
+                    <div class="row" id="teamName">
+                        <h1>{selectedTeam}</h1> 
                     </div>
                     <div class="row" id="teamdescriptionRow">
                             <p>{groupDescription.description}</p>
