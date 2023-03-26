@@ -1,15 +1,18 @@
 :root {
   --primary-color: #ffffff;
   --secondary-color: #0a0e22;
-  --tertiary-color:  #000a18;
-  --blue: #222e58;  /*rgba: rgb(34, 47, 92)*/
+  --tertiary-color: #000a18;
+  --blue: #222e58;
+  /*rgba: rgb(34, 47, 92)*/
   --white: #ffffff;
+  --gosthWhite: rgb(255, 255, 255, 0.3);
+  /*this white color has less opasity*/
   --green: #9BCBA7;
   --opaqueGreen: #9bcba78a;
   --ghostBlue: #7391ff;
   --fontSize: 1.1em;
   --screen-height: 100vh;
-  --screen-width:  100vw;
+  --screen-width: 100vw;
 }
 
 body {
@@ -18,23 +21,34 @@ body {
   font-size: var(--fontSize);
 }
 
-.pageContainer{
+.pageContainer {
   display: flex;
   flex-direction: column;
   background-color: var(--secondary-color);
 }
 
-.aPage{
-  margin-top: 4rem;
+@media (min-width: 768px) {
+  .transparentHeader{
+    position: relative;
+    top: -11vh;
+  }
 }
 
+
 #centeredDiv {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.primaryColor {
+  color: var(--primary-color);
+}
+
+.secondaryColor {
+  color: var(--secondary-color);
+}
 /* fontFamily = [Roboto-Light, Roboto-Medium, Roboto-Black, ...]*/
 
 /*******
@@ -50,7 +64,7 @@ body {
   width: auto;
 }
 
-.grid > * {
+.grid>* {
   margin: 24px;
 }
 
@@ -64,34 +78,34 @@ body {
 
 @media only screen and (min-width: 640px) {
   .grid .half {
-      display: inline-block;
-      vertical-align: top;
-      width: calc(50% - 48px);
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 48px);
   }
 
   .grid .half h2 {
-      text-align: left;
+    text-align: left;
   }
 
   .grid .third {
-      width: calc(33.33% - 48px);
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 16px;
+    width: calc(33.33% - 48px);
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 16px;
   }
 
   .grid .third:last-child {
-      margin-left: 16px;
-      margin-right: 0;
+    margin-left: 16px;
+    margin-right: 0;
   }
 
   .grid .two-thirds {
-      display: inline-block;
-      vertical-align: top;
-      width: calc(66% - 48px);
+    display: inline-block;
+    vertical-align: top;
+    width: calc(66% - 48px);
   }
 
   .grid *:only-child p {
-      text-align: center;
+    text-align: center;
   }
 }

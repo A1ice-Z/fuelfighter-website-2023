@@ -1,0 +1,108 @@
+.blogPreview{
+    border-left: 10px solid var(--blue);
+    margin: 10%;
+    color: var(--primary-color);
+    padding: 2%;
+    padding-bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+.blogPreview img{
+    object-fit: contain;
+}
+
+.blogPreview h2{
+    font-family: 'Roboto-BlackItalic';
+    color: var(--primary-color);
+}
+
+#primaryImgBlog{
+    z-index: 2;
+    width: 40%;
+}
+
+.slideInAnimation{
+    animation: slide-inIMG 0.7s;
+}
+
+.slideOutAnimation{
+    animation: slide-outIMG 0.1s;
+}
+
+.fadeInLeftAnimation{
+    animation: slide-article-left 0.7s;
+}
+
+.fadeInRightAnimation{
+    animation: slide-article-right 0.7s;
+}
+
+.blogPreview #inside{
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+}
+
+.blogPreview #inside #articlesBlogPreview{
+    display: flex;
+    flex-direction: row;   
+}
+
+.articleViewHome{
+    width: 50%;
+    padding: 1%;
+    margin-left: 1.7%;
+    overflow: hidden;
+    z-index: 0;
+    font-size: 1rem;
+}
+.articleViewHome h2{
+    font-size: 1.7rem;
+    min-height: 5rem;
+    text-align:center;
+    margin: auto;
+}
+
+.articleViewHome .dateArticle{
+    font-family: Roboto-Italic;
+    text-align: end;
+    margin:auto;
+}
+
+.articleViewHome p{
+    text-align:justify;
+    margin:auto;
+}
+
+.blogPreview .buttons{
+    margin-top: 1%;
+    font-size: 3.7rem;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+#selectedBullet{
+    opacity: 1;
+}
+
+.bi.bi-dot{
+    opacity: 0.4;
+}
+
+@keyframes slide-outIMG {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.4;
+    }
+}

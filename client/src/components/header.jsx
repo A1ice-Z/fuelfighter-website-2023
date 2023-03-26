@@ -1,18 +1,74 @@
-import React, { useState, /*useContext, useEffect*/} from "react"
+import React from 'react';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Facebook, Instagram, Linkedin, Youtube } from 'react-bootstrap-icons';
 import '../styles/componentStyles/header.css'
-
 import logoWhite from '../assets/logo/logo_white.png'
-//import logoBlue from '../assets/logo/logo_blue.png'
+// import logoBlue from '../assets/logo/logo_blue.png'
 
 // import { DarkModeContext } from "./DarkModeContext"
 
-export default function Header({path}) {
-    const [menuView, setMenuView] = useState(false)
-    // const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
+export default function Header({ headerTransparent }) {
+  const backgroundColor = window.innerWidth < 768
+      ? 'var(--tertiary-color)'
+      : headerTransparent
+      ? 'transparent'
+      : 'var(--tertiary-color)'
+  
+  return (
+      <Navbar
+        style={{
+          backgroundColor,
+          zIndex: 99, 
+        }}
+        expand="lg"
+      >
+        <Container fluid>
+          <Navbar.Brand href="/" style={{ color: 'var(--primary-color)', marginInline: '5%' }}>
+            <img src={logoWhite} alt="" width="48" height="48" style={{marginRight: '50px'}} />
+            Fuel Fighter
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarNav"/>
+          <Navbar.Collapse id="navbarNav" className="justify-content-left primaryColor">
+            <Nav className='align-items-center'>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="/">
+                Home
+              </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="blog">
+                Blog
+              </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="about">
+                About
+              </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="team">
+                Team
+              </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="sponsors">
+                Sponsors
+              </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="contact">
+                Contact Us
+              </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="join">
+                Join
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+  
+          {window.innerWidth > 768 && ( 
+            <Navbar.Collapse className='justify-content-end' style={{marginRight: '3%', display: 'flex', alignItems: 'center'}}>
+              <Facebook className='headerLinks primaryColor' style={{ marginInline: '5px'}} />
+              <Instagram className='headerLinks primaryColor' style={{ marginInline: '5px'}} />
+              <Linkedin className='headerLinks primaryColor' style={{ marginInline: '5px'}} />
+              <Youtube className='headerLinks primaryColor' style={{ marginInline: '5px'}} />
+            </Navbar.Collapse>
+          )}
+        </Container>
+      </Navbar>
+    );
+  }
 
-    const toggleDisplay = () => {
-        setMenuView(!menuView)
-    }
+    // const [menuView, setMenuView] = useState(false)
+    // const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
 
     //BLUE & WHITE HANDLED HERE ///////////////////////////////////////////////////////////////////////////
     // useEffect(()=>{
@@ -25,60 +81,9 @@ export default function Header({path}) {
     //     const imag = document.getElementById("logoimg"); 
     //     imag.src = !darkMode ? logoBlue : logoWhite;
     // }, [darkMode]);
-
-    return(
-        <div className="fixed-top">
-            <div className="header" id="headerBackground">
-                <div></div>
-                <a href="/" className="d-flex align-items-center justify-content-center col-md-1 mb-2 mb-md-0 text-decoration-none">
-                    {/* <img id="logoimg" /> */}
-                    <img id="logoimg" src = {logoWhite} alt="fuel fighter logo"/>
-                </a>
-                <a href="/" className="d-flex justify-content-center" id="titleHeader">Fuel Fighter</a>
-                
-                <div className="d-flex justify-content-center col-12" id="menuDisplay" onClick={toggleDisplay}>
-                    <i className="bi bi-list" id="menu"></i>
-                </div>
-                
-                <ul className="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0">
-                    {/* <li onClick={() => toggleDarkMode()}>
-                        {darkMode ? <i className="bi bi-moon-fill"></i> : <i className="bi bi-sun-fill"></i>}
-                    </li> */}
-                </ul>
-
-                <ul className="nav col-md-0 justify-content-center text-end">
-                    <li><a href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-facebook"></i>
-                    </a></li>
-                    <li><a href="https://www.instagram.com/fuelfighter_ntnu/" title="instagram" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-instagram"></i>
-                    </a></li>
-                    <li><a href="https://www.youtube.com/user/EcoMarathonNTNU" title="youtube" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-youtube"></i>
-                    </a></li>
-                    <li><a href="https://www.linkedin.com/company/22290458/" title="linkedin" target="_blank" rel="noopener noreferrer">
-                        <i className="bi bi-linkedin"></i>
-                    </a></li>
-                </ul>
-            </div>
-            {menuView ?
-                <div className="headMenu" id="menuDropdown">
-                    <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="menuBar">
-                        <li><a href="/" className="">Home</a></li>
-                        <li><a href="/blog" className="">Blog</a></li>
-                        <li><a href="/about" className="">About</a></li>
-                        <li><a href="/team" className="">Team</a></li>
-                        <li><a href="/sponsors" className="">Sponsors</a></li>
-                        <li><a href="/contact" className="">Contact us</a></li>
-                        <li><a href="/dev" className="">dev</a></li>
-                    </ul>
-                </div>
-                :
-                <></>
-            }
-        </div>
-    )
-}
-
-/*
-*/
+    // useEffect(()=>{
+    //     let x = document.querySelector('#dajeHead');
+    //     x.style.backgroundColor = headerTransparent ? "none" : "var(--tertiary-color)";
+    //     x.style.color= "var(--primary-color)";
+    // }, [path]);
+    
