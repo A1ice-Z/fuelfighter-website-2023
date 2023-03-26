@@ -89,26 +89,26 @@ export default function About() {
                     <p>Our motto is “inspire for a sustainable future”. We want to show that working on a project can be done with an environmental mindset, and that the electric car is the future. With more focus on energy efficiency, electric cars can increase their range a lot more than what current models can achieve. To help stop the climate changes within 2030, we focus our work around seven of UN’s 17 sustainable development goals.</p>
                 </div>
                 <div id="unGoalsImg">
-                    <a id="goal4" href="https://sdgs.un.org/goals/goal4">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal4">
                         <img alt="Un Sustainable Development Goal 4" src={goal4} />
-
+                        <div></div>
                     </a>
-                    <a id="goal7" href="https://sdgs.un.org/goals/goal7">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal7">
                         <img alt="Un Sustainable Development Goal 7" src={goal7} />
                     </a>
-                    <a id="goal9" href="https://sdgs.un.org/goals/goal9">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal9">
                         <img alt="Un Sustainable Development Goal 9" src={goal9} />
                     </a>
-                    <a id="goal11" href="https://sdgs.un.org/goals/goal11">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal11">
                         <img alt="Un Sustainable Development Goal 11" src={goal11} />
                     </a>
-                    <a id="goal12" href="https://sdgs.un.org/goals/goal12">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal12">
                         <img alt="Un Sustainable Development Goal 12" src={goal12} />
                     </a>
-                    <a id="goal13" href="https://sdgs.un.org/goals/goal13">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal13">
                         <img alt="Un Sustainable Development Goal 13" src={goal13} />
                     </a>
-                    <a id="goal17" href="https://sdgs.un.org/goals/goal17">
+                    <a id="goals" href="https://sdgs.un.org/goals/goal17">
                         <img alt="Un Sustainable Development Goal 17" src={goal17} />
                     </a>
                 </div>
