@@ -14,7 +14,6 @@ import goal17 from "../assets/pages/about/goal17.png";
 import right1 from "../assets/pages/about/aboutValue.jpg";
 
 import "../styles/pageStyles/about/about.css";
-import { SiJavascript } from "react-icons/si";
 
 export default function About() {
 

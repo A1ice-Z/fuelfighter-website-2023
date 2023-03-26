@@ -261,7 +261,8 @@ export default function Sponsors() {
                     </div>
                 </section>
                 <section id="sponsorsSponsors">
-                    <div class="SponsorDiv">
+                    <div class="sponsorDiv">
+                        <h3>PLATINUM SPONSORS</h3>
                         <div className="sponsorRow">
                             {sponsorsDiamond.map((sponsor) => (
                                 <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Diamond'/>
@@ -269,7 +270,7 @@ export default function Sponsors() {
                         </div>
                     </div>
                     <div class="sponsorDiv" id="goldSponsors">
-                        {/* <h3>GOLD SPONSORS</h3> */}
+                        <h3>GOLD SPONSORS</h3>
                         <div className="sponsorRow">
                             {sponsorsGold.map((sponsor) => (
                                 <SponsorCard key={sponsor.name} name={sponsor.name} img={sponsor.img} description={sponsor.description} level='Gold'/>
@@ -277,7 +278,7 @@ export default function Sponsors() {
                         </div>
                     </div>
                     <div class="sponsorDiv" id="silverSponsors">
-                        {/* <h3>SILVER SPONSORS</h3> */}
+                        <h3>SILVER SPONSORS</h3>
                         <div className="sponsorRow">
                             {sponsorsSilver.map((sponsor) => (
                                 <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Silver'/>
@@ -285,7 +286,7 @@ export default function Sponsors() {
                         </div>
                     </div>
                     <div class="sponsorDiv" id="bronzeSponsors">
-                        {/* <h3>BRONZE SPONSORS</h3> */}
+                        <h3>BRONZE SPONSORS</h3>
                         <div className="sponsorRow" id="bronzeSponsors">
                             {sponsorBronze.map((sponsor) => (
                                 <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Bronze'/>
@@ -293,10 +294,6 @@ export default function Sponsors() {
                         </div>
                     </div>
                 </section>
-
-                <div id="contactSponsorsContainer">
-                </div>
-                
                 <section style={{padding: '4%'}}>
                     <div className="sponsorDiv primaryColor" id="goldSponsors">
                         <h3>Partners</h3>
@@ -308,6 +305,8 @@ export default function Sponsors() {
                     </div>
                 </section>
 
+                <div id="contactSponsorsContainer">
+                </div>
                 <div id='SponsorForm'>
                     <SponsorForm />                
                 </div>

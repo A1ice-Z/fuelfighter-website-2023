@@ -14,26 +14,6 @@
     font-weight: bold;
 }
 
-
-.blogContainer .topStories{
-    background-image: url('../../../assets/pages/contact/backgroundContact.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-inline: 15%;
-}
-.blogContainer .topStories p, .blogContainer .topStories h1{
-    margin: 0;
-    padding: 1.5%;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
 .blogContainer .latestPosts{
     padding: 3%;
     display: grid;

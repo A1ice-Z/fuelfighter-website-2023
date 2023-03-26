@@ -5,6 +5,9 @@ import Post from './Blog/articlePost'
 import blogServices from '../_services/blog.services'
 import '../styles/pageStyles/blog/blog.css'
 
+import ParallaxImage from '../components/ParallaxImage'
+import heroImageBlog from '../assets/pages/blog/heroImageBlog.jpg'
+
 export default function Blog() {
     const navigate = useNavigate();
 	const [loading, setLoading] = useState(false)
@@ -104,10 +107,10 @@ export default function Blog() {
 
     return(
         <section className='blogContainer'>
-			<div className='topStories' id="centeredDiv">
-				<h1 id="titleBlog">Welcome to Fuel Fighter Blog</h1>
-				<p id="subtitleBlog">We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.</p>
-			</div>
+			<ParallaxImage image={heroImageBlog} height='105vh'
+				title='Welcome to Fuel Fighter Blog'
+				subtitle='We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.'/>
+			
 
 			<div className='latestPosts'>
 				<h1 className='titlePosts'>Latest News</h1>

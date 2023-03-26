@@ -10,7 +10,7 @@ import Positions from "./join/Positions";
 export const Join = () => {
     return (
         <div className='primaryColor'>
-            <ParallaxImage image={joinHero} />
+            <ParallaxImage image={joinHero} title='Join Us' height='50vh'/>
             <Container className="joinSection text-center primaryColor">
                 <div className="introCard">
                     As a cross-disciplinary project we need students from every field of study. We are usually a team of 45 students, and always make sure some of them are exchange students. We like to have a good mixture of people from every year of study, to get good group dynamic and a good work culture to make people want to continue over several years.

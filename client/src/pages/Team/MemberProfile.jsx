@@ -90,7 +90,7 @@ function Profile({mail, image, name, studie, position, linkedin}) {
 						? <Studie>{studie}</Studie> 
 						: null
 					}
-					<SocialMediaBar data = {data} />
+					{/* <SocialMediaBar data = {data} /> */}
 					<Line />
 					<Position>{position}</Position>
 				</Content>

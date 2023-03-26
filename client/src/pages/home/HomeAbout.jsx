@@ -35,7 +35,7 @@ export default function HomeAbout() {
                 <div className="homeSection slide-in-left" id="homeSection1">
                     <div className="testoHomeSections">
                         <h1>Inspire a sustainable future</h1>
-                        <p>Our Motto and Values</p>
+                        <p>We build the world's most energy-efficient electric car. Our car drives 30 times more energy-efficient than Tesla Model S.</p>
                     </div>
                     <div className="valuesImgContainer">
                         <img id="imgHomeAbout" className="come-in" alt="img values " src={imgValues} />
@@ -48,7 +48,7 @@ export default function HomeAbout() {
                     </div>
                     <div className="testoHomeSections">
                         <h1>Our Mission</h1>
-                        <p>to make things sustainable</p>
+                        <p>To engage students in working as an engineering team, applying theory from their studies to practice, and building a sustainable future together.</p>
                         <p></p>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ export default function HomeAbout() {
                 <div className="homeSection slide-in-left" id="homeSection3">
                     <div className="testoHomeSections">
                         <h1>Our Goals</h1>
-                        <p>Fn-målene</p>
+                        <p>Driving towards a greener future. One kilometer at a time.</p>
                         <p></p>
                     </div>
                     <div className="valuesImgContainer">
