@@ -13,6 +13,7 @@ import Contact from './pages/Contact'
 // import Admin    from './pages/Admin'
 import ArticlePage from './pages/Blog/articlePage'
 // import Dev from './pages/DevView'
+import History from './pages/History'
 import { Join } from './pages/Join';
 
 import Header from './components/header'
@@ -55,6 +56,7 @@ function App() {
           <Route path='/sponsors'       element={<HandMadeRoute Param={Sponsors}    />} />
           <Route path='/contact'        element={<HandMadeRoute Param={Contact}     />} />
           <Route path='/join'           element={<HandMadeRoute Param={Join}        />}/>
+          <Route path='/history'        element={<HandMadeRoute Param={History}     headerTransparent={true} />}/>
           {/* <Route path='/dev' element={<HandMadeRoute Param={Dev} />} /> */}
           {/* <Route path='/admin'    element={ <Admin /> } /> */}
           <Route path="*"               element={<HandMadeRoute Param={PageNotFound} />} />

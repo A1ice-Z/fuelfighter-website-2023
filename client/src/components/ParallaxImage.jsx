@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const ParallaxImage = ({ image }) => {
+const ParallaxImage = ({ image, title, subtitle, height}) => {
   const [scrollY, setScrollY] = useState(0);
 
   const handleScroll = () => {
@@ -19,12 +19,25 @@ const ParallaxImage = ({ image }) => {
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: 'cover',
-          minHeight: '50vh',
+          minHeight: `${height}`,
+          width: `100%`,
           backgroundAttachment: 'fixed',
           backgroundPosition: `center calc(50% - ${scrollY * 0.3}px)`,
+          margin: '0',
         }}>
         <Col>
-          <h1 className="text-center primaryColor">Join Us</h1>
+          <h1 className="text-center primaryColor" style={{
+              fontSize: '3.5em',
+              fontWeight: 'bold',
+              marginTop: '10%',
+              marginBottom: '5%',
+              color: 'var(--primary-color)',
+            }}>{title}</h1>
+          {subtitle && (<p className="text-center primaryColor" style={{
+              fontSize: '1.5em',
+              marginBottom: '5%',
+              color: 'var(--primary-color)',
+            }}>{subtitle}</p>)}
         </Col>
       </Row>
     </Container>

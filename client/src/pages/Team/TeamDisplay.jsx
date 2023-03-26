@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../styles/pageStyles/Team/TeamDisplay.css'
-import 'react-dropdown/style.css';
+// import 'react-dropdown/style.css';
 import teamService from '../../_services/team.service'
 import Profile from './MemberProfile'
 import styled from 'styled-components';

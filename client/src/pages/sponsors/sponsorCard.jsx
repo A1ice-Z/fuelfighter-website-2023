@@ -53,6 +53,23 @@ export default function SponsorCard({ name, img, level, link, description }) {
     }
   };
 
+  const getImageStyle = () => {
+    switch (level) {
+      case 'Diamond':
+        return '250px';
+      case 'Gold':
+        return '200px';
+      case 'Silver':
+        return '150px';
+      case 'Bronze':
+        return '100px';
+      case 'Partner':
+        return '70px';
+      default:
+        return '';
+    }
+  };
+
   const getMedal = () => {
     switch (level) {
       case 'Diamond':
@@ -63,6 +80,8 @@ export default function SponsorCard({ name, img, level, link, description }) {
         return <div className="medal silver">🥈</div>;
       case 'Bronze':
         return <div className="medal bronze">🥉</div>;
+      case 'Partner':
+        return <div className="medal partner">🤝</div>;
       default:
         return null;
     }
@@ -70,7 +89,7 @@ export default function SponsorCard({ name, img, level, link, description }) {
   const titleSpan = () => {
     switch (level) {
       case 'Diamond':
-        return <span className='diamond'>{level} Sponsor</span>
+        return <span className='diamond'>Platinum Sponsor</span>
       case 'Gold':
         return <span className='gold'>{level} Sponsor</span>
       case 'Silver':
@@ -84,9 +103,9 @@ export default function SponsorCard({ name, img, level, link, description }) {
   
   return (
     <>
-        <AnimatedCard ref={ref} style={{...animationProps, padding: '1%', height:'200px'}} className={`sponsorCard ${getCardStyle()}`} aria-label={`${name} sponsor card`} onClick={handleShowModal}>
+        <AnimatedCard ref={ref} style={{...animationProps, padding: '1%'}} className={`sponsorCard ${getCardStyle()}`} aria-label={`${name} sponsor card`} onClick={handleShowModal}>
           {getMedal()}
-          <Card.Img variant="top" src={img} alt={`${name} img`} aria-label={`${name} image`} style={{height:'110px'}} />
+          <Card.Img variant="top" src={img} alt={`${name} img`} aria-label={`${name} image`} style={{height:`${getImageStyle()}`}} />
           <div className="sponsorBody">
             <Card.Body>
               <Card.Title>{name}</Card.Title>

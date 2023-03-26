@@ -51,6 +51,9 @@ export default function Header({ headerTransparent }) {
               <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="join">
                 Join
               </Nav.Link>
+              <Nav.Link className="headerLinks" style={{ color: 'var(--primary-color)' }} href="history">
+                History
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
   
