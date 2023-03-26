@@ -1,24 +1,59 @@
 
 #contact-us-container{
     display: grid;
-    border: 1px solid;
-    border-width: 3px;
-    border-radius: 7px;
     margin: 0 auto; 
+    padding-bottom: 9%;
+    padding-top: 5%;
 }
 
-#contact-us-row{
+#contact-us-title{
     color: aliceblue;
     text-align: center;
+    font-family: "Roboto-Mediu";
 }
 
 #leader-contact-info{
     color: aliceblue;
     font-size: large;
     font-family: "Roboto-Light";
-    border:  1px solid;
-    border-width: 3px
+    padding: 6%;
     
+}
+
+#contact-text{
+    color: aliceblue;
+    font-family: "Roboto-MediumItalic";
+    text-shadow: 1px 10px rgba(0, 0, 238, 0.20);
+    padding: 5%;
+    text-align: left;
+    
+}
+
+#leader-information{
+    text-align: left;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+
+#leader-information h2{
+    font-weight: bold;
+}
+
+#leader-information h2, #leader-information h4, #leader-information h5,#leader-information a{
+    margin-bottom: 10%;
+    color: aliceblue;
+}
+
+#leader-information h2, #leader-information h4, #leader-information h5, #leader-information a:hover{
+    margin-bottom: 10%;
+    color: aliceblue;
+}
+
+
+
+#adress-info span{
+    margin: 2%;
 }
 
 
@@ -26,11 +61,19 @@
     color: aliceblue;
     font-size: large;
     font-family: "Roboto-Light";
-    border:  1px solid;
-    border-width: 3px;
     text-align: center;
-    padding: 2%;
-    background-color: rgb(30, 30, 38);
+    padding: 5%;
+    background-color: rgba(31, 31, 83, 0.13);
+    
+}
+
+#leader-picture{
+    text-align: center;
+}
+
+#leader-picture img{
+    width: 230px;
+    margin: auto;
 }
 
 #general-details{
@@ -38,6 +81,51 @@
     font-family: "Roboto-MediumItalic";
     text-align: left;  
 }
+/*------------------------------*/
+/* #contact-us-id{
+    display: flex;
+
+}
+
+#contactus-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#form-group{
+    width: 100%;
+    color: aliceblue;
+    font-family: "Roboto-Light";
+    background-color: grey;
+    display: grid;
+}
+
+.form-control{
+    width: 100%;
+} */
+
+#forms-box{
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+}
+
+#center-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-submit-button{
+    margin-top: 10px;
+}
+
+
+
+/*------------------------------*/
+
 
 
 .contact-details{
@@ -54,6 +142,12 @@
     text-align: center;
     padding: 2%;
 }
+
+#contactus-icons{
+    margin: 2%;
+}
+
+
 
 
 
