@@ -24,22 +24,6 @@ export default function Contact() {
                         <h5> <span class="bi bi-envelope"></span><a href="mailto:leder@fuelfighter.no">{" "}leder@fuelfighter.no</a></h5>
                 </div>
             </div>
-
-                {/* <form id="contact-us-id">
-                    <div className="col" id="form-group">
-                        <label for="inputFName">Full name</label>
-                            <input type="text" class="form-control" id="inputFName" placeholder="Full Name"/>                           
-                    </div>
-
-                    
-                    <div className="col" id="form-group">
-                        <label for="inputEmail">Email address</label>                        
-                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Email"/>
-                            <small id="emailHelp" class="form-text text-muted"></small>
-                    </div>
-                    
-                    <button type="submit" id="form-submit-button" class="btn btn-primary">Submit</button>
-                </form> */}
             
 
             <div className="row" id="adress-info">
@@ -49,7 +33,7 @@ export default function Contact() {
                         <p className="contact-details"> Office <br></br> Klæbuveien 153 </p>
 
                     <div className="h2" id="general-details"> General Inquiries </div>
-                        <p className="contact-details"> Email <br></br> <a href="mailto:post@fuelfighter.no" >post@fuelfighter.no</a></p>
+                        <p className="contact-details"> Email <br></br> <a id="general-mail" href="mailto:post@fuelfighter.no" >post@fuelfighter.no</a></p>
 
                     <div className="h2" id="general-details"> Social Media </div>
     
