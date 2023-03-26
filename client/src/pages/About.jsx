@@ -115,16 +115,10 @@ export default function About() {
             </div>
             <div id="secondRowText" className="rowTextHalf">
                 <p>
-                    Our firm’s culture is rooted in our core principles.
+                    Welcome to Fuel Fighter, a technical student organization at NTNU dedicated to designing and producing the world's most energy-efficient electric car. For over 13 years, we've been competing in the Shell Eco Marathon, the world's leading student competition on energy efficiency. Our team is comprised of more than 40 students from various fields of study at NTNU, including engineering, business, and design. We also have exchange students from countries like Spain, Germany, and France, adding an international dimension to our team.
                 </p>
                 <p>
-                    Here, you will join diverse and
-                </p>
-                <p>
-                    inclusive teams that support each other and
-                </p>
-                <p>
-                    empower you to  do  your  best  work.
+                    Our goal is to create sustainable solutions that promote energy efficiency and innovation. We're constantly striving to improve our designs and techniques to produce the most efficient electric car possible. Our primary focus is the Urban Concept battery electric class, where we aim to achieve the highest energy efficiency possible. We also compete in other categories, including communication, innovation, and design awards.
                 </p>
             </div>
             <div id="secondRowImg">
