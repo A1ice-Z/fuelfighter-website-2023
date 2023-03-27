@@ -30,7 +30,7 @@ body {
 @media (min-width: 768px) {
   .transparentHeader{
     position: relative;
-    top: -10vh;
+    top: -11vh;
   }
 }
 
