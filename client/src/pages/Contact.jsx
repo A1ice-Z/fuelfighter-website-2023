@@ -2,16 +2,21 @@ import React from "react"
 import '../styles/pageStyles/contactUs.css'
 import leaderImage from '../assets/pages/contact/Leader_Tor.JPG';
 
-
-
+import TypingText from "../components/TypingText";
 
 export default function Contact() {
     return(
         <main className="container" id="contact-us-container">
-            <div className="row" id="contact-text">
-                    <h2> Any questions? <br></br> Don't hesistate to contact us!</h2>
+            <div className="container d-flex align-items-center">
+                <div className="row justify-content-center" id="contact-text">
+                    <TypingText
+                    text="Any questions?"
+                    speed={100}
+                    secondaryText="Don't hesistate to contact us!"
+                    restartDelay={2000}
+                    />
                 </div>
-
+            </div>
             <div className="row" id="leader-contact-info">
                 <div className="col" id="leader-picture">
                     <img src={leaderImage} alt=""/>
@@ -19,9 +24,9 @@ export default function Contact() {
 
                 <div className='col' id="leader-information">
                         <h2>Tor Børve Rasmussen</h2>
-                        <h4> <span class="bi bi-person"></span>{" "}Project Manager</h4> 
-                        <h5> <span class="bi bi-telephone"></span><a href="tell:94131904" >{" "}941 34 655</a></h5>
-                        <h5> <span class="bi bi-envelope"></span><a href="mailto:leder@fuelfighter.no">{" "}leder@fuelfighter.no</a></h5>
+                        <h4> <span class="bi bi-person"></span>{" "}Project Manager</h4>
+                        <h5> <span class="bi bi-telephone"></span>{" "}<a href="tell:94131904" >941 34 655</a></h5>
+                        <h5> <span class="bi bi-envelope"></span>{" "}<a href="mailto:leder@fuelfighter.no">leder@fuelfighter.no</a></h5>
                 </div>
             </div>
             
@@ -38,10 +43,10 @@ export default function Contact() {
                     <div className="h2" id="general-details"> Social Media </div>
     
                         <span className="contact-details" > 
-                        <a id="contactus-icons" href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
-                        <a id="contactus-icons" href="https://www.instagram.com/fuelfighter_ntnu/" title="instagram" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
-                        <a id="contactus-icons" href="https://www.youtube.com/user/EcoMarathonNTNU" title="youtube" target="_blank" rel="noopener noreferrer"><i className="bi bi-youtube"></i></a>
-                        <a id="contactus-icons" href="https://www.linkedin.com/company/22290458/" title="linkedin" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
+                            <a id="contactus-icons" href="https://www.facebook.com/FuelFighterNTNU/" title="facebook" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
+                            <a id="contactus-icons" href="https://www.instagram.com/fuelfighter_ntnu/" title="instagram" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
+                            <a id="contactus-icons" href="https://www.youtube.com/user/EcoMarathonNTNU" title="youtube" target="_blank" rel="noopener noreferrer"><i className="bi bi-youtube"></i></a>
+                            <a id="contactus-icons" href="https://www.linkedin.com/company/22290458/" title="linkedin" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
                         </span>
                 </div>
 
@@ -58,7 +63,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <section id="center-form">
+            {/* <section id="center-form">
                 <form id="forms-box">
                     <div class="form-row" >
                     <div class="col">
@@ -75,7 +80,7 @@ export default function Contact() {
                         <button type="submit" id="form-submit-button" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
-            </section>
+            </section> */}
         </main>
     )
 }

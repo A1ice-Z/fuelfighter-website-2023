@@ -26,7 +26,6 @@
     text-shadow: 1px 10px rgba(0, 0, 238, 0.20);
     padding: 5%;
     text-align: left;
-    
 }
 
 #leader-information{
@@ -45,13 +44,10 @@
     color: aliceblue;
 }
 
-#leader-information h2, #leader-information h4, #leader-information h5, #leader-information a:hover{
+#leader-information a:hover{
     margin-bottom: 10%;
-    color: aliceblue;
+    color: var(--blue);
 }
-
-
-
 
 #adress-info span{
     margin: 2%;
@@ -59,6 +55,7 @@
 
 
 #adress-info{
+    border-left: 10px solid var(--blue);
     color: aliceblue;
     font-size: large;
     font-family: "Roboto-Light";
@@ -105,13 +102,20 @@
     color: aliceblue;
 }
 
-#contactus-icons, #contactus-icons a{
+#contactus-icons i, #contactus-icons a{
     margin: 2%;
     color: aliceblue;
+}
+#contactus-icons i:hover{
+    margin: 2%;
+    color: var(--blue);
 }
 
 #general-mail{
     color: aliceblue;
+}
+#general-mail:hover{
+    color: var(--blue);
 }
 
 
