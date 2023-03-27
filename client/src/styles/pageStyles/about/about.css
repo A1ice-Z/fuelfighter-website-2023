@@ -98,10 +98,6 @@
     background-color: var(--ghostBlue);
 }
 
-#secondRowText p {
-    margin: 0;
-}
-
 #secondRowImg {
     grid-area: presB;
     /* background-image: url('../../../assets/pages/about/aboutInit.jpg');
@@ -137,7 +133,7 @@
 
 .valueCard {
     width: 20vw;
-    min-height: 50vh;
+    min-height: 35vh;
 
     display: flex;
     flex-direction: column;
