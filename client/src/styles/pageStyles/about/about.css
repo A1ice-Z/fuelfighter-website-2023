@@ -86,10 +86,6 @@
     padding: 0.5%;
 }
 
-#unGoals #unGoalsImg p {
-    
-}
-
 .rowTextHalf {
     display: flex;
     flex-direction: column;
@@ -100,10 +96,6 @@
     width: 100%;
     height: 100%;
     background-color: var(--ghostBlue);
-}
-
-#secondRowText p {
-    margin: 0;
 }
 
 #secondRowImg {
@@ -141,7 +133,7 @@
 
 .valueCard {
     width: 20vw;
-    min-height: 50vh;
+    min-height: 35vh;
 
     display: flex;
     flex-direction: column;

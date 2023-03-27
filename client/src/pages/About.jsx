@@ -127,9 +127,9 @@ export default function About() {
             <div id="aboutImpact">
                 <h2>Our Impact</h2>
                 <div id="theseImpacts">
-                    <ValueCard title="Something something" img={impact1} subtitle="Through lending, investment and philanthropic capital, we’re supporting affordable housing and helping the underserved communities of today become flourishing communities tomorrow." />
-                    <ValueCard title="Environmental Sustainability" img={impact2} subtitle="Through lending, investment and philanthropic capital, we’re supporting affordable housing and helping the underserved communities of today become flourishing communities tomorrow." />
-                    <ValueCard title="Something something" img={impact3} subtitle="Through lending, investment and philanthropic capital, we’re supporting affordable housing and helping the underserved communities of today become flourishing communities tomorrow." />
+                    <ValueCard title="Inspire a sustainable future" img={impact1} subtitle="We optimize the car to let it be the most energy efficient as possible." />
+                    <ValueCard title="Connecting students" img={impact2} subtitle="We connect students from various engineering and business disciplines and create a network." />
+                    <ValueCard title="Developing innovative technology" img={impact3} subtitle="We inspire for new, innovative technology for electric cars." />
                 </div>
             </div>
             <div id="fourthRowImg">
@@ -137,16 +137,10 @@ export default function About() {
             </div>
             <div id="fourthRowText" className="rowTextHalf">
                 <p>
-                    Our firm’s culture is rooted in our core principles.
+                    At Fuel Fighter, we believe that teamwork and hands-on experience are crucial for success. We design and produce almost everything on our car ourselves, including PCB design, 3D modeling, and composite work. The students run every aspect of the organization, from financials and sponsorships to marketing and general organizational work. We're proud to offer our members the opportunity to develop practical skills that will be useful in their future careers.
                 </p>
                 <p>
-                    Here, you will join diverse and
-                </p>
-                <p>
-                    inclusive teams that support each other and
-                </p>
-                <p>
-                    empower you to  do  your  best  work.
+                    Joining Fuel Fighter is an excellent way to gain hands-on experience, develop your teamwork and leadership skills, and contribute to a crucial cause. Whether you're an engineering student or have a passion for sustainability, we welcome all students who share our vision for a greener future. We're excited to work together to create change, one kilometer at a time.
                 </p>
             </div>
         </div>
