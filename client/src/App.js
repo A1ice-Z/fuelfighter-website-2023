@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route /*, Redirect*/, useLocation } from 'react-router-dom'
+import React, {useState, useEffect} from 'react';
+import { BrowserRouter as Router, Routes, Route /*, Redirect*/ } from 'react-router-dom'
 
 import { DarkModeContext, useDarkMode } from './components/DarkModeContext';
 
@@ -23,35 +23,44 @@ import './styles/fonts.css'
 import './styles/shared.css'
 import './styles/animation.css'
 
+
 function App() {
   const [darkMode, setDarkMode] = useDarkMode();
   const [headerTransparent, setHeaderTransparent] = useState(false);
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
+  useEffect(() => {
+    if (window.location.pathname === '/' || window.location.pathname === '/blog' || window.location.pathname === '/history') {
+      setHeaderTransparent(true);
+    } else {
+      setHeaderTransparent(false);
+    }
+  }, []);
+  
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <Router>
         <div className='pageContainer'>
-        <Header headerTransparent={headerTransparent} />
-        <div className={headerTransparent ? 'transparentHeader' : ''}>
-          <Routes>
-            <Route path='/'               element={<Home        onNavigate={() => setHeaderTransparent(true)} />} />
-            <Route path='/blog'           element={<Blog        onNavigate={() => setHeaderTransparent(true)} />} />
-            <Route exact path='/blog/:id' element={<ArticlePage onNavigate={() => setHeaderTransparent(false)} />} />
-            <Route path='/about'          element={<About       onNavigate={() => setHeaderTransparent(false)} />} />
-            <Route path='/team'           element={<Team        onNavigate={() => setHeaderTransparent(false)} />} />
-            <Route path='/sponsors'       element={<Sponsors    onNavigate={() => setHeaderTransparent(false)} />} />
-            <Route path='/contact'        element={<Contact     onNavigate={() => setHeaderTransparent(false)} />} />
-            <Route path='/join'           element={<Join        onNavigate={() => setHeaderTransparent(false)} />}/>
-            <Route path='/history'        element={<History     onNavigate={() => setHeaderTransparent(true)} />}/>
-            {/* <Route path='/dev' element={<HandMadeRoute Param={Dev} />} /> */}
-            {/* <Route path='/admin'    element={ <Admin /> } /> */}
-            <Route path="*"               element={<PageNotFound />} />
-          </Routes>
-        </div>
-        <Footer />
+          <Header headerTransparent={headerTransparent} />
+          <div className={headerTransparent ? 'transparentHeader' : ''}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/blog' element={<Blog />} />
+              <Route exact path='/blog/:id' element={<ArticlePage />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/team' element={<Team />} />
+              <Route path='/sponsors' element={<Sponsors />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/join' element={<Join />} />
+              <Route path='/history' element={<History />} />
+              {/* <Route path='/admin'    element={ <Admin /> } /> */}
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </Router>
     </DarkModeContext.Provider>
