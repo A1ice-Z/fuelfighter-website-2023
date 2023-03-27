@@ -29,8 +29,8 @@ body {
 
 @media (min-width: 768px) {
   .transparentHeader{
-    position: relative;
-    top: -11vh;
+    position: absolute;
+    top: 0;
   }
 }
 

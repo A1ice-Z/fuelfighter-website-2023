@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route /*, Redirect*/, useLocation } from 'react-router-dom'
 
 import { DarkModeContext, useDarkMode } from './components/DarkModeContext';
@@ -23,23 +23,9 @@ import './styles/fonts.css'
 import './styles/shared.css'
 import './styles/animation.css'
 
-const HandMadeRoute = ({ Param, headerTransparent }) => {
-  const location = useLocation()
-
-  return (
-    <div className='pageContainer'>
-      <Header path={location.pathname} headerTransparent={headerTransparent ? headerTransparent : false} />
-      <div className={headerTransparent ? 'transparentHeader' : ''}>
-        <Param />
-      </div>
-      <Footer />
-    </div>
-  )
-}
-
 function App() {
   const [darkMode, setDarkMode] = useDarkMode();
-
+  const [headerTransparent, setHeaderTransparent] = useState(false);
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
@@ -47,20 +33,26 @@ function App() {
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <Router>
-        <Routes>
-          <Route path='/'               element={<HandMadeRoute Param={Home}        headerTransparent={true} />} />
-          <Route path='/blog'           element={<HandMadeRoute Param={Blog}        headerTransparent={true} />} />
-          <Route exact path='/blog/:id' element={<HandMadeRoute Param={ArticlePage} />} />
-          <Route path='/about'          element={<HandMadeRoute Param={About}       />} />
-          <Route path='/team'           element={<HandMadeRoute Param={Team}        />} />
-          <Route path='/sponsors'       element={<HandMadeRoute Param={Sponsors}    />} />
-          <Route path='/contact'        element={<HandMadeRoute Param={Contact}     />} />
-          <Route path='/join'           element={<HandMadeRoute Param={Join}        />}/>
-          <Route path='/history'        element={<HandMadeRoute Param={History}     headerTransparent={true} />}/>
-          {/* <Route path='/dev' element={<HandMadeRoute Param={Dev} />} /> */}
-          {/* <Route path='/admin'    element={ <Admin /> } /> */}
-          <Route path="*"               element={<HandMadeRoute Param={PageNotFound} />} />
-        </Routes>
+        <div className='pageContainer'>
+        <Header headerTransparent={headerTransparent} />
+        <div className={headerTransparent ? 'transparentHeader' : ''}>
+          <Routes>
+            <Route path='/'               element={<Home        onNavigate={() => setHeaderTransparent(true)} />} />
+            <Route path='/blog'           element={<Blog        onNavigate={() => setHeaderTransparent(true)} />} />
+            <Route exact path='/blog/:id' element={<ArticlePage onNavigate={() => setHeaderTransparent(false)} />} />
+            <Route path='/about'          element={<About       onNavigate={() => setHeaderTransparent(false)} />} />
+            <Route path='/team'           element={<Team        onNavigate={() => setHeaderTransparent(false)} />} />
+            <Route path='/sponsors'       element={<Sponsors    onNavigate={() => setHeaderTransparent(false)} />} />
+            <Route path='/contact'        element={<Contact     onNavigate={() => setHeaderTransparent(false)} />} />
+            <Route path='/join'           element={<Join        onNavigate={() => setHeaderTransparent(false)} />}/>
+            <Route path='/history'        element={<History     onNavigate={() => setHeaderTransparent(true)} />}/>
+            {/* <Route path='/dev' element={<HandMadeRoute Param={Dev} />} /> */}
+            {/* <Route path='/admin'    element={ <Admin /> } /> */}
+            <Route path="*"               element={<PageNotFound />} />
+          </Routes>
+        </div>
+        <Footer />
+        </div>
       </Router>
     </DarkModeContext.Provider>
   );
