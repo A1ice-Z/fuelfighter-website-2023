@@ -13,4 +13,9 @@ export default class teamService {
     return fetch(`${url}all_years.php`)
       .then(data => data.json());
   }
+
+  static async getLeader(year){
+    return fetch(`http://localhost/backend/team/getLeader.php?`)
+    .then(data => data.json());
+  }
 }
