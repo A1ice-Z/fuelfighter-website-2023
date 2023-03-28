@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 
 const TypingText = ({ text, speed, secondaryText, restartDelay }) => {
-  const [displayedText, setDisplayedText] = useState('');
   const [displayedSecondaryText, setDisplayedSecondaryText] = useState('');
   let index = 0;
   let secondaryIndex = 0;
+  let displayedText = '';
 
   useEffect(() => {
     const interval = setInterval(() => {
       if (index <= text.length) {
-        setDisplayedText(text.slice(0, index));
+        displayedText = text.slice(0, index);
         index++;
       } else if (secondaryIndex <= secondaryText.length) {
         setDisplayedSecondaryText(secondaryText.slice(0, secondaryIndex));

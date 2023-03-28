@@ -13,7 +13,7 @@ export default function Contact() {
                     text="Any questions?"
                     speed={100}
                     secondaryText="Don't hesistate to contact us!"
-                    restartDelay={2000}
+                    restartDelay={300}
                     />
                 </div>
             </div>

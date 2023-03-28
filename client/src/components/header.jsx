@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Facebook, Instagram, Linkedin, Youtube } from 'react-bootstrap-icons';
 import '../styles/componentStyles/header.css'
@@ -24,21 +24,23 @@ export default function Header({ headerTransparent }) {
     'history',
   ];
   const [activeLinkIndex, setActiveLinkIndex] = useState(
-    window.location.pathname == '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1))
+    window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1))
   );
   
   const [carStyle, setCarStyle] = useState({
     position: 'absolute',
   });
   
-
-  const handleLinkClick = (index) => {
-      let nPx = (index > activeLinkIndex ? 1 : -1) * 200 * (Math.abs(index - activeLinkIndex));
+  const handleLinkClick = (index, link) => {
+      let nPx =  250 * (index - activeLinkIndex);
       setCarStyle((prevStyle)=>({
         position: 'absolute',
         transition: 'all 0.1s ease-in-out',
         transform: `translateX(${nPx}%)`,
       }))
+      setTimeout(() => {
+        window.location.href = link === '/' ? '/' : `/${link}`;
+      }, 105);
   };
   const a = headerTransparent ? '':'';
   return (
@@ -66,8 +68,7 @@ export default function Header({ headerTransparent }) {
                   key={link}
                   className="headerLinks nav-link-page-width"
                   style={{ color: 'var(--primary-color)' }}
-                  href={link === '/' ? '/' : `/${link}`}
-                  onClick={() => handleLinkClick(index)}
+                  onClick={() => handleLinkClick(index, link)}
                   // ref={(el) => (linkRefs.current[index] = el)}
                 >
                   {link === '/' ? 'Home' : link.charAt(0).toUpperCase() + link.slice(1)}
