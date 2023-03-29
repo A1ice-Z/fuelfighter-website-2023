@@ -11,7 +11,7 @@ export default function Contact() {
                 <div className="row justify-content-center" id="contact-text">
                     <TypingText
                     text="Any questions?"
-                    speed={100}
+                    speed={20}
                     secondaryText="Don't hesistate to contact us!"
                     restartDelay={300}
                     />
@@ -52,14 +52,13 @@ export default function Contact() {
 
                 <div className="col" id="map-col">
                     <iframe title="map" 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.950164658801!2d10.404194299999999!3d63.40846749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d31c22348c915%3A0x85cb03960f58d16!2sKl%C3%A6buveien%20153%2C%207037%20Trondheim!5e0!3m2!1sno!2sno!4v1677513980935!5m2!1sno!2sno" 
-                    className="w-200" 
-                    height="300" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1785.950164658801!2d10.404194299999999!3d63.40846749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d31c22348c915%3A0x85cb03960f58d16!2sKl%C3%A6buveien%20153%2C%207037%20Trondheim!5e0!3m2!1sno!2sno!4v1677513980935!5m2!1sno!2sno" 
+                        className="w-200" 
+                        height="300" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
-                    
                 </div>
             </div>
 

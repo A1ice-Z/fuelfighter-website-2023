@@ -72,9 +72,9 @@ export default function Header({ headerTransparent }) {
                   // ref={(el) => (linkRefs.current[index] = el)}
                 >
                   {link === '/' ? 'Home' : link.charAt(0).toUpperCase() + link.slice(1)}
-                  {index === activeLinkIndex && (
+                  {index === activeLinkIndex && link !== '/' && (
                     <div className="car" style={carStyle}>
-                      🚗
+                      🏎️
                     </div>
                   )}
                 </Nav.Link>
