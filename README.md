@@ -26,7 +26,7 @@
 - [ ] Images 					[Yao]
 
 ## Team
-- idk							[Patryck]
+- ? 							[Patryck]
 
 ## Contact
 - Q&A 							[Frida]
