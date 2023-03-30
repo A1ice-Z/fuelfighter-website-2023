@@ -28,3 +28,14 @@
         display: block;
     }
 }
+
+@media (max-width: 768px) {
+    #headerBar{
+        position: fixed;
+        width: 100%;
+    }
+    #route{
+        position: relative;
+        top: 8vh;
+    }
+}

@@ -44,7 +44,7 @@ export default function Header({ headerTransparent }) {
   };
   const a = headerTransparent ? '':'';
   return (
-    <Navbar style={{ backgroundColor, zIndex: 99, position: a}} expand="lg">
+    <Navbar id="headerBar" style={{ backgroundColor: 'var(--secondary-color)', color: 'var(--primary-color)', zIndex: 99, position: a,}} expand="lg">
       <Container fluid>
         <Navbar.Brand
           href="/"
