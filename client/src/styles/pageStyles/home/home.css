@@ -4,6 +4,8 @@
     display: grid;
     font-family: 'Roboto-BlackItalic';
     grid-template-columns: [img] 10% [text] 90%;
+    grid-row-gap: 4%;
+    padding: 4%;
     text-align: left;
     display: flex;
     flex-direction: row;
@@ -49,6 +51,7 @@
 
 .homeContainer .applyField .applyText h1 {
     font-family: 'Roboto-BlackItalic';
+    text-align: justify;
 }
 
 
@@ -71,4 +74,10 @@
 .fuelfighter-logo {
     position: relative;
     top: -7%;
+}
+
+@media screen and (max-width: 600px) {
+    .homeContainer .applyField .button-suggested-action {
+        width: 40%;
+    }
 }
