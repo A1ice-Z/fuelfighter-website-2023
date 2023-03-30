@@ -40,6 +40,9 @@
 
 .homeContainer .homeAbout .valuesImgContainer {
     border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide-in-left {
@@ -58,4 +61,29 @@
 .visible {
     opacity: 1;
     transform: translateX(0);
+}
+#imgHomeAbout, #imgHomeAboutInv {
+    width: 80%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .homeContainer .homeAbout .homeSection,
+    .homeContainer .homeAbout #homeSectionInverted {
+        grid-template-columns: 100%;
+    }
+    .homeContainer .homeAbout #homeSectionInverted .valuesImgContainer {
+        order: 2;
+    }
+    .homeContainer .homeAbout #homeSectionInverted .testoHomeSections {
+        order: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    #imgHomeAbout, #imgHomeAboutInv {
+        width: 80%;
+        height: 30vh;
+    }
 }
