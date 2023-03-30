@@ -67,7 +67,7 @@ export default function About() {
                 </p>
             </div>
             <div id="secondRowImg">
-                <img src={right1} />
+                <img src={goal7} />
             </div>
             <div id="aboutImpact">
                 <h2>Our Impact</h2>
@@ -78,7 +78,7 @@ export default function About() {
                 </div>
             </div>
             <div id="fourthRowImg">
-                <img src={right1} />
+                <img src={goal7} />
             </div>
             <div id="fourthRowText" className="rowTextHalf">
                 <p>

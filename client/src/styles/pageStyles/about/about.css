@@ -26,7 +26,7 @@
 #titleAboutUs {
     height: 40vh;
     width: 100%;
-    background-image: url('../../../assets/pages/about/aboutInit.jpg');
+    background-image: url('../../../assets/pages/about/goal9.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -79,7 +79,7 @@
 }
 
 #unGoals #unGoalsImg {
-    padding-inline: 10%;
+    padding-inline: 1%;
 }
 
 #unGoals #unGoalsImg img {
