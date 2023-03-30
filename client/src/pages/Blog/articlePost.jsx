@@ -37,7 +37,7 @@ export default function Post ({props}) {
                 <h1>{props.title}</h1>
             </div>
             <div className="postTxt" id="centeredDiv">
-                <p>{description}</p>
+                <h7>{description}</h7>
                 {/* <span>→</span> */}
             </div>
         </div>
