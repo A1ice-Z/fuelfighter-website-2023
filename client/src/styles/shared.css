@@ -27,10 +27,17 @@ body {
   background-color: var(--secondary-color);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .transparentHeader{
     position: relative;
-    top: -11vh;
+    top: -74px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #headerBar {
+    position: fixed;
+    width: 100%;
   }
 }
 

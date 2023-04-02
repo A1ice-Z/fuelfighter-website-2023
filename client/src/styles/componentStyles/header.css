@@ -28,13 +28,3 @@
         display: block;
     }
 }
-
-@media (max-width: 768px) {
-    #headerBar{
-        position: fixed;
-        width: 100%;
-    }
-    #route{
-        margin-top: 58px;
-    }
-}

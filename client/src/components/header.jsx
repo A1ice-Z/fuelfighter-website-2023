@@ -7,12 +7,6 @@ import logoWhite from '../assets/logo/logo_white.png'
 
 // import { DarkModeContext } from "./DarkModeContext"
 export default function Header({ headerTransparent }) {
-  const backgroundColor =
-    window.innerWidth < 768
-      ? 'var(--tertiary-color)'
-      : headerTransparent
-      ? 'transparent'
-      : 'var(--tertiary-color)';
   const navLinks = [
     '/',
     'blog',
@@ -42,9 +36,15 @@ export default function Header({ headerTransparent }) {
         window.location.href = link === '/' ? '/' : `/${link}`;
       }, 105);
   };
-  const a = headerTransparent ? '':'';
+  // const a = headerTransparent ? 'transparentHeader':'';
+  const backgroundColor =
+    window.innerWidth < 1000
+      ? 'var(--tertiary-color)'
+      : headerTransparent
+      ? 'transparent'
+      : 'var(--tertiary-color)';
   return (
-    <Navbar id="headerBar" style={{ backgroundColor: 'var(--secondary-color)', color: 'var(--primary-color)', zIndex: 99, position: a,}} expand="lg">
+    <Navbar id="headerBar" style={{ backgroundColor: backgroundColor, color: 'var(--primary-color)', zIndex: 99}} expand="lg">
       <Container fluid>
         <Navbar.Brand
           href="/"
@@ -82,7 +82,7 @@ export default function Header({ headerTransparent }) {
             ))}
           </Nav>
         </Navbar.Collapse>
-        {window.innerWidth > 768 &&  (
+        {window.innerWidth > 1000 &&  (
           <Navbar.Collapse
             className="justify-content-end"
             style={{ marginRight: '3%', display: 'flex', alignItems: 'center' }}
