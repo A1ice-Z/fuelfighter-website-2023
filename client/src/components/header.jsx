@@ -7,12 +7,6 @@ import logoWhite from '../assets/logo/logo_white.png'
 
 // import { DarkModeContext } from "./DarkModeContext"
 export default function Header({ headerTransparent }) {
-  const backgroundColor =
-    window.innerWidth < 768
-      ? 'var(--tertiary-color)'
-      : headerTransparent
-      ? 'transparent'
-      : 'var(--tertiary-color)';
   const navLinks = [
     '/',
     'blog',
@@ -23,9 +17,7 @@ export default function Header({ headerTransparent }) {
     'join',
     'history',
   ];
-  const [activeLinkIndex, setActiveLinkIndex] = useState(
-    window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1))
-  );
+  let activeLinkIndex = window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1));
   
   const [carStyle, setCarStyle] = useState({
     position: 'absolute',
@@ -42,9 +34,20 @@ export default function Header({ headerTransparent }) {
         window.location.href = link === '/' ? '/' : `/${link}`;
       }, 105);
   };
-  const a = headerTransparent ? '':'';
+  // const a = headerTransparent ? 'transparentHeader':'';
+  const cssSelector1000 = window.innerWidth > 1000;
+  const backgroundColor =
+    window.innerWidth < 1000
+      ? 'var(--tertiary-color)'
+      : headerTransparent
+      ? 'transparent'
+      : 'var(--tertiary-color)';
+  
+  const linkClassName = (link) => {
+      return link === 'join'?'join_animation':'';
+  }
   return (
-    <Navbar style={{ backgroundColor, zIndex: 99, position: a}} expand="lg">
+    <Navbar id="headerBar" style={{ backgroundColor: backgroundColor, color: 'var(--primary-color)', zIndex: 99}} expand="lg">
       <Container fluid>
         <Navbar.Brand
           href="/"
@@ -66,13 +69,13 @@ export default function Header({ headerTransparent }) {
               <>
                 <Nav.Link
                   key={link}
-                  className="headerLinks nav-link-page-width"
+                  className={`headerLinks nav-link-page-width ${linkClassName(link)}`}
                   style={{ color: 'var(--primary-color)' }}
                   onClick={() => handleLinkClick(index, link)}
                   // ref={(el) => (linkRefs.current[index] = el)}
                 >
                   {link === '/' ? 'Home' : link.charAt(0).toUpperCase() + link.slice(1)}
-                  {index === activeLinkIndex && link !== '/' && (
+                  {cssSelector1000 && index === activeLinkIndex && link !== '/' && (
                     <div className="car" style={carStyle}>
                       🏎️
                     </div>
@@ -82,7 +85,7 @@ export default function Header({ headerTransparent }) {
             ))}
           </Nav>
         </Navbar.Collapse>
-        {window.innerWidth > 768 &&  (
+        {cssSelector1000 && (
           <Navbar.Collapse
             className="justify-content-end"
             style={{ marginRight: '3%', display: 'flex', alignItems: 'center' }}

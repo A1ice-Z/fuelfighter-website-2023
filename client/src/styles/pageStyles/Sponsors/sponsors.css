@@ -1,4 +1,5 @@
 #titleSponsors{
+    width: 100%;
     padding-inline: 10%;
     padding-block: 5%;
     background-color: var(--secondary-color);
@@ -13,7 +14,6 @@
 }
 .sponsorDiv{
     padding-inline: 4%;
-    /* background: linear-gradient(var(--white), var(--ghostBlue)); */
 }
 .sponsorDiv h3{
     font-family: Roboto-Medium;
@@ -27,16 +27,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-
-#goldSponsors{
-    /* background: linear-gradient(var(--secondary-color), gold, var(--secondary-color)); */
-}
-#silverSponsors{
-    /* background: linear-gradient(var(--secondary-color), silver, var(--secondary-color)); */
-}
-#bronzeSponsors{
-    /* background: linear-gradient(var(--secondary-color),#eda358, var(--secondary-color)); */
 }
 
 .bronzeSponsorsContainer{

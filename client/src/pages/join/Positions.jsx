@@ -63,7 +63,7 @@ const Positions = ({ positions }) => {
         </Row>
       )}
       <Row className="selected-position" style={{flexDirection: 'row', marginTop: '2rem'}}>
-        <h3 style={{textAlign: 'center'}}>{selectedPosition.title}</h3>
+        <h3 style={{textAlign: 'center'}} className='rainbow_text_animated'>{selectedPosition.title}</h3>
         <Col xs={12} sm={5}>
           <img src={selectedPosition.image} alt={selectedPosition.title} className="position-image" />
           {/* <img src={imageMocked} alt={selectedPosition.title} className="position-image" /> */}

@@ -55,6 +55,7 @@
 
 
 #adress-info{
+    margin: 1%;
     border-left: 10px solid var(--blue);
     color: aliceblue;
     font-size: large;

@@ -45,7 +45,7 @@ function App() {
       <Router>
         <div className='pageContainer'>
           <Header headerTransparent={headerTransparent} />
-          <div className={headerTransparent ? 'transparentHeader' : ''}>
+          <div id='route' className={headerTransparent ? 'transparentHeader' : ''}>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/blog' element={<Blog />} />
