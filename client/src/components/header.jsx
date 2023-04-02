@@ -37,12 +37,17 @@ export default function Header({ headerTransparent }) {
       }, 105);
   };
   // const a = headerTransparent ? 'transparentHeader':'';
+  const cssSelector1000 = window.innerWidth > 1000;
   const backgroundColor =
     window.innerWidth < 1000
       ? 'var(--tertiary-color)'
       : headerTransparent
       ? 'transparent'
       : 'var(--tertiary-color)';
+  
+  const linkClassName = (link) => {
+      return link === 'join'?'join_animation':'';
+  }
   return (
     <Navbar id="headerBar" style={{ backgroundColor: backgroundColor, color: 'var(--primary-color)', zIndex: 99}} expand="lg">
       <Container fluid>
@@ -66,13 +71,13 @@ export default function Header({ headerTransparent }) {
               <>
                 <Nav.Link
                   key={link}
-                  className="headerLinks nav-link-page-width"
+                  className={`headerLinks nav-link-page-width ${linkClassName(link)}`}
                   style={{ color: 'var(--primary-color)' }}
                   onClick={() => handleLinkClick(index, link)}
                   // ref={(el) => (linkRefs.current[index] = el)}
                 >
                   {link === '/' ? 'Home' : link.charAt(0).toUpperCase() + link.slice(1)}
-                  {index === activeLinkIndex && link !== '/' && (
+                  {cssSelector1000 && index === activeLinkIndex && link !== '/' && (
                     <div className="car" style={carStyle}>
                       🏎️
                     </div>
@@ -82,7 +87,7 @@ export default function Header({ headerTransparent }) {
             ))}
           </Nav>
         </Navbar.Collapse>
-        {window.innerWidth > 1000 &&  (
+        {cssSelector1000 && (
           <Navbar.Collapse
             className="justify-content-end"
             style={{ marginRight: '3%', display: 'flex', alignItems: 'center' }}

@@ -39,6 +39,10 @@ body {
     position: fixed;
     width: 100%;
   }
+  #route {
+    position: static;
+    margin-top: +74px;
+  }
 }
 
 

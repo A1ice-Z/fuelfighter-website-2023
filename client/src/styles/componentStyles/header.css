@@ -23,8 +23,6 @@
     font-size: medium;
 }
 
-@media (min-width: 768px) {
-    .car{
-        display: block;
-    }
+.join_animation {
+
 }

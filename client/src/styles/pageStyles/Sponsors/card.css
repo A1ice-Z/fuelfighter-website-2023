@@ -7,12 +7,6 @@
     overflow: hidden;
     cursor: pointer;
 }
-  
-@media screen and (max-width:600px) {
-  .sponsorCard{
-      width:50%;
-  }
-}
 
 /* .sponsorCard {
   display: flex;
@@ -52,10 +46,6 @@
 }
 
 
-.diamondSponsor {
-  margin-inline: 7vh;
-}
-
 .goldSponsor .card-title {
     font-weight: bold;
 }
@@ -81,3 +71,16 @@
   .diamond {
     color: #b9f2ff;
   }
+
+
+    
+@media screen and (max-width:600px) {
+  .sponsorCard{
+    width:50%;
+  }
+}
+@media screen and (min-width:1000px) {
+  .diamondSponsor {
+    margin-inline: 7vw;
+  }
+}
