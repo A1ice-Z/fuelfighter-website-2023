@@ -17,9 +17,7 @@ export default function Header({ headerTransparent }) {
     'join',
     'history',
   ];
-  const [activeLinkIndex, setActiveLinkIndex] = useState(
-    window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1))
-  );
+  let activeLinkIndex = window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1));
   
   const [carStyle, setCarStyle] = useState({
     position: 'absolute',

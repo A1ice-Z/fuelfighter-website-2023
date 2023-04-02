@@ -13,8 +13,6 @@ import goal12 from "../assets/pages/about/goal12.png";
 import goal13 from "../assets/pages/about/goal13.png";
 import goal17 from "../assets/pages/about/goal17.png";
 
-import right1 from "../assets/pages/about/aboutValue.jpg";
-
 import "../styles/pageStyles/about/about.css";
 
 export default function About() {
@@ -68,7 +66,7 @@ export default function About() {
                     </p>
                 </div>
                 <div id="secondRowImg">
-                    <img src={goal7} />
+                    <img src={goal7} alt="not defined"/>
                 </div>
             </div>
             
@@ -82,7 +80,7 @@ export default function About() {
             </div>
             <div className="aboutTxtImg">
                 <div id="fourthRowImg">
-                    <img src={goal7} />
+                    <img src={goal7} alt="not defined"/>
                 </div>
                 <div id="fourthRowText" className="rowTextHalf">
                     <p>
@@ -100,7 +98,7 @@ export default function About() {
 const ValueCard = ({ img, title, subtitle }) => {
     return (
         <div className="valueCard">
-            <img id="" alt="Picture missing " src={img} />
+            <img id="" alt={`${title} logo`} src={img} />
             <h3>{title}</h3>
             <p>{subtitle}</p>
         </div>
