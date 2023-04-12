@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/pageStyles/NewTeamYears.css'
+import '../styles/pageStyles/TeamYears.css'
 
 
 
