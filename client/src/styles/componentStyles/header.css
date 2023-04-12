@@ -12,3 +12,17 @@
     margin-left: 1%;
     color: fuchsia;
 }
+
+.nav-link-page-width{
+    width: calc(100% / 6);
+}
+
+.car{
+    display: none;
+    opacity: 1;
+    font-size: medium;
+}
+
+.join_animation {
+
+}

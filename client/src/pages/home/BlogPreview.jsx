@@ -124,24 +124,22 @@ export default function BlogPreview() {
                     : <></>}
                 </div>
             </div>
-            <div className='buttons'>
-                <div onClick={prevPreview}>
+            <div className='buttonsBlogPreview'>
+                <a onClick={prevPreview}>
                     <i className="bi bi-caret-left-fill"></i>
-                </div>
-                <div className='bullets'>
-                    {selected?
-                        posts?.map((post) => {
-                            let idBullet = (post.id === selected.id) ? "selectedBullet" : "";
-                            return(
-                                <i className="bi bi-dot" id={idBullet} key={post.id}></i>
-                            )
-                        })
-                        : <></>
-                    }
-                </div>
-                <div onClick={nextPreview}>
+                </a>
+                {selected?
+                    posts?.map((post) => {
+                        let idBullet = (post.id === selected.id) ? "selectedBullet" : "";
+                        return(
+                            <i className="bi bi-dot" id={idBullet} key={post.id}></i>
+                        )
+                    })
+                    : <></>
+                }
+                <a onClick={nextPreview}>
                     <i className="bi bi-caret-right-fill"></i>
-                </div>
+                </a>
             </div>
         </section>
     )

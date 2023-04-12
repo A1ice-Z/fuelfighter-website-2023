@@ -7,11 +7,21 @@
     overflow: hidden;
     cursor: pointer;
 }
-  
-@media screen and (max-width:600px) {
-  .sponsorCard{
-      width:50%;
-  }
+
+/* .sponsorCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.sponsorCard .card-img {
+  margin: auto;
+  background-color: white;
+}
+
+.sponsorCard img{
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .sponsorName{
@@ -19,19 +29,19 @@
   text-align:center;
 }
 
-.goldSponsor:hover .sponsorBody {
+.goldSponsor:hover {
     background-color: gold;
 }
 
-.silverSponsor:hover .sponsorBody {
+.silverSponsor:hover {
     background-color: silver;
 }
 
-.bronzeSponsor:hover .sponsorBody {
+.bronzeSponsor:hover {
     background-color: #cd7f32;
 }
 
-.diamondSponsor:hover .sponsorBody {
+.diamondSponsor:hover {
   background-color: #b9f2ff;
 }
 
@@ -61,3 +71,16 @@
   .diamond {
     color: #b9f2ff;
   }
+
+
+    
+@media screen and (max-width:600px) {
+  .sponsorCard{
+    width:50%;
+  }
+}
+@media screen and (min-width:1000px) {
+  .diamondSponsor {
+    margin-inline: 7vw;
+  }
+}

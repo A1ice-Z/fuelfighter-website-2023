@@ -12,9 +12,8 @@
     color: inherit;
 }
 
-.footer a:hover {
-    text-decoration: none;
-    color: inherit;
+.navigasjon a:hover, .sosials i:hover, .contact span:hover {
+    color: var(--blue);
 }
 
 .footer a:active {
@@ -48,6 +47,17 @@
     margin-right: 2%;
 }
 
+.sosials .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.sosials .nav .nav-link{
+    margin-inline: 5px;
+    padding-inline: 0px;
+}
+
 .logo {
     display: flex;
     flex-direction: row;
@@ -57,15 +67,19 @@
 
 #navigasjon {
     width: 20%;
-    margin-left: 11%;
-    padding-left: 1%;
+    margin-left: 10%;
+    padding-left: 4%;
     border-left: 2px solid var(--gosthWhite);
 }
 
 #navigasjon h2 {
     color: aliceblue;
     font-family: 'Roboto-BlackItalic';
-    margin-left: 14%;
+}
+
+#navigasjon .nav-link{
+    margin-inline: 0px;
+    padding-inline: 0px;
 }
 
 .navigasjon {
@@ -123,3 +137,35 @@
     color: aliceblue;
     text-align: center;
 }
+/* Set default size for image */
+
+.logo img {
+    width: 40px;
+}
+
+/* Use media query to adjust size on small screens */
+@media (max-width: 600px) {
+    .logo img {
+        width: 50px;
+    }
+}
+
+/* Use media query to adjust font size on small screens */
+@media (max-width: 1400px) {
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo h2 {
+      display: none;
+    }
+  }
+
+/* Use media query to hide Navigation on small screens */
+@media (max-width: 600px) {
+    #navigasjon {
+      display: none;
+    }
+  }
