@@ -1,4 +1,5 @@
 #titleSponsors{
+    width: 100%;
     padding-inline: 10%;
     padding-block: 5%;
     background-color: var(--secondary-color);
@@ -12,27 +13,20 @@
     color: var(--primary-color);
 }
 .sponsorDiv{
-    padding-block: 9%;
-    padding-inline: 10%;
-    /* background: linear-gradient(var(--white), var(--ghostBlue)); */
+    padding-inline: 4%;
 }
 .sponsorDiv h3{
     font-family: Roboto-Medium;
+    margin:auto;
+    margin-left: 9%;
 }
 
 .sponsorRow{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-}
-
-#goldSponsors{
-    background: linear-gradient(var(--secondary-color), gold, var(--secondary-color));
-}
-#silverSponsors{
-    background: linear-gradient(var(--secondary-color), silver, var(--secondary-color));
-}
-#bronzeSponsors{
-    background: linear-gradient(var(--secondary-color),#eda358, var(--secondary-color));
+    align-items: center;
+    justify-content: center;
 }
 
 .bronzeSponsorsContainer{
@@ -49,4 +43,27 @@
     padding: 10%;
     color: white;
     font-family: Roboto-Black;
+}
+
+
+@keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.bi-chevron-down {
+    font-size: 2rem;
+    display: block;
+    margin: 0 auto;
+    
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Sponsor form
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.required {
+    color: red;
 }

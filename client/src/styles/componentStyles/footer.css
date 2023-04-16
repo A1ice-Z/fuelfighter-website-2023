@@ -1,3 +1,171 @@
-.footer span{
-    color: var(--primary-color);
+#upper-part li {
+    text-decoration: none;
 }
+
+.footer a:link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigasjon a:hover, .sosials i:hover, .contact span:hover {
+    color: var(--blue);
+}
+
+.footer a:active {
+    text-decoration: none;
+
+}
+
+.container #upper-part {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+}
+
+#about-fuel-fighter {
+    width: 38%;
+}
+
+.sosials .links {
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    color: var(--secondary-color);
+    margin-top: 3%;
+}
+
+.sosials .links a {
+    color: aliceblue;
+}
+
+.sosials .links li {
+    margin-right: 2%;
+}
+
+.sosials .links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.sosials .nav .nav-link{
+    margin-inline: 5px;
+    padding-inline: 0px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    font-family: 'Roboto-BlackItalic';
+}
+
+#navigasjon {
+    width: 20%;
+    margin-left: 10%;
+    padding-left: 4%;
+    border-left: 2px solid var(--gosthWhite);
+}
+
+#navigasjon h2 {
+    color: aliceblue;
+    font-family: 'Roboto-BlackItalic';
+}
+
+#navigasjon .nav-link{
+    margin-inline: 0px;
+    padding-inline: 0px;
+}
+
+.navigasjon {
+    color: var(--secondary-color);
+    /* margin-left: 60px; */
+}
+
+.navigasjon a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#information {
+    width: 20%;
+    margin-left: 11%;
+    padding-left: 1%;
+    border-left: 2px solid var(--gosthWhite);
+}
+
+
+.adresse {
+    color: aliceblue;
+    margin-left: 10%;
+}
+
+.adresse h2 {
+    font-family: 'Roboto-BlackItalic';
+}
+
+#information {
+    color: var(--secondary-color);
+}
+
+.contact a {
+    color: aliceblue;
+    font-family: 'Roboto-BlackItalic';
+    text-align: left;
+    font-size: x-large;
+    margin-left: 3%;
+    text-decoration: none;
+}
+
+.contact {
+    margin-top: 5%;
+}
+
+.contact li {
+    color: var(--secondary-color);
+}
+
+.text {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column-reverse;
+    color: aliceblue;
+    text-align: center;
+}
+/* Set default size for image */
+
+.logo img {
+    width: 40px;
+}
+
+/* Use media query to adjust size on small screens */
+@media (max-width: 600px) {
+    .logo img {
+        width: 50px;
+    }
+}
+
+/* Use media query to adjust font size on small screens */
+@media (max-width: 1400px) {
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo h2 {
+      display: none;
+    }
+  }
+
+/* Use media query to hide Navigation on small screens */
+@media (max-width: 600px) {
+    #navigasjon {
+      display: none;
+    }
+  }

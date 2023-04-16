@@ -1,7 +1,7 @@
 import React from 'react'
-import { SiLinkedin  } from 'react-icons/si'
-import { MdMailOutline } from 'react-icons/md'
-import 'react-dropdown/style.css';
+// import { SiLinkedin  } from 'react-icons/si'
+// import { MdMailOutline } from 'react-icons/md'
+// import 'react-dropdown/style.css';
 // import styled from 'styled-components';
 import '../../styles/pageStyles/Team/SocialMediaBar.css'
 
@@ -16,7 +16,7 @@ function SocialMediaBar(props) {
                     <SiLinkedin className = "socialicon" size = {iconSize +2} /> 
                 </a> 
                 <a  href = {'mailto:'+props.data.email}>
-                    <MdMailOutline className = "socialicon" size = {iconSize + 11}  />
+                     <MdMailOutline className = "socialicon" size = {iconSize + 11}  /> 
                 </a>
             </div> 
         )
@@ -25,7 +25,7 @@ function SocialMediaBar(props) {
         return (
             <div>
                 <a href = {'mailto:'+props.data.email}>
-                    <MdMailOutline className = "socialicon" size = {iconSize + 11}  />
+                    <MdMailOutline className = "socialicon" size = {iconSize + 11}  /> 
                 </a>
             </div> 
         )

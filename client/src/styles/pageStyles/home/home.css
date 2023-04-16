@@ -1,74 +1,59 @@
-.homeContainer{
+.homeContainer .applyField #apply {
+    border-radius: 0px;
+    grid-column: element;
     display: grid;
-    grid-template-rows: [first] 90vh [about] 190vh;
-    grid-template-columns: [all] 100%;
+    font-family: 'Roboto-BlackItalic';
+    grid-template-columns: [img] 10% [text] 90%;
+    grid-row-gap: 4%;
+    padding: 4%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
 }
 
-.homeContainer .homeFirst{
-    grid-row: first;
-    margin: 0;
-    height: 100%;
-}
-
-.homeContainer .homeFirst video{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-}
-
-.homeContainer .homeFirst .homeTitle{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
+.homeContainer .applyField #apply-button {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    z-index: 2;
-    font-family: RobotoBlack;
-    color: var(--primary-color);
-    text-shadow: 2px 2px 2px var(--blue);
+    grid-column: element;
+    font-family: 'Roboto-BlackItalic';
+    font-size: large;
 }
 
-.homeContainer .homeAbout{
-    grid-row: about;
-    grid-column: all;
+.homeContainer .applyField .button-suggested-action {
+    background-color: #011a2c;
+    background-image: linear-gradient(180deg, #05253b, #011a2c);
+    border-color: #03111b;
+    color: #fff;
+    text-shadow: 0 1px rgb(0 0 0 / 30%);
+    margin-left: 64px;
+    border-radius: 5px;
+    outline: none;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Roboto-Light';
+    width: 15%;
+    text-decoration: none;
+}
 
-    background-color: var(--blue);
+.homeContainer .applyField {
+    background-color: var(--secondary-color);
     display: grid;
     grid-template-columns: [white] 5% [element] 90% [white] 5%;
     grid-row-gap: 4%;
-    padding: 4% 0;
-}
-.homeContainer .homeAbout #homeSection{
-    border-radius: 40px;
-    grid-column: element;
-    background-color: var(--white);
-    display: grid;
-    grid-template-columns: [text] 60% [img] 40%;
+    padding: 4%;
+    margin-bottom: 7%;
 }
 
-.homeContainer .homeAbout #homeSectionInverted{
-    border-radius: 40px;
-    grid-column: element;
-    background-color: var(--white);
-    display: grid;
-    grid-template-columns: [text] 40% [img] 60%;
+.homeContainer .applyField .applyText {
+    color: aliceblue;
+    font-family: 'Roboto-Light';
 }
 
-.homeContainer .homeAbout .testoHomeSections{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.homeContainer .applyField .applyText h1 {
+    font-family: 'Roboto-BlackItalic';
+    text-align: justify;
 }
 
-.homeContainer .homeAbout .valuesImgContainer{
-    border-radius: inherit;
-}
 
 #imgHomeAbout {
     border-end-end-radius: inherit;
@@ -78,10 +63,21 @@
     background-size: cover;
 }
 
-#imgHomeAboutInv{
+#imgHomeAboutInv {
     border-end-start-radius: inherit;
     border-start-start-radius: inherit;
     width: 100%;
     height: 100%;
     background-size: cover;
+}
+
+.fuelfighter-logo {
+    position: relative;
+    top: -7%;
+}
+
+@media screen and (max-width: 600px) {
+    .homeContainer .applyField .button-suggested-action {
+        width: 40%;
+    }
 }
