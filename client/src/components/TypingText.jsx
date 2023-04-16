@@ -16,7 +16,7 @@ const TypingText = ({ text, speed, secondaryText }) => {
       }
     }, speed);
     return () => clearInterval(interval);
-  }, [text, speed, secondaryText]);
+  }, [text, speed, secondaryText, secondaryIndex]);
 
   return (
     <>

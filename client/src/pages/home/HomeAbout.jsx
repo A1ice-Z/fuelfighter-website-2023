@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import imgValues from '../../assets/pages/home/value1.jpg'
 import joinHero from '../../assets/pages/join/joinHero.jpeg'
-import sponsorCar from '../../assets/pages/Sponsors/sponsors_car.jpg'
+// import sponsorCar from '../../assets/pages/Sponsors/sponsors_car.jpg'
 
 import '../../styles/pageStyles/home/homeAbout.css';
 

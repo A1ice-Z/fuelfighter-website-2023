@@ -72,7 +72,18 @@
     color: #b9f2ff;
   }
 
-
+.modal-gold-title{
+  text-shadow: 1px 5px gold;
+}
+.modal-diamond-title{
+  text-shadow: 1px 5px #b9f2ff;
+}
+.modal-silver-title{
+  text-shadow: 1px 5px silver;
+}
+.modal-bronze-title{
+  text-shadow: 1px 5px #cd7f32;
+}
     
 @media screen and (max-width:600px) {
   .sponsorCard{
