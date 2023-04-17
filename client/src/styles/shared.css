@@ -115,6 +115,9 @@ body {
     vertical-align: top;
     width: calc(66% - 48px);
   }
+  .grid .two-thirds i{
+    font-size: 3rem;
+  }
 
   .grid *:only-child p {
     text-align: center;

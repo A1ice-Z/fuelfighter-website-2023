@@ -2,6 +2,9 @@ import React from "react"
 
 import ParallaxImage from "../components/ParallaxImage";
 
+import heroAboutImg from "../assets/pages/about/AboutUs.JPG";
+import welcome from '../assets/pages/about/Welcome_to_Fuel_Fighter.JPG';
+import handsOn from '../assets/pages/about/Hands_on_experience.JPG';
 import impact1 from "../assets/pages/about/impact1.png";
 import impact2 from "../assets/pages/about/impact2.png";
 import impact3 from "../assets/pages/about/impact3.png";
@@ -19,7 +22,7 @@ export default function About() {
 
     return (
         <div id="aboutUs">
-            <ParallaxImage image={goal4} title="About Us" height="50vh"/>
+            <ParallaxImage image={heroAboutImg} title="About Us" height="80vh"/>
             <div className="fullCentered">
                 <div id="subtitleAboutUs">
                     <h2>Who We Are</h2>
@@ -66,7 +69,7 @@ export default function About() {
                     </p>
                 </div>
                 <div id="secondRowImg">
-                    <img src={goal7} alt="not defined"/>
+                    <img src={welcome} alt="not defined"/>
                 </div>
             </div>
             
@@ -80,7 +83,7 @@ export default function About() {
             </div>
             <div className="aboutTxtImg">
                 <div id="fourthRowImg">
-                    <img src={goal7} alt="not defined"/>
+                    <img src={handsOn} alt="not defined"/>
                 </div>
                 <div id="fourthRowText" className="rowTextHalf">
                     <p>

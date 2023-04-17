@@ -17,6 +17,7 @@ import car2011Image from '../assets/pages/history/car_2011.jpg';
 import car2010Image from '../assets/pages/history/car_2010.jpg';
 import car2009Image from '../assets/pages/history/car_2009.jpg';
 import car2021Image from '../assets/pages/history/car2021.jpg';
+import car2022Image from '../assets/pages/history/history-img-2022.png';
 
 const HistoryView = styled.div`
 	width: 100%;
@@ -97,6 +98,7 @@ export default function History() {
 				{/* <ViewMoreArrow style={{position: 'absolute', bottom: '30px'}} /> */}
 			</HistorySection>
 			<HistoryView>
+				<SectionModule title="2022" img={car2022Image} text="Fuel Fighter 6 was finished just in time for the competition. The team had created a brand new car with an incredible weight of 66kg. The carbon fibre with inclusions of sustainable flax fibre made the basis of our most ambitious project yet. Unfortunately, due to reliability issues, the car was not able to get a viable lap in time, and the teams ambitious car was yet to show its full potential.For the first time, the team competed in the Autonomous Challenge, placing at an impressive 3rd for the first time ever."/>
 				<SectionModule title="2021" img = {car2021Image} text = "Despite another year of lockdowns and uncertainty, we still managed to test the car in Halsa."/>
 				<SectionModule title=" The Covid-19 outbreak" text="Our team was determined to continue the work on the car built last year to further develop and improve the car. But unfortunately due to the Covid-19 virus Shell Eco Marathon got canceled and the team didn't get the chance to show of the work." />
 				<SectionModule title="FUELFIGHTER 5" img={car2019Image} text="The fall of 2018 the team spent planning a new car. In the winter and spring of 2019 we built our new car, FuelFighter 5, completely from scratch, everything possible in carbon fibre. The car weighed only 73kg and performed 181km/kWh, our best performance with any car ever. That led us to a 5th place in the main competition, and winners of the vehicle design award." />
