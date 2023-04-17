@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const ScrollToBottom = ({appear, disappear}) => {
-  const [visible, setVisible] = useState(false);
+const ScrollToBottom = ({appear, disappear, defaultDisplay}) => {
+  const [visible, setVisible] = useState(defaultDisplay);
 
   const handleScroll = () => {
     const chevronDown = document.querySelector(appear);
