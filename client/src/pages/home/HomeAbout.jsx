@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
-import imgValues from '../../assets/pages/home/value1.jpg'
-import joinHero from '../../assets/pages/join/joinHero.jpeg'
-import sponsorCar from '../../assets/pages/Sponsors/sponsors_car.jpg'
+
+import sustainableFuture from '../../assets/pages/home/Inspire_a_sustainable_future.JPG'
+import ourMission from '../../assets/pages/home/Our_Mission.JPG'
+import ourGoals from '../../assets/pages/home/Our_Goals.JPG'
+// import sponsorCar from '../../assets/pages/Sponsors/sponsors_car.jpg'
 
 import '../../styles/pageStyles/home/homeAbout.css';
 
@@ -40,13 +42,13 @@ export default function HomeAbout() {
                     <p>We build the world's most energy-efficient electric car. Our car drives 30 times more energy-efficient than Tesla Model S.</p>
                 </div>
                 <div className="valuesImgContainer">
-                    <img id="imgHomeAbout" className="come-in" alt="img values " src={joinHero} />
+                    <img id="imgHomeAbout" className="come-in" alt="img values " src={sustainableFuture} />
                 </div>
             </div>
 
             <div className="slide-in-right" id="homeSectionInverted">
                 <div className="valuesImgContainer" >
-                    <img id="imgHomeAboutInv" alt="img values " src={imgValues} />
+                    <img id="imgHomeAboutInv" alt="img values " src={ourMission} />
                 </div>
                 <div className="testoHomeSections">
                     <h1>Our Mission</h1>
@@ -62,7 +64,7 @@ export default function HomeAbout() {
                     <p></p>
                 </div>
                 <div className="valuesImgContainer">
-                    <img id="imgHomeAbout" alt="img values " src={joinHero} />
+                    <img id="imgHomeAbout" alt="img values " src={ourGoals} />
                 </div>
             </div>
         </div>

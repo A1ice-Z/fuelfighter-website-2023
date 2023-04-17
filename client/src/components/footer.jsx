@@ -2,7 +2,7 @@
 // import { DarkModeContext } from "./DarkModeContext"
 // const { darkMode } = useContext(DarkModeContext);
 
-import React, { useContext, useEffect } from "react"
+import React from "react"
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import '../styles/componentStyles/footer.css'
 
@@ -15,7 +15,7 @@ export default function Footer() {
             <Row id="upper-part">
               <Col id="about-fuel-fighter">
                 <div className="logo">
-                  <img src={logoWhite} width="40" />
+                  <img src={logoWhite} width="40" alt="fuel fighter logo"/>
                   <h2>Fuel Figther NTNU</h2>
                 </div>
                 <div className="sosials">
