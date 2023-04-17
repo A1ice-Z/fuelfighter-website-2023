@@ -14,6 +14,8 @@ import { formatDate } from '../../components/formatter';
 export default function ArticlePage({state}) {
     const [blogpost, setBlogPost] = useState();
 	const location = useLocation();
+	//dele en string opp i flere vha. 
+	
 
 	const id = location.state.id;
 
@@ -68,11 +70,8 @@ export default function ArticlePage({state}) {
 						</figure> : <></>}
 						<p id="descriptionArticle">{blogpost.description}</p>
 					</header>
-					<section id="derivedHTML"
-						// style={{color: "white"}} 
-						dangerouslySetInnerHTML={{ __html: blogpost.content }}
-					/>
-				</article>
+					<section id="derivedHTML" dangerouslySetInnerHTML={{ __html: blogpost.content }} /> 
+					</article>
 					<hr />
 					<div className="grid">
 						<div className="two-thirds">
