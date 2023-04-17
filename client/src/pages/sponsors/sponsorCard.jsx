@@ -22,15 +22,13 @@ export default function SponsorCard({ name, img, level, link, description }) {
     transform: inView ? 'translateY(0)' : 'translateY(100px)',
   });
   
-  const getCardStyle = () => levels[level]?.cardStyle || '';
   const getMedal = () => levels[level]?.medal || null;
-  const getTitleSpan = () => levels[level]?.titleSpan || null;
   const getModalTitle = () => "modal-"+level.toLowerCase()+"-title";
 
   const getCardSize = () => levels[level]?.cardSize || '100px';
   return (
     <>
-        <AnimatedCard ref={ref} style={{...animationProps, padding: '1%', height:`${getCardSize()}`}} className={`sponsorCard ${getCardStyle()}`} aria-label={`${name} sponsor card`} onClick={handleShowModal}>
+        <AnimatedCard ref={ref} style={{...animationProps, padding: '1%', height:`${getCardSize()}`, border: '15px solid white'}} className={`sponsorCard ${levels[level]?.cardStyle+''}`} aria-label={`${name} sponsor card`} onClick={handleShowModal}>
           {getMedal()}
           <Card.Img src={img} alt={`${name} img`} aria-label={`${name} image`} />
         </AnimatedCard>

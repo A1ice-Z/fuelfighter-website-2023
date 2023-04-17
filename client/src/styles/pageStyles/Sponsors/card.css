@@ -1,5 +1,4 @@
 .sponsorCard {
-    border: none;
     width: 25%;
     color: var(--secondary-color);
     background-color: var(--primary-color);
@@ -30,19 +29,19 @@
 }
 
 .goldSponsor:hover {
-    background-color: gold;
+    border-color: gold !important;
 }
 
 .silverSponsor:hover {
-    background-color: silver;
+    border-color: silver !important;
 }
 
 .bronzeSponsor:hover {
-    background-color: #cd7f32;
+    border-color: #cd7f32 !important;
 }
 
-.diamondSponsor:hover {
-  background-color: #b9f2ff;
+.diamondSponsor:hover{
+    border-color: #b9f2ff !important;
 }
 
 
@@ -79,10 +78,10 @@
   text-shadow: 1px 5px #b9f2ff;
 }
 .modal-silver-title{
-  text-shadow: 1px 5px silver;
+  text-shadow: 1px 2px silver;
 }
 .modal-bronze-title{
-  text-shadow: 1px 5px #cd7f32;
+  text-shadow: 1px 2px #cd7f32;
 }
     
 @media screen and (max-width:600px) {

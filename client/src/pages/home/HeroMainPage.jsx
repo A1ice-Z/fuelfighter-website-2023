@@ -4,6 +4,7 @@ import "../../styles/pageStyles/home/heroHome.css";
 
 import video from '../../assets/video/mainPageVideo.mp4';
 import landingImage from '../../assets/pages/home/car_render_transparent_crop1.png';
+import TypingText from '../../components/TypingText';
 
 export default function HeroHome() {
     const [videoVisible, setVideoVisible] = useState(true)
