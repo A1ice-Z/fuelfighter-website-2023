@@ -12,7 +12,7 @@ import { formatDate } from '../../components/formatter';
 export default function ArticlePage({state}) {
     const [blogpost, setBlogPost] = useState();
 	const location = useLocation();
-	//dele en string opp i flere vha. 
+
 	
 
 	const id = location.state.id;
