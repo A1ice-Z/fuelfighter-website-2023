@@ -96,7 +96,8 @@ export default function BlogPreview() {
     return (
         <section className='blogPreview'>
             <h2>Blog Preview</h2>
-            <h4>At Morgan Stanley, we lead with exceptional ideas. Across all our businesses, we offer keen insight on today's most critical issues.</h4>
+            <br />
+            {/* <h4>At Morgan Stanley, we lead with exceptional ideas. Across all our businesses, we offer keen insight on today's most critical issues.</h4> */}
             <div id="inside">
                 {selected ? <img src={selected.image} id="primaryImgBlog" className="" alt="primary article img" onClick={() => goInside(selected.id)}/>:<></>}
                 
@@ -125,9 +126,9 @@ export default function BlogPreview() {
                 </div>
             </div>
             <div className='buttonsBlogPreview'>
-                <a onClick={prevPreview}>
+                <div onClick={prevPreview}>
                     <i className="bi bi-caret-left-fill"></i>
-                </a>
+                </div>
                 {selected?
                     posts?.map((post) => {
                         let idBullet = (post.id === selected.id) ? "selectedBullet" : "";
@@ -137,9 +138,9 @@ export default function BlogPreview() {
                     })
                     : <></>
                 }
-                <a onClick={nextPreview}>
+                <div onClick={nextPreview}>
                     <i className="bi bi-caret-right-fill"></i>
-                </a>
+                </div>
             </div>
         </section>
     )

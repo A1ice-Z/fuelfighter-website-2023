@@ -13,7 +13,7 @@
 }
 
 .navigasjon a:hover, .sosials i:hover, .contact span:hover {
-    color: var(--blue);
+    color: var(--ghostBlue);
 }
 
 .footer a:active {

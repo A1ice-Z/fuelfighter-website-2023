@@ -10,12 +10,12 @@ export default function Header({ headerTransparent }) {
   const navLinks = [
     '/',
     'blog',
-    'about',
+    'history',
     'team',
     'sponsors',
     'contact',
     'join',
-    'history',
+    'about',
   ];
   let activeLinkIndex = window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1));
   

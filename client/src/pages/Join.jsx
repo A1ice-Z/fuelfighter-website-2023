@@ -5,7 +5,8 @@ import joinHero from '../assets/pages/join/joinHero.jpeg';
 import '../styles/pageStyles/join.css';
 
 import ParallaxImage from "../components/ParallaxImage";
-import Positions from "./join/Positions";
+import LeaderPositions from "./join/LeaderPositions";
+import GeneralPositions from "./join/GeneralPositions";
 
 export const Join = () => {
     return (
@@ -22,14 +23,18 @@ export const Join = () => {
                 </div>
             </Container>
             <Container>
-                <h3 className="text-center mt-5">Available Roles</h3>
-                <Positions positions={positions} />
+                <h3 className="text-center mt-5">Available Positions</h3>
+                {/* <LeaderPositions positions={leaderPositions} /> */}
+                <GeneralPositions />
             </Container>
         </div>
       );
 };
 
-const positions = [
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// LEADER RECRUITMENT                                                                                                            //
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const leaderPositions = [
     {
         'title': 'Project Manager',
         'description': 'As project manager you are the main responsible for DNV Fuel Fighter’s overall progress, and you will have the overall responsibility for ensuring the success for all phases of the team’s work, from initiation to closure. This means that you will be involved in every part of the organisation, and will have to work with both technical problems, marketing and general administration. As PM you are also our public face, and will have to talk to sponsors, organizers of the SEM-event, NTNU and many others. This position gives what we consider a rather unique experience in working with and managing a fairly large team and engineering project. We do not demand any previous experience in leadership, and encourage everyone interested to apply, but as the PM of a technical student organisation you should have some interest in both technical and administrative tasks. But most importantly we are looking for you who are organised, dedicated and keen to work hard to take both the car and team to the next level!'
