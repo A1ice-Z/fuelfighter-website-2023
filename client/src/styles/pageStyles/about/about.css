@@ -119,7 +119,7 @@
 
 #secondRowImg img, #fourthRowImg img {
     object-fit: cover;
-    min-width: 40vw;
+    max-width: 50vw;
 }
 
 #aboutImpact {

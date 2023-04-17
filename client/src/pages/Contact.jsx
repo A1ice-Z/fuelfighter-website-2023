@@ -29,8 +29,45 @@ export default function Contact() {
                         <h5> <span class="bi bi-envelope"></span>{" "}<a href="mailto:leder@fuelfighter.no">leder@fuelfighter.no</a></h5>
                 </div>
             </div>
-            
 
+            <div className="row primaryColor" id="q_A">
+                <div className="col" id="Q&A-col">
+                    <div className="h2" id="general-details"> Frequently Asked Questions </div>
+                    <div id="general-details">
+                        <div className="h3">Why join Fuel Fighter NTNU?</div>
+                        <ul>
+                            <li>By becoming a member in Fuel Fighter you get the opportunity to work hands on with the worlds most energy efficient car. We use innovative materials, focus on hyper relevant problems such as energy optimisation and encourage members to make their mark on the car.</li>
+                            <li>We compete alongside Europes top Technical universities where you will meet many new and interesting people.</li>
+                            <li>Our organisation also has a wide array of business connections. By joining Fuel Fighter you will get the opportunity to work alongside some of them and learn more about how our project connects to big real world problems.</li>
+                        </ul>
+                    </div>
+                    <div id="general-details">
+                        <div className="h3"> Who can join Fuel Fighter NTNU? </div>
+                        <ul>
+                            <li>If you are student at NTNU and interested in cars, mechanics, programming, business, or just want to be a part of a big team you are welcome to apply!</li>
+                            <li>We want to have a diverse team consisting og 1st to 5th year students from as many disciples as possible. Enthusiasm and curiosity are the things we mostly look for, what you can learn is much more important than what you already know.</li>
+                            <li>In team 23 we had members from over 20 different study programmes in all years.</li>
+                        </ul>
+                    </div>
+                    <div id="general-details">
+                        <div className="h3"> What is the best way to learn about Fuel Fighter NTNU? </div>
+                        <ul>
+                            <li>We have lots of information on our website about the history of Fuel Fighter and what we do.</li>
+                            <li>If you really want to get to know the organisation, just ask one of our member! By sending questions to post@fuelfighter.no you can get in touch with the team.</li>
+                        </ul>
+                    </div>
+                    <div id="general-details">
+                        <div className="h3"> How much work is it? </div>
+                        <ul>
+                            <li>In general a member spends 15 hours a week working with Fuel Fighter NTNU. The hours are divided between work sessions and meetings.</li>
+                            <li>For many of the members the 15 hours fly away because of how fun it is. However if you are worried, dont hesitate to ask for adjustments.</li>
+                            <li>View it as an extra subject where you can connect what you learn in lectures onto something fun and engaging.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            
             <div className="row" id="adress-info">
                 <div className="col" id="adr-col">
 
@@ -60,26 +97,7 @@ export default function Contact() {
                         referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
-            </div>
-
-            {/* <section id="center-form">
-                <form id="forms-box">
-                    <div class="form-row" >
-                    <div class="col">
-                        <label for="inputFName">Full Name</label>
-                            <input type="text" class="form-control" placeholder="Full name"/>
-                        </div>
-
-                        <div class="col">
-                            <label for="inputEmail">Email</label>
-                            <input type="text" class="form-control" placeholder="Email"/>
-                        </div> 
-                    </div>
-                    <div>
-                        <button type="submit" id="form-submit-button" class="btn btn-primary">Submit</button>
-                    </div>
-                </form>
-            </section> */}
+                </div>
         </main>
     )
 }

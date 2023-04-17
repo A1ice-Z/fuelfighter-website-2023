@@ -19,7 +19,7 @@ import NeptuneEnergy from '../assets/pages/Sponsors/colored/NeptuneEnergy.jpg'
 //BRONZE
 import DNV from '../assets/pages/Sponsors/colored/DNV.png'
 import SUBSEA from '../assets/pages/Sponsors/colored/subsea7.png'
-import NTNU from '../assets/pages/Sponsors/colored/NTNU.png'
+import NTNU from '../assets/pages/Sponsors/colored/NTNU.svg'
 import HPC from '../assets/pages/Sponsors/colored/HPC.png'
 import TrondheimStaal from '../assets/pages/Sponsors/colored/Trondheim_staal.png'
 import LindbergLund from '../assets/pages/Sponsors/colored/Lindberg_lund.png'
@@ -63,7 +63,7 @@ export default function Sponsors() {
                             ))}
                         </div>
                     </div>
-                    <ScrollToBottom appear='.bi-chevron-down' disappear='#SponsorForm' />
+                    <ScrollToBottom appear='.bi-chevron-down' disappear='#SponsorForm' defaultDisplay={false}/>
                     <div class="sponsorDiv" id="goldSponsors">
                         <h3>Gold Sponsors</h3>
                         <div className="sponsorRow">

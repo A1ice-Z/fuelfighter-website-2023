@@ -33,7 +33,7 @@ function App() {
   };
 
   useEffect(() => {
-    if (window.location.pathname === '/' || window.location.pathname === '/blog' || window.location.pathname === '/history') {
+    if (window.location.pathname === '/' || window.location.pathname === '/history' || window.location.pathname === '/about' ) {
       setHeaderTransparent(true);
     } else {
       setHeaderTransparent(false);

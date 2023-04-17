@@ -46,7 +46,7 @@
 
 #leader-information a:hover{
     margin-bottom: 10%;
-    color: var(--blue);
+    color: var(--ghostBlue);
 }
 
 #adress-info span{
@@ -109,25 +109,31 @@
 }
 #contactus-icons i:hover{
     margin: 2%;
-    color: var(--blue);
+    color: var(--ghostBlue);
 }
 
 #general-mail{
     color: aliceblue;
 }
 #general-mail:hover{
-    color: var(--blue);
+    color: var(--ghostBlue);
 }
 
+#q_A{
+    color: aliceblue;
+    text-align: left;
+    padding: 7%;
+    text-align: justify;
+}
 
+#q_A .h2{
+    text-align: center;
+}
 
+#q_A #general-details{
+    margin-bottom: 7%;
+}
 
-
-
-
-
-  
-
-
-
-
+#q_A #general-details li{
+    font-family: "Roboto-Light";
+}
