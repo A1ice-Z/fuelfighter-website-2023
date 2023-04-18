@@ -16,6 +16,7 @@ import goal12 from "../assets/pages/about/goal12.png";
 import goal13 from "../assets/pages/about/goal13.png";
 import goal17 from "../assets/pages/about/goal17.png";
 
+import videoAbout from '../assets/video/mainPageVideo.mp4';
 import "../styles/pageStyles/about/about.css";
 
 export default function About() {
@@ -23,10 +24,11 @@ export default function About() {
     return (
         <div id="aboutUs">
             <ParallaxImage image={heroAboutImg} title="About Us" height="80vh"/>
-            <div className="fullCentered">
-                <div id="subtitleAboutUs">
-                    <h2>Who We Are</h2>
+            <div id="subtitleAboutUs" className="fullCentered">
+                <h2>Who We Are</h2>
+                <div id="whoWeAre">
                     <p>Fuel Fighter is a technical student organization at NTNU working with the goal of making the world’s most energy efficient electric car. For 13 years we have been competing in the world’s leading student competition on energy efficiency, the Shell Eco Marathon. With several accomplishments through the years, we are always competing for the first place in the Urban Concept battery electric class, as well as challenging the communication, innovation and design awards. The last two years we have also started developing an autonomous system for the car, for competing in the Shell Eco Marathon Autonomous competition.</p>
+                    <video id="" width="100%" height="100%" src={videoAbout} controls autoPlay muted />
                 </div>
             </div>
             <div id="unGoals">

@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
                 <div id="apply-button">
                     <a className="button-suggested-action" href="./join">
-                        Apply now
+                        <p className="rainbow_text_animated" style={{margin:0}}>Apply now</p>
                     </a>
                 </div>
             </div>

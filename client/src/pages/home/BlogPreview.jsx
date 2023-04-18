@@ -96,8 +96,7 @@ export default function BlogPreview() {
     return (
         <section className='blogPreview'>
             <h2>Blog Preview</h2>
-            <br />
-            {/* <h4>At Morgan Stanley, we lead with exceptional ideas. Across all our businesses, we offer keen insight on today's most critical issues.</h4> */}
+            <h5>We at Fuel Fighter NTNU want to share our experience with our friends, family, and anyone else interested in what we do. In this blog, we'll cover the challenges, and achievements in designing and producing the car from scratch, as well as competing at an international level.</h5>
             <div id="inside">
                 {selected ? <img src={selected.image} id="primaryImgBlog" className="" alt="primary article img" onClick={() => goInside(selected.id)}/>:<></>}
                 
