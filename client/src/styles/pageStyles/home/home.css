@@ -18,9 +18,8 @@
 }
 
 .homeContainer .applyField .button-suggested-action {
-    background-color: #011a2c;
-    background-image: linear-gradient(180deg, #05253b, #011a2c);
-    border-color: #03111b;
+    background-image: linear-gradient(to right, #05253b, #011a2c,#05253b);
+    border: 1px solid var(--tertiary-color);    
     color: #fff;
     text-shadow: 0 1px rgb(0 0 0 / 30%);
     margin-left: 64px;
