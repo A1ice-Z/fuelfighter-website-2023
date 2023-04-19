@@ -79,3 +79,28 @@
 
 }
 
+.blogpost-share, #arrowBack{
+    font-size: 32px;
+    opacity: 0.8;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.blogpost-share:hover{
+    opacity: 1;
+}
+
+.blogpost-share:active {
+    opacity: 0.8;
+}
+
+.blogpost-share[title="facebook"] {
+    fill: #1877F2;
+    color: #1877F2;
+}
+
+.blogpost-share[title="copy"] {
+    fill: #D2D2D2;
+    color: #D2D2D2;
+}
+

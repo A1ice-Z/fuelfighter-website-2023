@@ -1,3 +1,7 @@
+.headerLinks{
+    cursor: pointer;
+}
+
 .headerLinks:hover {
     opacity: 0.8;
     font-size: larger;

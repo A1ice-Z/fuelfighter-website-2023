@@ -93,18 +93,22 @@ export default function Header({ headerTransparent }) {
             <Facebook
               className="headerLinks primaryColor"
               style={{ marginInline: '5px' }}
+              onClick={() => window.open('https://www.facebook.com/FuelFighterNTNU', '_blank')}
             />
             <Instagram
               className="headerLinks primaryColor"
               style={{ marginInline: '5px' }}
+              onClick={() => window.open('https://www.instagram.com/fuelfighter_ntnu/', '_blank')}
             />
             <Linkedin
               className="headerLinks primaryColor"
               style={{ marginInline: '5px' }}
+              onClick={() => window.open('https://www.linkedin.com/company/22290458/', '_blank')}
             />
             <Youtube
               className="headerLinks primaryColor"
               style={{ marginInline: '5px' }}
+              onClick={() => window.open('https://www.youtube.com/user/EcoMarathonNTNU', '_blank')}
             />
           </Navbar.Collapse>
         )}
