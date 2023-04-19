@@ -10,8 +10,8 @@
 }
 
 #articlePageContainer{
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 #articleSpanner{
@@ -33,7 +33,7 @@
 }
 
 #articleContainer{
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     position: relative;
     top: -17vh;
     padding-top: 3%;
@@ -74,5 +74,6 @@
 #descriptionArticle, #derivedHTML{
     text-align: justify;
     text-justify: inter-word;
+
 }
 
