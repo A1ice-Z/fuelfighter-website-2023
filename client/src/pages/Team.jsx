@@ -139,7 +139,7 @@ export default function NewTeam() {
                             
                         <div id="memberBox">
                             {team.map(member => (
-                                <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} />
+                                <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} year = {member.year} />
                                 ))}
                         </div>
                         ))}
