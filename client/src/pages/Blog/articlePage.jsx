@@ -70,7 +70,7 @@ export default function ArticlePage({state}) {
 						</figure> : <></>}
 						<p id="descriptionArticle">{blogpost.description}</p>
 					</header>
-					<section id="derivedHTML" dangerouslySetInnerHTML={{ __html: blogpost.content }} /> 
+					<section id="derivedHTML" dangerouslySetInnerHTML={{ __html: blogpost.content }} style={{overflow: 'hidden'}}/> 
 					</article>
 					<hr />
 					<div className="grid">
