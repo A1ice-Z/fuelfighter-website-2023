@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Controller, Scene } from 'react-scrollmagic';
 
 const ParallaxImage = ({ image, title, subtitle, height}) => {
   const [scrollY, setScrollY] = useState(0);
@@ -14,7 +15,10 @@ const ParallaxImage = ({ image, title, subtitle, height}) => {
   }, []);
 
   return (
-    <Container fluid className="p-0">
+    <Controller>
+    <Scene duration={500} triggerHook="onLeave">
+        {(progress) => (
+    <Container fluid className="p-0" style={{ opacity: 1-progress}}>
       <Row className="align-items-center"
         style={{
           backgroundImage: `url(${image})`,
@@ -41,6 +45,9 @@ const ParallaxImage = ({ image, title, subtitle, height}) => {
         </Col>
       </Row>
     </Container>
+        )}
+        </Scene>
+    </Controller>
   );
 };
 
