@@ -44,6 +44,7 @@ const Image = styled.img.attrs(props => ({
   object-fit: contain;
 `;
 
+
 const Text = styled.div.attrs(props => ({
   style: {
     transform: 'translate(0, ' + props.offset / 2 + 'px)',
@@ -52,7 +53,8 @@ const Text = styled.div.attrs(props => ({
   max-width: 400px;
   color: rgba(255,255,255,0.9);
   display: inline-block;
-  margin-left: -40px;
+  margin-left: 25%;
+  margin-top: -10%;
   margin-right: 20px;
   padding: 10px;
   border-radius: 3px;
@@ -60,8 +62,10 @@ const Text = styled.div.attrs(props => ({
   line-height: 24px;
   max-height: 40vh;
   overflow-y: auto;
+  text-align: justify;
   box-shadow: 0px 0px 82px 44px rgba(0,0,0,0.4);
 `;
+
 
 export default class SectionModule extends Component {
 

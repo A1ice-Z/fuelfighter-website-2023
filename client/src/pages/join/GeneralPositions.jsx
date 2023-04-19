@@ -1,5 +1,9 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { Container, Row, Col } from "react-bootstrap"
+import PersonCard from "../../components/PersonCard";
+
+import getMemberDetails from '../../_services/leader.service.js';
+import notFound from '../../assets/404-img.jpeg'
 
 const generalPositions = [
     {
@@ -30,10 +34,10 @@ const generalPositions = [
                         We absolutely love students who have a practical experience, such as a certificate of apprenticeship (“fagbrev”), but this is not by any means a must.
                         </li>
                     </ul>
-                    <div className="h4">What to know more?</div>
-                    <p>Talk to the Mechanical Team Leader team 23, Mikael.</p>
                 </div>
-            )
+            ),
+            leader: 190,
+            'image': notFound,
     },
     {
         title: 'Electrical',
@@ -55,6 +59,8 @@ const generalPositions = [
                     <p>Talk to the Electrical Team Leader team 23, Areeb.</p>
                 </div>
         ),
+        leader: 216,
+        image: notFound
     },
     {
         title: 'Software',
@@ -70,9 +76,11 @@ const generalPositions = [
                         <li>In the software group you can develop your programming skills and meet a community of students.</li>
                     </ul>
                     <div className="h4">What to know more?</div>
-                    <p>Talk to the Autonomous Team Leader team 23, Johannes.</p>
+                    <p>Talk to the Autonomous Team Leader team 23, Patryk.</p>
                 </div>
         ),
+        leader: 180,
+        'image': notFound,
     },
     {
         title: 'Autonomous',
@@ -93,22 +101,34 @@ const generalPositions = [
                     <p>Talk to the Autonomous Team Leader team 23, Johannes.</p>
                 </div>
         ),
+        'image': notFound,
+        leader: 179
     },
     {
         title: 'Design',
+        'image': notFound,
     },
     {
         title: 'Marketing & Finance',
+        'image': notFound,
     }
 ]
 
 const GeneralPositions = () => {
     const [selectedPosition, setSelectedPosition] = useState(generalPositions[0]);
-  
+    const [leader, setLeader] = useState([]);
+
     const handleSelectPosition = (position) => {
       setSelectedPosition(position);
-    };
-  
+    }
+    
+    useEffect(() => {
+        getMemberDetails(selectedPosition.leader)
+        .then((res) => {
+            setLeader(Object.values(res));
+        })
+    }, [selectedPosition]);
+
     return (
         <div className="positions-wrapper">
             <Container>
@@ -129,7 +149,7 @@ const GeneralPositions = () => {
                 </Row>
                 <Row className="selected-position" style={{flexDirection: 'row', marginTop: '2rem'}}>
                     <h3 style={{textAlign: 'center'}} className=''>{selectedPosition.title}</h3>
-                    <Col xs={12} sm={5}>
+                    <Col xs={12} sm={5} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <img src={selectedPosition.image} alt={selectedPosition.title} className="position-image" />
                     </Col>
                     <Col xs={12} sm={7}>
@@ -139,8 +159,17 @@ const GeneralPositions = () => {
                             }
                         </ul>
                     </Col>
-                    
-                    
+                </Row>
+                <Row>
+                    <Col xs={12} sm={6} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        <div id='descriptionGenPosition'>
+                            <div className="h4">What to know more?</div>
+                            { (leader.length ===6) &&(<p>Talk to the {selectedPosition.title} Team Leader team 23, {leader[0]}.</p>)}
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={6} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                        { (leader.length === 6) && (<PersonCard firstname={leader[0]} lastname={leader[1]} study={leader[2]} email={leader[3]} image={leader[4]} linkedin={leader[5]} />)}
+                    </Col>
                 </Row>
             </Container>
         </div>

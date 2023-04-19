@@ -43,6 +43,16 @@
 #subtitleAboutUs p {
     text-align: justify;
 }
+#whoWeAre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#whoWeAre video{
+    max-width: 45%;
+    margin: 2%;
+    margin-top: 0;
+}
 
 #unGoals {
     padding-block: 8vh;
@@ -106,6 +116,9 @@
         font-size: inherit;
         padding-inline: 14%;
         padding-block: auto;
+    }
+    #whoWeAre video{
+        display: none;
     }
 }
 
