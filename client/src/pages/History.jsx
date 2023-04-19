@@ -1,5 +1,6 @@
 import React from "react"
 import styled, { keyframes } from 'styled-components';
+import { Controller, Scene } from 'react-scrollmagic';
 
 import Timeline from '../components/history/Timeline'
 import SectionModule from '../components/history/SectionModule'
@@ -92,11 +93,17 @@ export default function History() {
 
     return (
         <>
-            <HistorySection>
+		<Controller>
+            <Scene duration={600} triggerHook="onLeave">
+                {(progress) => (
+            <HistorySection style={{ opacity: 1-progress}}>
 				<HistoryBanner src={bannerImage} alt="banner" />
 				<Title>History</Title>
 				{/* <ViewMoreArrow style={{position: 'absolute', bottom: '30px'}} /> */}
 			</HistorySection>
+			)}
+			</Scene>
+		</Controller>
 			<HistoryView>
 				<SectionModule title="2022" img={car2022Image} text="Fuel Fighter 6 was finished just in time for the competition. The team had created a brand new car with an incredible weight of 66kg. The carbon fibre with inclusions of sustainable flax fibre made the basis of our most ambitious project yet. Unfortunately, due to reliability issues, the car was not able to get a viable lap in time, and the teams ambitious car was yet to show its full potential.For the first time, the team competed in the Autonomous Challenge, placing at an impressive 3rd for the first time ever."/>
 				<SectionModule title="2021" img = {car2021Image} text = "Despite another year of lockdowns and uncertainty, we still managed to test the car in Halsa."/>
