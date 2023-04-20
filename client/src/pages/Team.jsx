@@ -3,7 +3,8 @@ import "../styles/pageStyles/Team.css"
 import teamService from '../_services/team.service'
 import Profile from './Team/MemberProfile'
 
-
+import ParallaxImage from "../components/ParallaxImage";
+import heroTeam from '../assets/pages/teamHero.JPG';
 
 export default function NewTeam() {
 
@@ -82,73 +83,74 @@ export default function NewTeam() {
     
 
     return(
-        <div class="container" id="teamContainer">
-        <div class="row" id="teamTitleRow">
-            <div class="col-2">
-            
-            </div>
-            <div class="col-10" id="ourTeam">
-            <h1 id="teamTitleText" >Our Team </h1>
-            </div>
-        </div>
-            <div class="row">
-                <div class="col-2" id="teamYearCol">
-                    <div id="stickyDiv">
-                        
-                    <div id="yearTitle">
-                        <p onClick={() => onClickChangeYear(2023)}>Team 2023</p>
-                    </div>
-                    <div id="yearTitle">
-                        <p onClick={() => onClickChangeYear(2022)}>Team 2022</p>
-                    </div>
-                    <div id="yearTitle">
-                        <p onClick={() => onClickChangeYear(2021)}>Team 2021</p>
-                    </div>
-                    <div id="yearTitle">
-                        <p onClick={() => onClickChangeYear(2020)}>Team 2020</p>
-                    </div>
-                    
-                    </div>
+        <>
+            <ParallaxImage image={heroTeam} title="Our Team" height="100vh" backgroundPositionIni={'30'}/>
+            <div class="container" id="teamContainer">
+            <div class="row" id="teamTitleRow">
+                <div class="col-2">
+                
                 </div>
-                <div class="col-10" id="teamList">
-                    <div class="row justify-content-center" id="teamGroupRow">
-
-                        {groupList.map(group => (
-                            
-                            <div class="col-auto" id="chooseGroupButton">
-                                <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(group)}>{group}</p>
-                            </div>))}
-                    </div>
-
-                    <div class="row" id="teamName">
-                        <h1>{selectedTeam}</h1> 
-                    </div>
-
-
-                    <div class="d-flex justify-content-center">
-                        <div class="spinner-border text-light" role="status" id="spinner">
-                            <span class="sr-only"></span>
-                        </div>
-                    </div>
-                    <div class="row" id="teamdescriptionRow">
-                            <p>{groupDescription.description}</p>
-                    </div>
-                    <div class="row" id="teamPicturesRow">
-                        
-                        {displayTeam.map(team => (
-                            
-                        <div id="memberBox">
-                            {team.map(member => (
-                                <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} year = {member.year} />
-                                ))}
-                        </div>
-                        ))}
-                    </div>
+                <div class="col-10" id="ourTeam">
+                <h1 id="teamTitleText" >Our Team </h1>
                 </div>
             </div>
-        </div>
-        
+                <div class="row">
+                    <div class="col-2" id="teamYearCol">
+                        <div id="stickyDiv">
+                            
+                        <div id="yearTitle">
+                            <p onClick={() => onClickChangeYear(2023)}>Team 2023</p>
+                        </div>
+                        <div id="yearTitle">
+                            <p onClick={() => onClickChangeYear(2022)}>Team 2022</p>
+                        </div>
+                        <div id="yearTitle">
+                            <p onClick={() => onClickChangeYear(2021)}>Team 2021</p>
+                        </div>
+                        <div id="yearTitle">
+                            <p onClick={() => onClickChangeYear(2020)}>Team 2020</p>
+                        </div>
+                        
+                        </div>
+                    </div>
+                    <div class="col-10" id="teamList">
+                        <div class="row justify-content-center" id="teamGroupRow">
 
+                            {groupList.map(group => (
+                                
+                                <div class="col-auto" id="chooseGroupButton">
+                                    <p id="chooseGroupButtonText" onClick={() => onClickChangeTeam(group)}>{group}</p>
+                                </div>))}
+                        </div>
+
+                        <div class="row" id="teamName">
+                            <h1>{selectedTeam}</h1> 
+                        </div>
+
+
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border text-light" role="status" id="spinner">
+                                <span class="sr-only"></span>
+                            </div>
+                        </div>
+                        <div class="row" id="teamdescriptionRow">
+                                <p>{groupDescription.description}</p>
+                        </div>
+                        <div class="row" id="teamPicturesRow">
+                            
+                            {displayTeam.map(team => (
+                                
+                            <div id="memberBox">
+                                {team.map(member => (
+                                    <Profile key={member.firstname + ' ' + member.lastname} name={member.firstname + ' ' + member.lastname} position={member.position_description} studie={member.study} mail={member.email} image={member.image} linkedin = {member.linkedin} year = {member.year} />
+                                    ))}
+                            </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 
