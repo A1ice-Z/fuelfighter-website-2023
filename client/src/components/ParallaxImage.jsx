@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Controller, Scene } from 'react-scrollmagic';
 
-const ParallaxImage = ({ image, title, subtitle, height, backgroundPositionIni}) => {
-  let backgroundPosition = backgroundPositionIni || '50';
+const ParallaxImage = ({ image, title, subtitle, height}) => {
   const [scrollY, setScrollY] = useState(0);
 
   const handleScroll = () => {
@@ -27,7 +26,7 @@ const ParallaxImage = ({ image, title, subtitle, height, backgroundPositionIni})
           minHeight: `${height}`,
           width: `100%`,
           backgroundAttachment: 'fixed',
-          backgroundPosition: `center calc(${backgroundPosition}% - ${scrollY * 0.3}px)`,
+          backgroundPosition: `center calc(50% - ${scrollY * 0.3}px)`,
           margin: '0',
         }}>
         <Col>

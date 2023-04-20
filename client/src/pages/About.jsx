@@ -23,7 +23,7 @@ export default function About() {
     let duration = 500;
     return (
         <div id="aboutUs">
-            <ParallaxImage image={heroAboutImg} title="About Us" height="100vh"/>
+            <ParallaxImage image={heroAboutImg} title="About Us" height="80vh"/>
             <Controller>
             <Scene duration={1000} triggerHook="onCenter">
                 {(progress) => (

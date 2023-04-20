@@ -107,7 +107,7 @@ export default function Blog() {
 
     return(
         <section className='blogContainer'>
-			<ParallaxImage image={heroImageBlog} height='100vh'
+			<ParallaxImage image={heroImageBlog} height='90vh'
 				title='Welcome to Fuel Fighter Blog'
 				subtitle='We at Fuel Fighter NTNU want to share our experience with our friends, family and anyone else interested in what we do. Our blog is the best way for anyone interested to get an in depth view of what we do both socially and as a technical student organization.'/>
 			
