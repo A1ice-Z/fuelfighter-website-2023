@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import "../styles/pageStyles/Team.css"
 import teamService from '../_services/team.service'
 import Profile from './Team/MemberProfile'
+import ParallaxImage from "../components/ParallaxImage";
 
-
+import heroTeam from '../assets/pages/team/teamHero.JPG';
 
 export default function NewTeam() {
 
@@ -82,15 +83,9 @@ export default function NewTeam() {
     
 
     return(
+        <>
+        <ParallaxImage image={heroTeam} title="Our Team" height="100vh" backgroundPositionIni={'30'}/>
         <div class="container" id="teamContainer">
-        <div class="row" id="teamTitleRow">
-            <div class="col-2">
-            
-            </div>
-            <div class="col-10" id="ourTeam">
-            <h1 id="teamTitleText" >Our Team </h1>
-            </div>
-        </div>
             <div class="row">
                 <div class="col-2" id="teamYearCol">
                     <div id="stickyDiv">
@@ -147,8 +142,7 @@ export default function NewTeam() {
                 </div>
             </div>
         </div>
-        
-
+        </>
     )
 }
 
