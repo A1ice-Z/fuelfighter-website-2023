@@ -76,7 +76,7 @@ const generalPositions = [
                         <li>In the software group you can develop your programming skills and meet a community of students.</li>
                     </ul>
                     <div className="h4">What to know more?</div>
-                    <p>Talk to the Autonomous Team Leader team 23, Patryk.</p>
+                    <p>Talk to the Software Team Leader team 23, Patryk.</p>
                 </div>
         ),
         leader: 180,
@@ -106,11 +106,43 @@ const generalPositions = [
     },
     {
         title: 'Design',
+        description: (
+            <div id="descriptionGenPosition">
+                    <div className="h4">What does an Design group member do?</div>
+                    <ul>
+                        <li>The design team is in charge of translating the ideas and concepts gathered in cooperation with the rest of the teams, into tangible objects, or systems that would be used in the vehicle</li>
+                        <li>As a member of the design team, you will be working on the development of the exterior and interior of the vehicle, from the steering wheel to the frame and the chassis.</li>
+                    </ul>
+                    <div className="h4">Who can join?</div>
+                    <ul>
+                        <li>If you have interest in modelling, prototyping and testing aspect such as aerodynamics, strength, ergonomics and aesthetics of the car, this could be the group for you!</li>
+                    </ul>
+                    <div className="h4">What to know more?</div>
+                    <p>Talk to the Design Team Leader team 23, Andres.</p>
+                </div>
+        ),
         'image': notFound,
+        leader: 202
     },
     {
         title: 'Marketing & Finance',
+        description: (
+            <div id="descriptionGenPosition">
+                    <div className="h4">What does an Marketing & Finance group member do?</div>
+                    <ul>
+                        <li>As a member of the Marketing & Finance group, you are responsible for the team’s economy. This includes keeping track of the team’s expenses, planning the budget, and gathering sponsors.</li>
+                        <li>Marketing & Finance members are responsible for making Fuel Fighter visible to the outside. This includes taking photos and videos, 3D animation, graphical design and posting on our social media accounts</li>
+                    </ul>
+                    <div className="h4">Who can join?</div>
+                    <ul>
+                        <li>If you are interested in subjects like budget management, photography, online marketing strategies or graphical design, the marketing & finance team is the place for you!.</li>
+                    </ul>
+                    <div className="h4">What to know more?</div>
+                    <p>Talk to the Marketing & Finance Team Leader team 23, David.</p>
+                </div>
+        ),
         'image': notFound,
+        leader: 213
     }
 ]
 
