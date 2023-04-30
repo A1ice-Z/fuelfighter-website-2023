@@ -19,6 +19,7 @@ export default function Post ({props}) {
             if(idx <= nWords){
                 str += el+" "
             }
+            return 0;
         })
         return str;
     }
@@ -29,7 +30,7 @@ export default function Post ({props}) {
 
     return (
         <div id="containerPost" onClick={() => goInside(props.id)}>
-            <img className="imagePost" width="100%" height="170" src={props.image}/>
+            <img className="imagePost" width="100%" alt={`${props.title}`} height="170" src={props.image}/>
             <div className="datePost">
                 {formatDate(props.date)}
             </div>

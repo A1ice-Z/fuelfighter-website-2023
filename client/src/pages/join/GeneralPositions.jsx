@@ -5,6 +5,10 @@ import PersonCard from "../../components/PersonCard";
 import getMemberDetails from '../../_services/leader.service.js';
 import notFound from '../../assets/404-img.jpeg'
 
+import electricImg from '../../assets/pages/join/electrical.JPG'
+import machanicImg from '../../assets/pages/join/marketing.JPG'
+import marketinImg from '../../assets/pages/join/mechanical.JPG'
+
 const generalPositions = [
     {
         'title': 'Mechanical',
@@ -37,7 +41,7 @@ const generalPositions = [
                 </div>
             ),
             leader: 190,
-            'image': notFound,
+            'image': machanicImg,
     },
     {
         title: 'Electrical',
@@ -60,7 +64,7 @@ const generalPositions = [
                 </div>
         ),
         leader: 216,
-        image: notFound
+        image: electricImg
     },
     {
         title: 'Software',
@@ -110,7 +114,7 @@ const generalPositions = [
     },
     {
         title: 'Marketing & Finance',
-        'image': notFound,
+        'image': marketinImg,
     }
 ]
 
@@ -149,7 +153,7 @@ const GeneralPositions = () => {
                 </Row>
                 <Row className="selected-position" style={{flexDirection: 'row', marginTop: '2rem'}}>
                     <h3 style={{textAlign: 'center'}} className=''>{selectedPosition.title}</h3>
-                    <Col xs={12} sm={5} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <Col xs={12} sm={5} style={{display:'flex', flexDirection: 'column', justifyContent: 'center'}}>
                         <img src={selectedPosition.image} alt={selectedPosition.title} className="position-image" />
                     </Col>
                     <Col xs={12} sm={7}>
@@ -164,7 +168,7 @@ const GeneralPositions = () => {
                     <Col xs={12} sm={6} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <div id='descriptionGenPosition'>
                             <div className="h4">What to know more?</div>
-                            { (leader.length ===6) &&(<p>Talk to the {selectedPosition.title} Team Leader team 23, {leader[0]}.</p>)}
+                            { (leader.length ===6) && (<p>Talk to the {selectedPosition.title} Team Leader team 23, {leader[0].trim()}.</p>)}
                         </div>
                     </Col>
                     <Col xs={12} sm={6} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
