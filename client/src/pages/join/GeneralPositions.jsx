@@ -10,6 +10,7 @@ import machanicImg from '../../assets/pages/join/mechanical.JPG'
 import marketinImg from '../../assets/pages/join/marketing_and_finance.JPG'
 import autonomoImg from '../../assets/pages/join/autonomous_description.JPG'
 
+
 const generalPositions = [
     {
         'title': 'Mechanical',
