@@ -26,10 +26,18 @@
 
 #arrowBack{
     position: relative;
-    left: 5%;
+    left: 2%;
     width: fit-content;
     display: flex;
     margin-bottom: 2%;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+#arrowBack i{
+    font-size: 2rem;
 }
 
 

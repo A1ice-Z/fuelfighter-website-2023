@@ -4,7 +4,11 @@
 
 .headerLinks:hover {
     opacity: 0.8;
-    font-size: larger;
+    font-weight: bold;
+}
+
+.headerLinkSocial:hover{
+    color: var(--ghostBlue);
 }
 
 .navbar-toggler-icon{
@@ -18,7 +22,9 @@
 }
 
 .nav-link-page-width{
-    width: calc(100% / 6);
+    min-width: fit-content;
+    width: 80px;
+    text-align: center;
 }
 
 .car{

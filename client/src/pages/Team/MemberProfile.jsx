@@ -35,7 +35,7 @@ function Profile({mail, image, name, studie, position, linkedin,year}) {
 
 			<div id="memberPictureBox">
 	
-				<img src={image} id="memberImage" image={image} />
+				<img src={image} id="memberImage" image={image} alt={name}/>
 				<div id = "memberInfo"> 
 
 				<div id="nameline">{name}</div>

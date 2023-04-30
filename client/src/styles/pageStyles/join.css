@@ -123,6 +123,7 @@
  .position-item:hover{
 	color:orange; 
 	background-color:#333333; 
+	cursor: pointer;
  }
  
  .position-item.selected{
@@ -142,6 +143,7 @@
 	width: 100%;
 	height: auto;
   }
+  
   #descriptionGenPosition{
 	text-align: justify;
   }
@@ -176,6 +178,10 @@
 	}
 	.position-image{
 		display: none;
+	}
+	#PosLeadDescription{
+		width: 100%;
+		height: 100%;
 	}
 }
 
