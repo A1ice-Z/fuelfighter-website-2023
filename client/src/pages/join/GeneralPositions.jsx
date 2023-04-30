@@ -188,7 +188,7 @@ const GeneralPositions = () => {
                     <Col xs={12} sm={5} style={{display:'flex', flexDirection: 'column', justifyContent: 'center'}}>
                         <img src={selectedPosition.image} alt={selectedPosition.title} className="position-image" />
                     </Col>
-                    <Col xs={12} sm={7}>
+                    <Col xs={12} sm={7} id='PosLeadDescription'>
                         <ul>
                             {
                                 selectedPosition.description

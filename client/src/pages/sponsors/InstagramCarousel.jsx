@@ -29,7 +29,7 @@ const IframeCarousel = () => {
   return (
     <>
     <div id="iframe-container" style={{display: 'flex', flexDirection: 'row', alignContent: 'center', justifyContent: 'space-evenly'}}>
-        <div onClick={handleLeftClick} style={{width: '100%', display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center', fontSize: '3vw', cursor: 'pointer'}}>
+        <div onClick={handleLeftClick} style={{width: '100%', display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center', fontSize: '4vh', cursor: 'pointer'}}>
             {
                 startIndex !== 0 && (<i className="bi bi-caret-left-fill"></i>)
             }
@@ -37,13 +37,13 @@ const IframeCarousel = () => {
       {iframes.slice(startIndex, startIndex + nPosts).map(src => (
         <iframe key={src} src={src} title={src} height={350} scrolling="no" style={{marginLeft: '10px'}}></iframe>
       ))}
-      <div onClick={handleRightClick} style={{width: '100%', display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center', fontSize: '3vw', cursor: 'pointer'}}>
+      <div onClick={handleRightClick} style={{width: '100%', display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent: 'center', fontSize: '4vh', cursor: 'pointer'}}>
         {
             (startIndex+nPosts) !== 8 && (<i className="bi bi-caret-right-fill"></i>)
         }
       </div>
     </div>
-    <div style={{width: '100%', display: 'flex', alignContent: 'center', justifyContent: 'center', fontSize: '3vw'}}>
+    <div style={{width: '100%', display: 'flex', alignContent: 'center', justifyContent: 'center', fontSize: '4vh'}}>
     {
         iframes.map((link, index) => {
             let idBullet = (index >= startIndex && index <= startIndex+nPosts-1) ? "selectedBullet" : "";

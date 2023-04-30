@@ -25,7 +25,7 @@ export const Join = () => {
                 </div> 
             </Container>
             <Container>
-                {/* <h3 className="text-center mt-5">Available Positions</h3> */}
+                <h3 className="text-center mt-5">Available Positions</h3>
                 <LeaderPositions />
                 {/* <GeneralPositions /> */}
             </Container>

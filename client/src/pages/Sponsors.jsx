@@ -62,7 +62,7 @@ export default function Sponsors() {
                         <h3>Platinum Sponsors</h3>
                         <div className="sponsorRow">
                             {sponsorsDiamond.map((sponsor) => (
-                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Diamond'/>
+                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Diamond' link={sponsor.link}/>
                             ))}
                         </div>
                     </div>
@@ -71,7 +71,7 @@ export default function Sponsors() {
                         <h3>Gold Sponsors</h3>
                         <div className="sponsorRow">
                             {sponsorsGold.map((sponsor) => (
-                                <SponsorCard key={sponsor.name} name={sponsor.name} img={sponsor.img} description={sponsor.description} level='Gold'/>
+                                <SponsorCard key={sponsor.name} name={sponsor.name} img={sponsor.img} description={sponsor.description} level='Gold' link={sponsor.link}/>
                             ))}
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function Sponsors() {
                         <h3>Silver Sponsors</h3>
                         <div className="sponsorRow">
                             {sponsorsSilver.map((sponsor) => (
-                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Silver'/>
+                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Silver' link={sponsor.link}/>
                             ))}
                         </div>
                     </div>
@@ -87,7 +87,7 @@ export default function Sponsors() {
                         <h3>Bronze Sponsors</h3>
                         <div className="sponsorRow" id="bronzeSponsors">
                             {sponsorBronze.map((sponsor) => (
-                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Bronze'/>
+                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Bronze' link={sponsor.link}/>
                             ))}
                         </div>
                     </div>
@@ -95,7 +95,7 @@ export default function Sponsors() {
                         <h3>Partners</h3>
                         <div className="sponsorRow">
                         {partners.map((sponsor) => (
-                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Partner'/>
+                                <SponsorCard key={sponsor.name} name={sponsor.name}img={sponsor.img} description={sponsor.description} level='Partner' link={sponsor.link}/>
                             ))}
                         </div>
                     </div>
@@ -115,7 +115,7 @@ const sponsorsDiamond =[
     name:'Alva',
     img: alva,
     description: 'Alva was founded to meet the growing global energy demand with renewable technologies. We develop electric generators for production of clean energy and electric motors to convert this energy into motion.',
-    link: 'https://alvaindustries.com/',
+    link: 'https://alvaindustries.com/'
 },
 {
     name: 'Zolve',
@@ -146,69 +146,69 @@ const sponsorBronze = [
   img: AutoCare,
   description:
     "A product with a thousand uses. WD-40 Multi Use was originally developed to help block moisture in space-shuttle compliments, but was soon know as the product with thousands of uses. Since the beginning the formula remains the same however new uses are continuously being discovered. WD-40 is irreplaceable for numerous applications, such as removing moisture and lubrication. WD-40 protects metals against rust and corrosion, and even removes grease and smut from surfaces. Fuel Fighter NTNU uses WD-40 supplied from AutoCare in all moving parts to ensure smooth and efficient movements.",
-  link: "https://www.autocare.no",
+  link: "https://www.autocare.no"
 },
 {
   name: "DNV GL",
   img: DNV,
   description:
     "We are the independent expert in risk management and quality assurance. Driven by our purpose, to safeguard life, property and the environment, we empower our customers and their stakeholders with facts and reliable insights so that critical decisions can be made with confidence. As a trusted voice for many of the world’s most successful organizations, we use our knowledge to advance safety and performance, set industry benchmarks, and inspire and invent solutions to tackle global transformations.",
-  link: "https://www.dnv.com/",
+  link: "https://www.dnv.com/"
 },
 {
   name: "Subsea7",
   img: SUBSEA,
   description:
     "Subsea7 makes offshore energy transition possible through the continuous evolution of lower-carbon oil and gas and by enabling the growth of renewables and emerging energy. Fleet of 30+ vessels in over 30 countries - powered by over 13 000 employees!",
-  link: "https://www.subsea7.com/en/index.html",
+  link: "https://www.subsea7.com/en/index.html"
 },
 {
   name: "Lindberg & Lund",
   img: LindbergLund,
   description:
     "Lindberg & Lund AS imports and distributes construction adhesives, lubricants, release agents, composite materials, grouts and auxiliaries for the electronics industry.",
-  link: "https://lindberg-lund.no/",
+  link: "https://lindberg-lund.no/"
 },
 {
   name: "SKF",
   img: SKF,
   description:
     "Our expertise is built on the development, design and manufacture of bearings, seals and lubrication systems.",
-  link: "https://www.skf.com/",
+  link: "https://www.skf.com/"
 },
 {
   name: "Altair",
   img: Altair,
   description:
     "Solving your toughest challenges. Helping the innovators innovate, drive better decisions, and turning today’s problems into tomorrow’s opportunities.",
-  link: "https://www.altair.com/",
+  link: "https://www.altair.com/"
 },
 {
   name: "Nskog",
   img: nskog,
   description:
     "Norske Skog Skogn is actively working towards the green shift and the global circular economy through value creation of renewable resources such as norwegian spruce and hydro power.",
-  link: "https://www.norskeskog.com/",
+  link: "https://www.norskeskog.com/"
 },
 {
   name: "EW Glass & Plast",
   img: EWGlassOgPlast,
   description:
     "Ew Glass & Plast primarily conducts wholesale trading activities with the purchase and sale of glass, plastic, fittings and accessories. They offer short delivery times on their products. EW Glass & Plast always aims to provide maximum service for all their customers, and grow their reputation as a supplier!",
-  link: "http://www.ewglass.no/",
+  link: "http://www.ewglass.no/"
 },{
     name: 'Tietoevery',
     img: Tietoevery,
     description:
       'Tietoevery is a leading technology company within cloud, data and software - located in more than 90 countries with over 24 000 employees. Besides a strong Nordic root and our common IT-synergy, Tietoevery has a strong climate focus with their Sustainability game plan 2023; during 2021 their data centers and offices ran on 92% carbon-free electricity.',
-    link: 'https://www.tietoevry.com/no/',
+    link: 'https://www.tietoevry.com/no/'
   },
   {
     name: 'GKN Aerospace Norway AS',
     img: GKN,
     description:
       'GKN Aerospace Norway AS (GAN) manufactures complex components for jet engines and gas turbines for the world’s largest aircraft manufacturers. GAN have extensive experience in the industry and are a centre of excellence within advanced mechanical production.',
-    website:
+    link:
       'https://www.gknaerospace.com/en/about-gkn-aerospace/locations/gkn-aerospace-in-europe/norway-as/',
   },
   {
@@ -265,7 +265,8 @@ const sponsorsSilver = [
 {
   name: "Framo",
   img: Framo,
-  description: "Based in Bergen, Norway, Framo has been the recognized leader in pumping systems for the marine industry for more than half a century. Customers around the globe turn to them, both for pumps and for expertise in meeting their challenges. Discover Framos unique solutions on their website."
+  description: "Based in Bergen, Norway, Framo has been the recognized leader in pumping systems for the marine industry for more than half a century. Customers around the globe turn to them, both for pumps and for expertise in meeting their challenges. Discover Framos unique solutions on their website.",
+  link: 'https://www.framo.com/',
 },
 {
     name: 'Neptune Energy',

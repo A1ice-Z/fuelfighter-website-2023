@@ -33,7 +33,7 @@ export default function SponsorCard({ name, img, level, link, description }) {
           <Card.Img src={img} alt={`${name} img`} aria-label={`${name} image`} />
         </AnimatedCard>
     
-      <Modal show={showModal} onHide={handleCloseModal} size="lg">
+      <Modal show={showModal} onHide={handleCloseModal} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title id="title" className={`${getModalTitle()}`}>{name}</Modal.Title>
         </Modal.Header>
@@ -42,9 +42,11 @@ export default function SponsorCard({ name, img, level, link, description }) {
           <div style={{ textAlign: "justify" }}>{description}</div>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" href={link}>
-            Learn More
-          </Button>
+          <a href={link}>
+            <Button variant="primary">
+              Learn More
+            </Button>
+          </a>
         </Modal.Footer>
       </Modal>
     </>

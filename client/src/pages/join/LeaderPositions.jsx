@@ -22,6 +22,8 @@ const LeaderPositions = () => {
 
   const handleSelectRow = (event) => {
     setSelectedRow(event.target.value);
+    if(event.target.value === 'Board') setSelectedPosition(positions[0]);
+    if(event.target.value === 'Group Leader') setSelectedPosition(positions[5]);
   };
 
   const firstRowPositions = positions.slice(0, 5);
@@ -32,7 +34,6 @@ const LeaderPositions = () => {
     <Container>
       <Row>
         <Col>
-          <h3>Select the position:</h3>
           <Button className="button-positions" variant={selectedRow === 'Board' ? 'outline-light' : 'light'} value="Board" onClick={handleSelectRow}>
             Board
           </Button>
@@ -75,16 +76,16 @@ const LeaderPositions = () => {
         </Row>
       )}
       {(selectedRow === 'Group Leader' || selectedRow === 'Board') && (
-      <Row className="selected-position" style={{flexDirection: 'row', marginTop: '2rem'}}>
-        <h3 style={{textAlign: 'center'}} /*className='rainbow_text_animated'*/>{selectedPosition.title}</h3>
-        <Col xs={12} sm={5}>
-          <img src={selectedPosition.image} alt={selectedPosition.title} className="position-image" />
-          {/* <img src={imageMocked} alt={selectedPosition.title} className="position-image" /> */}
-        </Col>
-        <Col xs={12} sm={7}>
-          <p style={{textAlign: 'justify'}}>{selectedPosition.description}</p>
-      </Col>  
-      </Row>
+        <Row className="selected-position" style={{flexDirection: 'row', marginTop: '2rem'}}>
+          <h3 style={{textAlign: 'center'}} /*className='rainbow_text_animated'*/>{selectedPosition.title}</h3>
+          <Col xs={12} sm={5}>
+            <img src={selectedPosition.image} alt={selectedPosition.title} className="position-image" />
+            {/* <img src={imageMocked} alt={selectedPosition.title} className="position-image" /> */}
+          </Col>
+          <Col xs={12} sm={7} id='PosLeadDescription'>
+            <p style={{textAlign: 'justify'}}>{selectedPosition.description}</p>
+          </Col>
+        </Row>
       )}
       {selectedRow === 'General' && (
         <GeneralPositions />
