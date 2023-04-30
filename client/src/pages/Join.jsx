@@ -5,13 +5,13 @@ import joinHero from '../assets/pages/join/joinHero.jpeg';
 import '../styles/pageStyles/join.css';
 
 import ParallaxImage from "../components/ParallaxImage";
-// import LeaderPositions from "./join/LeaderPositions";
+import LeaderPositions from "./join/LeaderPositions";
 // import GeneralPositions from "./join/GeneralPositions";
 
 export const Join = () => {
     return (
         <div className='primaryColor'>
-            <ParallaxImage image={joinHero} title='Join Us' height='50vh'/>
+            <ParallaxImage image={joinHero} title='Join Us' height={'70vh'}/>
             <Container className="joinSection text-center primaryColor">
                 <div className="introCard">
                     As a cross-disciplinary project we need students from every field of study. We are usually a team of 45 students, and always make sure some of them are exchange students. We like to have a good mixture of people from every year of study, to get good group dynamic and a good work culture to make people want to continue over several years.
@@ -26,7 +26,7 @@ export const Join = () => {
             </Container>
             <Container>
                 {/* <h3 className="text-center mt-5">Available Positions</h3> */}
-                {/* <LeaderPositions /> */}
+                <LeaderPositions />
                 {/* <GeneralPositions /> */}
             </Container>
         </div>

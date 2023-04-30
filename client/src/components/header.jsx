@@ -72,14 +72,13 @@ export default function Header({ headerTransparent }) {
                   className={`headerLinks nav-link-page-width ${linkClassName(link)}`}
                   style={{ color: 'var(--primary-color)' }}
                   onClick={() => handleLinkClick(index, link)}
-                  // ref={(el) => (linkRefs.current[index] = el)}
                 >
                   {link === '/' ? 'Home' : link.charAt(0).toUpperCase() + link.slice(1)}
-                  {cssSelector1000 && index === activeLinkIndex && link !== '/' && (
+                  {/* {cssSelector1000 && index === activeLinkIndex && link !== '/' && (
                     <div className="car" style={carStyle}>
                       🏎️
                     </div>
-                  )}
+                  )} */}
                 </Nav.Link>
               </>
             ))}
@@ -91,22 +90,22 @@ export default function Header({ headerTransparent }) {
             style={{ marginRight: '3%', display: 'flex', alignItems: 'center' }}
           >
             <Facebook
-              className="headerLinks primaryColor"
+              className="headerLinks headerLinkSocial primaryColor"
               style={{ marginInline: '5px' }}
               onClick={() => window.open('https://www.facebook.com/FuelFighterNTNU', '_blank')}
             />
             <Instagram
-              className="headerLinks primaryColor"
+              className="headerLinks headerLinkSocial primaryColor"
               style={{ marginInline: '5px' }}
               onClick={() => window.open('https://www.instagram.com/fuelfighter_ntnu/', '_blank')}
             />
             <Linkedin
-              className="headerLinks primaryColor"
+              className="headerLinks headerLinkSocial primaryColor"
               style={{ marginInline: '5px' }}
               onClick={() => window.open('https://www.linkedin.com/company/22290458/', '_blank')}
             />
             <Youtube
-              className="headerLinks primaryColor"
+              className="headerLinks headerLinkSocial primaryColor"
               style={{ marginInline: '5px' }}
               onClick={() => window.open('https://www.youtube.com/user/EcoMarathonNTNU', '_blank')}
             />

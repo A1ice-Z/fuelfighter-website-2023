@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from "react"
 import { Container, Row, Col } from "react-bootstrap"
-import PersonCard from "../../components/PersonCard";
+import Profile from "../Team/MemberProfile";
 
 import getMemberDetails from '../../_services/leader.service.js';
 import notFound from '../../assets/404-img.jpeg'
 
 import electricImg from '../../assets/pages/join/electrical.JPG'
-import machanicImg from '../../assets/pages/join/marketing.JPG'
-import marketinImg from '../../assets/pages/join/mechanical.JPG'
+import machanicImg from '../../assets/pages/join/mechanical.JPG'
+import marketinImg from '../../assets/pages/join/marketing_and_finance.JPG'
+import autonomoImg from '../../assets/pages/join/autonomous_description.JPG'
 
 const generalPositions = [
     {
@@ -59,8 +60,6 @@ const generalPositions = [
                         <li>If you are interested in electronics and want to get your hands on a unique project you are more than welcome to apply.</li>
                         <li>The electrical members are typically students in electrical systems design and innovation or similar.</li>
                     </ul>
-                    <div className="h4">What to know more?</div>
-                    <p>Talk to the Electrical Team Leader team 23, Areeb.</p>
                 </div>
         ),
         leader: 216,
@@ -79,8 +78,6 @@ const generalPositions = [
                         <li>If you have an interest in computer science and want a practical application you should consider applying for a position in the software group.</li>
                         <li>In the software group you can develop your programming skills and meet a community of students.</li>
                     </ul>
-                    <div className="h4">What to know more?</div>
-                    <p>Talk to the Autonomous Team Leader team 23, Patryk.</p>
                 </div>
         ),
         leader: 180,
@@ -101,20 +98,55 @@ const generalPositions = [
                         <li>The typical autonomous member studies Cybernetics and Robotics or something similar. They all have a shared interest for autonomous systems.</li>
                         <li>You do not need any prior knowledge to join the group, and after a year of being a member in the autonomous group you probably know more about autonomous driving than just about anyone as this is a true niche field.</li>
                     </ul>
-                    <div className="h4">What to know more?</div>
-                    <p>Talk to the Autonomous Team Leader team 23, Johannes.</p>
                 </div>
         ),
-        'image': notFound,
+        'image': autonomoImg,
         leader: 179
     },
     {
         title: 'Design',
+        description: (
+            <div id="descriptionGenPosition">
+                    <div className="h4">What does a member in the Design group do?</div>
+                    <ul>
+                        <li>A member of the design group works with different parts of the cars design, either interior or exterior.</li>
+                        <li>The design group cooperates with the mechanical group in designing the chassis of the cars. They combine aesthetics and functional design to create a truly eye catching efficient vehicle.</li>
+                        <li>In addition to the exterior, the team is tasked with creating the driver interface including the dashboard and the steering wheel.</li>
+                        <li>The members work with 3D modeling software and innovative materials.</li>
+                    </ul>
+                    <div className="h4">Who can join?</div>
+                    <ul>
+                        <li>If you have an eye for good design and want to make your mark on the Fuel Fighter car you should apply to the Design group.</li>
+                    </ul>
+                </div>
+        ),
         'image': notFound,
+        leader: 202
     },
+/* 
+Who can join?
+
+ 
+*/
     {
         title: 'Marketing & Finance',
         'image': marketinImg,
+        description: (
+            <div id="descriptionGenPosition">
+                    <div className="h4">What does a member in the Marketing and Finance group do?</div>
+                    <ul>
+                        <li>The members in Marketing and Finance makes sure that the team is visible to people outside the organisation.</li>
+                        <li>They contact sponsors, do graphic design, are responsible for events and manages our social media channels.</li>
+                        <li>The marketing group works closely with all the groups to convey their work to a wide audience.</li>
+                    </ul>
+                    <div className="h4">Who can join?</div>
+                    <ul>
+                        <li>If you want to challenge your communication skills, expand your network and learn about Fuel Fighter as a whole you should apply for Marketing and Finance.</li>
+                        <li>The group is often the most diverse in terms of students from different fields of study ranging from future engineers to economists.</li>
+                    </ul>
+                </div>
+        ),
+        leader: 213
     }
 ]
 
@@ -172,7 +204,7 @@ const GeneralPositions = () => {
                         </div>
                     </Col>
                     <Col xs={12} sm={6} style={{display:'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                        { (leader.length === 6) && (<PersonCard firstname={leader[0]} lastname={leader[1]} study={leader[2]} email={leader[3]} image={leader[4]} linkedin={leader[5]} />)}
+                        { (leader.length === 6) && ( <Profile name={leader[0].trim() + ' ' + leader[1].trim()} study={leader[2]} mail={leader[3]} image={leader[4]} position={`Team Leader ${selectedPosition.title}`} linkedin={leader[5]} year={'2023'} />)}
                     </Col>
                 </Row>
             </Container>
