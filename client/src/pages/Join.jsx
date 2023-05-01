@@ -20,7 +20,7 @@ export const Join = () => {
                 
                 <div className="introCard text-center">
                     <a href="https://forms.office.com/e/JELKE2y10G">
-                        <button className="btn btn-join">Apply Now</button>
+                        <button className="btn btn-join primaryColor">Apply Now</button>
                     </a>
                 </div> 
             </Container>

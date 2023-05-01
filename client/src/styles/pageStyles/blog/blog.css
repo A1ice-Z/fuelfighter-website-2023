@@ -54,6 +54,7 @@
     flex-direction: column;
     justify-content: space-around;
     background: #11183a;
+    color: white;
 }
 .suggestions #suggestionsTitle{
     font-weight: bold;
@@ -78,7 +79,8 @@
 }
 
 .articlesRow .suggestions li:hover{
-    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .articlesRow .suggestions a {

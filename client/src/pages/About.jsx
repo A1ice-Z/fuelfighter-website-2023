@@ -25,9 +25,9 @@ export default function About() {
         <div id="aboutUs">
             <ParallaxImage image={heroAboutImg} title="About Us" height="100vh"/>
             <Controller>
-            <Scene duration={1000} triggerHook="onCenter">
+            <Scene duration={1000} triggerHook="onLeave">
                 {(progress) => (
-                <div id="subtitleAboutUs" className="fullCentered" style={{ opacity: 1-progress}}>
+                <div id="subtitleAboutUs" className="fullCentered primaryColor" style={{ opacity: 1-progress*2}}>
                     <h2>Who We Are</h2>
                     <div id="whoWeAre">
                         <p>Fuel Fighter is a technical student organization at NTNU working with the goal of making the world’s most energy efficient electric car. For 13 years we have been competing in the world’s leading student competition on energy efficiency, the Shell Eco Marathon. With several accomplishments through the years, we are always competing for the first place in the Urban Concept battery electric class, as well as challenging the communication, innovation and design awards. The last two years we have also started developing an autonomous system for the car, for competing in the Shell Eco Marathon Autonomous competition.</p>

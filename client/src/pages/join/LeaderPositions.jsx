@@ -33,14 +33,14 @@ const LeaderPositions = () => {
     <div className='positions-wrapper'>
     <Container>
       <Row>
-        <Col>
-          <Button className="button-positions" variant={selectedRow === 'Board' ? 'outline-light' : 'light'} value="Board" onClick={handleSelectRow}>
+        <Col id="centeredRow">
+          <Button className="button-positions" variant={selectedRow === 'Board' ? 'primary' : 'secondary'} value="Board" onClick={handleSelectRow}>
             Board
           </Button>
-          <Button className="button-positions" variant={selectedRow === 'Group Leader' ? 'outline-light' : 'light'} value="Group Leader" onClick={handleSelectRow}>
+          <Button className="button-positions" variant={selectedRow === 'Group Leader' ? 'primary' : 'secondary'} value="Group Leader" onClick={handleSelectRow}>
             Group Leaders
           </Button>
-          <Button className="button-positions" variant={selectedRow === 'General' ? 'outline-light' : 'light'} value="General" onClick={handleSelectRow}>
+          <Button className="button-positions" variant={selectedRow === 'General' ? 'primary' : 'secondary'} value="General" onClick={handleSelectRow}>
             General
           </Button>
         </Col>
