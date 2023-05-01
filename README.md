@@ -4,6 +4,7 @@
 [ ] Next roles 					[Frida]
 
 ___
+___
 
 ## White Mode
 [ ] Check w team members the 1.0 implementation
