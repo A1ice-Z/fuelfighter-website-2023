@@ -1,38 +1,21 @@
 # TODOLIST
 
-## Header
-- [ ] Feedback on the cards
+## Join
+[ ] Next roles 					[Frida]
 
-## Footer
-- [ ] Needs Mobile check
+---
+
+## White Mode
+[ ] Check w team members the 1.0 implementation
+[ ] Improve
+
+## Google Analytics
+[ ] Ask what metrics could be used
+[ ] Which email to use
+
+## Admin
+[x] Working
+[ ] Secure? > Maybe make an "ad hoc" software not hosted on the server
 
 ## Home
-- [ ] Animation 				[FinanceDesign_Guy]
-- [ ] Revising the style 		[Alice]
-- [ ] Images from 				[Yao]
-- [ ] Needs mobile check
-
-## Blog
-- [ ] Mobile check
-
-## Blog/inside
-- [ ] Mobile check
-- [x] Thanks for reading 		[Sofia]
-- [x] Style from db 			[Sofia]
-
-## About
-- [x] Why is it so tricky to start? [Alice]
-- [ ] Swag Image as hero
-- [ ] Images 					[Yao]
-
-## Team
-- ? 							[Patryck]
-
-## Contact
-- Q&A 							[Frida]
-
-## Join
-- Next roles 					[Frida]
-
-## History
-- 2022 / 2023 					[Frida]
+[?] Add spefic pages from "Inspire a Sustainable Future" | "Our Mission" | "Our Goals"
