@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Facebook, Instagram, Linkedin, Youtube } from 'react-bootstrap-icons';
 import '../styles/componentStyles/header.css'
@@ -19,23 +19,10 @@ export default function Header({ headerTransparent }) {
   ];
   let activeLinkIndex = window.location.pathname === '/' ? 0 : navLinks.indexOf(window.location.pathname.substring(1));
   
-  const [carStyle, setCarStyle] = useState({
-    position: 'absolute',
-  });
-  
   const handleLinkClick = (index, link) => {
-      let nPx =  250 * (index - activeLinkIndex);
-      setCarStyle((prevStyle)=>({
-        position: 'absolute',
-        transition: 'all 0.1s ease-in-out',
-        transform: `translateX(${nPx}%)`,
-      }))
-      setTimeout(() => {
-        window.location.href = link === '/' ? '/' : `/${link}`;
-      }, 105);
+    window.location.href = link === '/' ? '/' : `/${link}`;
   };
-  // const a = headerTransparent ? 'transparentHeader':'';
-  const cssSelector1000 = window.innerWidth > 1000;
+
   const backgroundColor =
     window.innerWidth < 1000
       ? 'var(--tertiary-color)'
@@ -43,9 +30,10 @@ export default function Header({ headerTransparent }) {
       ? 'transparent'
       : 'var(--tertiary-color)';
   
-  const linkClassName = (link) => {
-      return link === 'join'?'join_animation':'';
+  const linkClassName = (index, link) => {
+      return index === activeLinkIndex ? 'selectedLink':'';
   }
+  
   return (
     <Navbar id="headerBar" style={{ backgroundColor: backgroundColor, color: 'var(--primary-color)', zIndex: 99}} expand="lg">
       <Container fluid>
@@ -69,22 +57,17 @@ export default function Header({ headerTransparent }) {
               <>
                 <Nav.Link
                   key={link}
-                  className={`headerLinks nav-link-page-width ${linkClassName(link)}`}
+                  className={`headerLinks nav-link-page-width ${linkClassName(index, link)}`}
                   style={{ color: 'var(--primary-color)' }}
                   onClick={() => handleLinkClick(index, link)}
                 >
                   {link === '/' ? 'Home' : link.charAt(0).toUpperCase() + link.slice(1)}
-                  {/* {cssSelector1000 && index === activeLinkIndex && link !== '/' && (
-                    <div className="car" style={carStyle}>
-                      🏎️
-                    </div>
-                  )} */}
                 </Nav.Link>
               </>
             ))}
           </Nav>
         </Navbar.Collapse>
-        {cssSelector1000 && (
+        
           <Navbar.Collapse
             className="justify-content-end"
             style={{ marginRight: '3%', display: 'flex', alignItems: 'center' }}
@@ -110,7 +93,7 @@ export default function Header({ headerTransparent }) {
               onClick={() => window.open('https://www.youtube.com/user/EcoMarathonNTNU', '_blank')}
             />
           </Navbar.Collapse>
-        )}
+        
       </Container>
     </Navbar>
   );

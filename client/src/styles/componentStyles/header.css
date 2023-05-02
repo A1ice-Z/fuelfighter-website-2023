@@ -7,6 +7,12 @@
     font-weight: bold;
 }
 
+.selectedLink{
+    font-weight: bold;
+    color: aliceblue !important;
+    text-decoration: underline aliceblue;
+}
+
 .headerLinkSocial:hover{
     color: var(--ghostBlue);
 }
@@ -33,6 +39,11 @@
     font-size: medium;
 }
 
-.join_animation {
-
-}
+@media (max-width: 1000px){
+    .headerLinkSocial{
+        display: none;
+    }
+    #headerBar{
+        background-color: var(--tertiary-color) !important;
+    }
+} 
