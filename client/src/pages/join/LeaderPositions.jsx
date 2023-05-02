@@ -5,9 +5,14 @@ import projectManager from '../../assets/pages/join/project_manager.JPG'
 import assistant_project_manager from '../../assets/pages/join/assistant_project_manager.JPG'
 import technicalLeader from '../../assets/pages/join/technical_leader.JPG'
 import assistent_tech_lead from '../../assets/pages/join/assistent_tech_lead.JPG'
+import head_of_finance from '../../assets/pages/join/head_of_finance.jpg'
 
 import marketing_group_leader from '../../assets/pages/join/marketing_group_leader.JPG'
 import autonomous_group_leader from '../../assets/pages/join/autonomous_group_leader.jpg'
+import leader_design from '../../assets/pages/join/leader_design.jpg'
+import groupL_electrical from '../../assets/pages/join/groupL_electrical.jpg'
+import mech_leader from '../../assets/pages/join/mech_leader.jpg'
+import software_leader from '../../assets/pages/join/software_leader.jpg'
 
 import GeneralPositions from './GeneralPositions';
 
@@ -113,6 +118,7 @@ const leaderPositions = [
   },
   {
       'title': 'Head of Finance',
+      'image': head_of_finance,
       'description': 'As head of Finance, you are responsible for the budget and our sponsors. You will be in contact with employees at NTNU as well as contact people from sponsors. The work consists of purchasing orders for the team, handling sponsor deals and making sure the project is keeping within its budget. One of the tasks is also working closely with the assistant project manager in trying to get new sponsorship deals, and renewing existing ones.'
   },
   {
@@ -127,10 +133,12 @@ const leaderPositions = [
   },
   {
       'title': 'Electrical Group Leader',
+      'image': groupL_electrical,
       'description': 'As leader of the electrical team, you are responsible for making sure the electrical system is ready for the competition.  You will get insight in all the electronics needed to make an electric car, this includes everything from motors to the dashboard. Improving on last years design is important to improve the efficiency of the electrical system. This includes everything from hardware design to writing software. You will also be responsible for ordering everything the team needs for electrical system. It is a great experience as you can influence the whole electrical system, and you get to help the team members when they encounter problems with their subsystems. It can be challenging at times, but it is also a lot of fun.'
   },
   {
       'title': 'Design Group Leader',
+      'image': leader_design,
       'description': 'The Design Leader manages the overall process of designing both the interior and exterior design of the vehicle; he/she is responsible of ensuring that the car is designed according to the specifications of the SEM 2022 rules and the design goes together with the technical design of the Mechanical and Electrical group.'
   },
   {
@@ -140,6 +148,7 @@ const leaderPositions = [
   },
   {
       'title': 'Software Group Leader',
+      'image': software_leader,
       'description': 'The Software group leader is responsible for the Software group. The software group is responsible for the fuelfighter.no website, as well as the simulator. The Software Group Leader makes sure that the Software group is collaborating and reaching their goals by facilitating work sessions. They are also responsible to communicate relevant information about the competition/other groups to the Software group. The Software Group leader should be familiar with different it architectures and able to aid the members in their tasks. As Software Group Leader you will get experience in managing a small group, as well as communication in a complex organisation. You will have the freedom to explore different.'
   },
   {
@@ -149,6 +158,7 @@ const leaderPositions = [
   },
   {
       'title': 'Mechanical Group Leader',
+      'image': mech_leader,
       'description': 'The Mechanical Group Leader has the responsibility to ensure that all mechanical systems function according to specifications. The group leader is the main point of contact with the electrical and autonomous group. The group leader represents the mechanical group in board meetings, and is expected to be conscious about any issues related to the mechanical group and report these to the board. The group leader is expected to be available for any mechanical group members to turn to when they are facing an issue.'
   }
 ]

@@ -3,13 +3,13 @@ import { Container, Row, Col } from "react-bootstrap"
 import Profile from "../Team/MemberProfile";
 
 import getMemberDetails from '../../_services/leader.service.js';
-import notFound from '../../assets/404-img.jpeg'
 
-import electricImg from '../../assets/pages/join/electrical.JPG'
+import electricImg from '../../assets/pages/join/software_general.jpg'
 import machanicImg from '../../assets/pages/join/mechanical.JPG'
 import marketinImg from '../../assets/pages/join/marketing_and_finance.JPG'
 import autonomoImg from '../../assets/pages/join/autonomous_description.JPG'
-
+import design_description from '../../assets/pages/join/design_description.jpg'
+import software_description from '../../assets/pages/join/electrical.JPG'
 
 const generalPositions = [
     {
@@ -82,7 +82,7 @@ const generalPositions = [
                 </div>
         ),
         leader: 180,
-        'image': notFound,
+        'image': software_description,
     },
     {
         title: 'Autonomous',
@@ -121,14 +121,9 @@ const generalPositions = [
                     </ul>
                 </div>
         ),
-        'image': notFound,
+        'image': design_description,
         leader: 202
     },
-/* 
-Who can join?
-
- 
-*/
     {
         title: 'Marketing & Finance',
         'image': marketinImg,
