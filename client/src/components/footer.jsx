@@ -47,7 +47,7 @@ export default function Footer() {
               </Col>
               <Col id="information">
                 <div className="adresse">
-                  <h2>Adresse</h2>
+                  <h2>Address</h2>
                   <p>Fuel Fighter NTNU</p>
                   <p>Klæbuveien 153</p>
                   <p>7031 Trondheim</p>

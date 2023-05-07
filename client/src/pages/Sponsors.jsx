@@ -49,7 +49,7 @@ export default function Sponsors() {
                         <p style={{textAlign:"justify"}}>
                             As a student organization, we depend on the support from our sponsors. They support us both financially and by providing us with components and services. We are deeply grateful to our partners for their generous contributions of time, goods and funds. Together, we address complex issues and successfully leverage our resources to compete in the Eco Shell Marathon. With support from our partners, we can continue to fund existing programs and create new services in response to emerging needs. We are therefore grateful for their contribution into the project.
                         </p>
-                        <h3 style={{marginBottom: '5vh'}}>Stories with our sponsors</h3>
+                        <h3 style={{marginBottom: '5vh'}}>Social Media</h3>
                         <InstagramCarousel />
                         <div style={{marginTop: '5vh', display:'flex', alignContent:'center', textAlign: 'center', flexDirection:'column', cursor:'pointer'}} onClick={() => document.querySelector('#SponsorForm').scrollIntoView()}>
                             <p style={{margin: 0}}>Write us to discover more</p>

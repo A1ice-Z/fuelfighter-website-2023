@@ -53,7 +53,7 @@ export default function Header({ headerTransparent }) {
         <Navbar.Toggle aria-controls="navbarNav" />
         <Navbar.Collapse id="navbarNav" className="justify-content-left primaryColor">
           <Nav className="align-items-center">
-            {navLinks.map((link, index) => link != '/' && (
+            {navLinks.map((link, index) => link !== '/' && (
               <>
                 <Nav.Link
                   key={link}

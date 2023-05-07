@@ -84,7 +84,7 @@ export default function NewTeam() {
 
     return(
         <>
-            <ParallaxImage image={heroTeam} title="Our Team" height="100vh" backgroundPositionIni={'30'}/>
+            <ParallaxImage image={heroTeam} title="" height="100vh" backgroundPositionIni={'30'}/>
             <div class="container" id="teamContainer">
             <div class="row" id="teamTitleRow">
                 <div class="col-2">
